@@ -3,11 +3,10 @@ name: Build and deploy
 on:
   push:
     branches:
-      - develop
+      - main
   workflow_dispatch:
 
-# Production has been deploying from develop. Do not change this
-# without updating MIGRATION_NOTES.md and DEPLOYMENT.md.
+# Production deploys from main.
 permissions:
   contents: read
   pages: write
@@ -39,7 +38,7 @@ jobs:
 
   deploy:
     needs: build
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

@@ -4,7 +4,7 @@
 
 As of 14 September 2026 the public hostname `spectra.rombo.ai` is served by **nginx** running the SpectraPro application (`0.6.0-alpha`). It is **not** this GitHub Pages landing.
 
-This repository still contains a GitHub Actions workflow that deploys a Jekyll site from **`develop`**. Do not flip DNS to GitHub Pages until product and marketing agree how `/login` and the application will be hosted.
+This repository deploys a Jekyll site from **`main`**. Do not flip DNS to GitHub Pages until product and marketing agree how `/login` and the application will be hosted.
 
 Recommended split (human decision):
 
@@ -13,7 +13,7 @@ Recommended split (human decision):
 
 ## GitHub Pages setup
 
-1. Keep the repository production branch as **`develop`** unless you document a change here and in `MIGRATION_NOTES.md`.
+1. Keep the repository production branch as **`main`**.
 2. Enable GitHub Pages with **GitHub Actions** as the source (not the default Jekyll builder).
 3. `CNAME` contains `spectra.rombo.ai`.
 4. Production workflow: `.github/workflows/pages.yml`
@@ -35,7 +35,7 @@ The workflow:
 4. Builds Jekyll with `JEKYLL_ENV=production`
 5. Runs `scripts/qa.sh` (HTMLProofer, secret grep, title/H1/description checks)
 6. Uploads the Pages artifact
-7. Deploys only from `develop`
+7. Deploys only from `main`
 
 Optional Pagefind step can be added after `jekyll build` if you want static search. The site is usable without it.
 

@@ -7,7 +7,7 @@ The older GitHub landing (`romboai/spectra-ai-landing`) was an indigo React/Vite
 ## Preserved
 
 - Custom domain `spectra.rombo.ai` (`CNAME`)
-- Production branch for this repo: **`develop`** (unchanged)
+- Production branch for this repo: **`main`**
 - Live brand: **Spectra by ROMBO AI**, orange molecular logo (`assets/images/logo.png`)
 - Live hero copy: “From NMR spectrum to molecular identity, with traceable evidence.”
 - Live subheading, audience line, and four-step workflow
@@ -83,4 +83,4 @@ bundle exec jekyll serve
 
 ## How to deploy
 
-See `DEPLOYMENT.md`. Production workflow stays on `develop`.
+See `DEPLOYMENT.md`. Production workflow deploys from `main`.
