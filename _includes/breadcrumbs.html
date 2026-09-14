@@ -1,0 +1,22 @@
+{% assign crumb_depth = 0 %}
+{% assign crumb_segments = page.url | split: "/" %}
+{% for segment in crumb_segments %}
+  {% if segment != "" %}
+    {% assign crumb_depth = crumb_depth | plus: 1 %}
+  {% endif %}
+{% endfor %}
+{% if page.layout != "landing" and page.url != "/" and crumb_depth > 1 %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {% if page.collection == "docs" %}
+      <li><a href="{{ '/docs/' | relative_url }}">Docs</a></li>
+    {% elsif page.collection == "use_cases" %}
+      <li><a href="{{ '/use-cases/' | relative_url }}">Use cases</a></li>
+    {% elsif page.collection == "changelog" %}
+      <li><a href="{{ '/changelog/' | relative_url }}">Changelog</a></li>
+    {% endif %}
+    <li aria-current="page">{{ page.breadcrumb | default: page.nav | default: page.title }}</li>
+  </ol>
+</nav>
+{% endif %}

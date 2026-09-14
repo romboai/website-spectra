@@ -1,0 +1,30 @@
+- slug: compound-verification
+  title: NMR compound verification
+  nav: Verification
+  path: /use-cases/compound-verification/
+  summary: Check whether submitted 1H and 13C data support a proposed structure.
+- slug: dereplication
+  title: NMR dereplication
+  nav: Dereplication
+  path: /use-cases/dereplication/
+  summary: Separate known library members from residual unknowns in extracts and mixtures.
+- slug: unknown-compound-identification
+  title: Unknown compound identification
+  nav: Unknowns
+  path: /use-cases/unknown-compound-identification/
+  summary: Produce a defensible shortlist when the identity is not already assumed.
+- slug: impurity-identification
+  title: NMR impurity identification
+  nav: Impurities
+  path: /use-cases/impurity-identification/
+  summary: Rank plausible explanations for unexpected signals beside a known major component.
+- slug: natural-products
+  title: Natural-products research
+  nav: Natural products
+  path: /use-cases/natural-products/
+  summary: Support extract dereplication and analogue ranking before isolation campaigns expand.
+- slug: metabolite-identification
+  title: Metabolite identification
+  nav: Metabolites
+  path: /use-cases/metabolite-identification/
+  summary: Rank metabolite hypotheses from NMR with explicit residual uncertainty.

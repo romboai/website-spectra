@@ -1,0 +1,7 @@
+{% if site.posthog_key and site.posthog_key != "" %}
+<script src="{{ '/assets/js/consent.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/analytics.js' | relative_url }}" defer data-posthog-key="{{ site.posthog_key }}" data-posthog-host="{{ site.posthog_host }}"></script>
+{% else %}
+<script src="{{ '/assets/js/consent.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/analytics.js' | relative_url }}" defer></script>
+{% endif %}

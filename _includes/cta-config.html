@@ -1,0 +1,17 @@
+{% assign mode = site.data.product.access_mode %}
+{% assign cta_set = site.data.product.cta[mode] %}
+{% if site.product_url and site.product_url != "" %}
+  {% assign product_href = site.product_url %}
+{% else %}
+  {% assign product_href = site.fallback_cta_path %}
+{% endif %}
+{% if cta_set.primary.url_key == "product_url" %}
+  {% assign primary_href = product_href %}
+{% else %}
+  {% assign primary_href = cta_set.primary.path %}
+{% endif %}
+{% assign primary_label = cta_set.primary.label %}
+{% assign secondary_label = cta_set.secondary.label %}
+{% assign secondary_href = cta_set.secondary.path %}
+{% assign enterprise_label = cta_set.enterprise.label %}
+{% assign enterprise_href = cta_set.enterprise.path %}

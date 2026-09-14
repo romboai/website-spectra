@@ -1,0 +1,49 @@
+# Only list formats and experiment types stated on the live product site
+# or otherwise verified. Unknown items are omitted.
+verified: true
+last_reviewed: 2026-09-14
+nuclei:
+  - id: 1h
+    label: "1H"
+    notes: Stated on the live Spectra homepage as a primary input.
+    verified: true
+  - id: 13c
+    label: "13C"
+    notes: Stated on the live Spectra homepage as a primary input.
+    verified: true
+vendor_families:
+  - id: bruker
+    label: Bruker
+    verified: true
+    notes: Named on the live Spectra homepage as a raw-data source family.
+  - id: jeol
+    label: JEOL
+    verified: true
+    notes: Named on the live Spectra homepage as a raw-data source family.
+  - id: varian
+    label: Varian
+    verified: true
+    notes: Named on the live Spectra homepage as a raw-data source family.
+exchange_formats:
+  - id: jcamp-dx
+    label: JCAMP-DX
+    verified: true
+    notes: Named on the live Spectra homepage as a supported exchange format.
+optional_context:
+  - label: Molecular formula
+    status: additional_context
+    notes: May improve ranking when provided. Not a required input.
+  - label: Exact mass or MS
+    status: additional_context
+    notes: May be used as additional context when available. Not positioned as a standalone MS product.
+  - label: Solvent
+    status: recommended
+    notes: The live example uses DMSO-d6. Solvent should be supplied when known.
+  - label: Field strength
+    status: recommended
+    notes: The live example reports 600 MHz. Field strength should be supplied when known.
+unverified_do_not_list:
+  - FID-specific undocumented vendor extensions
+  - Unconfirmed 2D experiment coverage as a public format matrix
+  - IR as a required input
+contact_for_other: true

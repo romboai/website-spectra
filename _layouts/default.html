@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body data-page="{{ page.url }}">
+  <a class="skip-link" href="#content">Skip to content</a>
+  {% include header.html %}
+  <main id="content" class="site-main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+</body>
+</html>

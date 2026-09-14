@@ -1,0 +1,15 @@
+{% include cta-config.html %}
+<section class="section hero-band" id="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ site.data.product.kicker | default: "Compound identification" }}</p>
+      <h1 id="hero-title">{{ site.data.product.tagline }}</h1>
+      <p class="lede">{{ site.data.product.subheading }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ primary_href }}" data-analytics="try_spectra_clicked" aria-label="Try Spectra">{{ primary_label }}</a>
+        <p class="hero-note">{{ site.data.product.audience }}</p>
+      </div>
+    </div>
+    {% include example-card.html %}
+  </div>
+</section>

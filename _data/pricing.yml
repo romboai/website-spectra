@@ -1,0 +1,47 @@
+currency: EUR
+currency_symbol: "€"
+last_reviewed: 2026-09-14
+vat_note: Tax treatment is confirmed at checkout or on the invoice. It is not stated here.
+plans:
+  - id: free
+    name: Free
+    price_label: 3 analyses
+    amount: null
+    interval: null
+    seats: 1
+    summary: Start with three analyses on your own 1H and 13C data.
+    who: Individual chemists evaluating Spectra before committing to a paid plan.
+    next_step: Try Spectra
+    cta: product_url
+  - id: pro
+    name: Pro
+    price_label: €79 / month
+    amount: 79
+    interval: month
+    annual_amount: 790
+    annual_label: €790 / year
+    seats: 1
+    summary: Monthly or annual billing for ongoing self-service identification work.
+    who: Individual chemists and researchers who need regular analyses beyond the free allotment.
+    next_step: Try Spectra
+    cta: product_url
+  - id: lab
+    name: Lab
+    price_label: €299 / month
+    amount: 299
+    interval: month
+    seats: 5
+    summary: Shared laboratory access for five users.
+    who: Analytical groups that need a common workspace for up to five people.
+    next_step: Request a pilot
+    cta: contact
+  - id: enterprise
+    name: Enterprise
+    price_label: Custom
+    amount: null
+    interval: null
+    seats: custom
+    summary: Scoped pricing for larger teams, pilots, and private-deployment conversations.
+    who: Pharmaceutical R&D, impurity teams, and organisations that need a negotiated agreement.
+    next_step: Request a pilot
+    cta: contact

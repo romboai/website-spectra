@@ -1,0 +1,67 @@
+name: Spectra
+brand: Spectra by ROMBO AI
+short_name: Spectra
+auth_name: Spectra AI
+category: AI NMR compound identification software
+kicker: Compound identification
+access_mode: self_service
+version: 0.6.0-alpha
+version_label: Public alpha
+status: available
+login_path: /login
+tagline: From NMR spectrum to molecular identity, with traceable evidence.
+subheading: >-
+  A scientific agent that combines large-scale retrieval, foundation models
+  and physics-guided validation to verify knowns, dereplicate mixtures and
+  identify unknowns.
+audience: Built for chemists, researchers and lab teams.
+primary_nuclei:
+  - "1H"
+  - "13C"
+supported_vendor_families:
+  - Bruker
+  - JEOL
+  - Varian
+supported_exchange_formats:
+  - JCAMP-DX
+disclaimer: >-
+  Spectra ranks and explains candidate structures. The chemist remains
+  responsible for final interpretation, validation, and any regulatory
+  or publication decision.
+not:
+  - A replacement for chemist judgment
+  - A definitive compound confirmation engine
+  - A guaranteed identification service
+  - A claim of regulatory certification
+  - A replacement for NMR acquisition or processing software
+cta:
+  self_service:
+    primary:
+      label: Try
+      url_key: product_url
+    secondary:
+      label: Read the docs
+      path: /docs/
+    enterprise:
+      label: Request a pilot
+      path: /contact/
+  request_access:
+    primary:
+      label: Request access
+      path: /contact/
+    secondary:
+      label: View sample analysis
+      path: /examples/sample-analysis/
+    enterprise:
+      label: Request a pilot
+      path: /contact/
+  pilot_only:
+    primary:
+      label: Bring a case
+      path: /contact/
+    secondary:
+      label: Request a pilot
+      path: /contact/
+    enterprise:
+      label: Request a pilot
+      path: /contact/

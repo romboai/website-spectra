@@ -1,0 +1,134 @@
+# Claim and evidence registry.
+# Templates may render a numerical KPI only when verified: true AND public: true.
+# Historical landing-page KPIs are retained here for review and must stay hidden.
+
+last_reviewed: 2026-09-14
+
+claims:
+  - id: top1-accuracy
+    value: "82%"
+    label: Top-1 accuracy
+    scope: Historical marketing landing page. Dataset and protocol were not published with the figure.
+    metric_definition: Correct candidate ranked first.
+    dataset: Not specified in a public methodology.
+    sample_count: unknown
+    acquisition_regime: unknown
+    evaluation_protocol: unknown
+    source_url: ""
+    source_label: Unpublished historical landing page
+    verified: false
+    public: false
+    last_reviewed: 2026-09-14
+    required_evidence: Public dataset identifier, holdout policy, nucleus, field, and scoring definition.
+
+  - id: top10-accuracy
+    value: "97%"
+    label: Top-10 accuracy
+    scope: Historical marketing landing page.
+    metric_definition: Correct candidate within the top ten results.
+    dataset: Not specified in a public methodology.
+    sample_count: unknown
+    acquisition_regime: unknown
+    evaluation_protocol: unknown
+    source_url: ""
+    source_label: Unpublished historical landing page
+    verified: false
+    public: false
+    last_reviewed: 2026-09-14
+    required_evidence: Same protocol package as top-1, plus rank cutoff definition.
+
+  - id: identification-time
+    value: "<30 sec"
+    label: Average identification time
+    scope: Historical marketing landing page.
+    metric_definition: Time from raw spectrum to an explainable shortlist.
+    dataset: Not specified.
+    sample_count: unknown
+    acquisition_regime: unknown
+    evaluation_protocol: unknown
+    source_url: ""
+    source_label: Unpublished historical landing page
+    verified: false
+    public: false
+    last_reviewed: 2026-09-14
+    required_evidence: Hardware, queue conditions, spectrum size, and start/stop timestamps.
+
+  - id: chemical-classes
+    value: "21+"
+    label: Chemical classes
+    scope: Historical marketing landing page.
+    metric_definition: Chemical classes covered by identification models.
+    dataset: Not specified.
+    sample_count: unknown
+    acquisition_regime: unknown
+    evaluation_protocol: unknown
+    source_url: ""
+    source_label: Unpublished historical landing page
+    verified: false
+    public: false
+    last_reviewed: 2026-09-14
+    required_evidence: Class ontology and inclusion rule.
+
+  - id: explainable-results
+    value: "100%"
+    label: Explainable results
+    scope: Historical marketing landing page. Absolute figures are not displayed.
+    metric_definition: Every result with an evidence score, assignments and traceable logs.
+    dataset: Not specified.
+    sample_count: unknown
+    acquisition_regime: unknown
+    evaluation_protocol: unknown
+    source_url: ""
+    source_label: Unpublished historical landing page
+    verified: false
+    public: false
+    last_reviewed: 2026-09-14
+    required_evidence: Precise definition of explainable and an audit of failed or abstained cases.
+
+  - id: retrieval-space
+    value: "94M+"
+    label: Retrieval space
+    scope: Historical marketing landing page.
+    metric_definition: Molecules searchable across experimental and simulated libraries.
+    dataset: Not specified.
+    sample_count: unknown
+    acquisition_regime: unknown
+    evaluation_protocol: unknown
+    source_url: ""
+    source_label: Unpublished historical landing page
+    verified: false
+    public: false
+    last_reviewed: 2026-09-14
+    required_evidence: Library inventory, uniqueness rule, and experimental vs simulated split.
+
+  - id: rose-pretrain-size
+    value: "3.2M"
+    label: ROSE pretraining spectra
+    scope: ROSE-1H NMR research model, not the Spectra product benchmark.
+    metric_definition: Spectra used to pretrain ROSE-Pretrain-L, as reported in the public ROSE materials.
+    dataset: Multi-source public experimental and simulated 1H corpora described in the ROSE repository.
+    sample_count: "approximately 3.2 million"
+    acquisition_regime: 1H, 0-14 ppm grid, mixed sources
+    evaluation_protocol: See ROSE paper and repository holdout policy.
+    source_url: https://github.com/romboai/rose-1h-nmr
+    source_label: ROSE-1H NMR repository
+    verified: true
+    public: true
+    last_reviewed: 2026-09-14
+    display_context: research_only
+
+  - id: rose-parameters
+    value: "7.8M"
+    label: ROSE model parameters
+    scope: ROSE-1H NMR research model.
+    metric_definition: Parameter count of the released ROSE-Pretrain-L encoder and heads.
+    dataset: Not a product accuracy metric.
+    sample_count: n/a
+    acquisition_regime: n/a
+    evaluation_protocol: n/a
+    source_url: https://huggingface.co/romboai/rose-1h-nmr
+    source_label: Hugging Face model card
+    verified: true
+    public: true
+    last_reviewed: 2026-09-14
+    display_context: research_only

@@ -1,0 +1,22 @@
+{% assign current = page.nav_order | plus: 0 %}
+{% assign prev_n = current | minus: 1 %}
+{% assign next_n = current | plus: 1 %}
+{% assign prev = nil %}
+{% assign nxt = nil %}
+{% for doc in site.docs %}
+  {% assign n = doc.nav_order | plus: 0 %}
+  {% if n == prev_n %}{% assign prev = doc %}{% endif %}
+  {% if n == next_n %}{% assign nxt = doc %}{% endif %}
+{% endfor %}
+<nav class="docs-pager" aria-label="Documentation pages">
+  <div>
+    {% if prev %}
+      <a href="{{ prev.url | relative_url }}">Previous: {{ prev.nav | default: prev.title }}</a>
+    {% endif %}
+  </div>
+  <div>
+    {% if nxt %}
+      <a href="{{ nxt.url | relative_url }}">Next: {{ nxt.nav | default: nxt.title }}</a>
+    {% endif %}
+  </div>
+</nav>

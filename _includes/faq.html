@@ -1,0 +1,13 @@
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 id="faq-title">Frequently asked questions</h2>
+    <div class="faq">
+      {% for item in site.data.faq %}
+      <details>
+        <summary>{{ item.question }}</summary>
+        <p>{{ item.answer }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>

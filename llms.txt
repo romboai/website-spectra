@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# Spectra by ROMBO AI
+
+> AI-assisted NMR compound identification. Ranked candidates, physics-guided shift validation, chemist remains responsible for confirmation.
+
+- Official site: {{ site.url }}/
+- Product login: {{ site.product_url }}
+- Pricing: {{ site.url }}/pricing/
+- Documentation: {{ site.url }}/docs/
+- Getting started: {{ site.url }}/docs/getting-started/
+- Limitations: {{ site.url }}/docs/limitations/
+- Use cases: {{ site.url }}/use-cases/
+- Sample analysis: {{ site.url }}/examples/sample-analysis/
+- Research (ROSE vs product): {{ site.url }}/research/
+- Security: {{ site.url }}/security/
+- Privacy: {{ site.url }}/privacy/
+- Changelog: {{ site.url }}/changelog/
+- Support: mailto:{{ site.contact_email }}
+- Company: https://rombo.ai
+- ROSE code: https://github.com/romboai/rose-1h-nmr
+- ROSE weights: https://huggingface.co/romboai/rose-1h-nmr
+- ROSE preprint: https://doi.org/10.26434/chemrxiv.15007823/v1

@@ -1,0 +1,13 @@
+name = "spectra-lead-proxy"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Secrets to set with `wrangler secret put`:
+# MAKE_WEBHOOK_URL
+# MAKE_WEBHOOK_KEY
+# TURNSTILE_SECRET (optional)
+#
+# Do not commit real values.
+
+[vars]
+ALLOWED_ORIGINS = "https://spectra.rombo.ai,http://127.0.0.1:4000,http://localhost:4000"

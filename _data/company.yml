@@ -1,0 +1,20 @@
+legal_name: ROMBO AI S.r.l.
+short_name: ROMBO AI
+founded: 2023
+url: https://rombo.ai
+email: contact@rombo.ai
+phone: "+39 352 064 8081"
+address:
+  line1: Open Campus
+  line2: SS 195 KM 2,300
+  postal_code: "09123"
+  city: Cagliari
+  country: Italy
+github: https://github.com/romboai
+huggingface: https://huggingface.co/romboai
+research_url: https://rombo.ai
+about_url: https://rombo.ai/about/
+contact_url: https://rombo.ai/contact/
+blog_url: https://rombo.ai/blog/
+product_corporate_url: https://rombo.ai/product/
+nmr_use_case_url: https://rombo.ai/use-cases/nmr-compound-identification/

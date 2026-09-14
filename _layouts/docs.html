@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="wrap docs-shell">
+  {% include docs-sidebar.html %}
+  <article class="docs-content">
+    <header>
+      {% include breadcrumbs.html %}
+      <p class="eyebrow">Documentation</p>
+      <h1>{{ page.h1 | default: page.title }}</h1>
+      {% if page.description %}<p class="page-lede">{{ page.description }}</p>{% endif %}
+    </header>
+    {% if page.toc != false %}
+    <nav class="toc" aria-label="On this page">
+      <strong>On this page</strong>
+      <div data-toc></div>
+    </nav>
+    {% endif %}
+    <div class="prose">
+      {{ content }}
+    </div>
+    {% include docs-pagination.html %}
+  </article>
+</div>

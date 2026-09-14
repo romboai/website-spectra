@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if page.noindex or site.noindex %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+<meta name="theme-color" content="#F8F7F7">
+<meta name="theme-color" content="#131010" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% seo %}
+{% include schema/organization.html %}
+{% if page.schema == "software" or page.layout == "landing" %}
+{% include schema/software-application.html %}
+{% endif %}
+{% if page.schema == "faq" or page.layout == "landing" %}
+{% include schema/faq.html %}
+{% endif %}
+{% unless page.layout == "landing" %}
+{% include schema/breadcrumb.html %}
+{% endunless %}
+{% if page.schema == "article" or page.layout == "docs" or page.layout == "post" or page.layout == "use-case" %}
+{% include schema/article.html %}
+{% endif %}
+{% include cookie-consent.html %}
+{% include posthog.html %}

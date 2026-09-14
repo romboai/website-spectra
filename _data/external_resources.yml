@@ -1,0 +1,48 @@
+trust_strip:
+  - label: ROMBO AI
+    url: https://rombo.ai
+    event: external_rombo_clicked
+  - label: ROSE research
+    url: https://github.com/romboai/rose-1h-nmr
+    event: external_github_clicked
+  - label: ChemRxiv preprint
+    url: https://doi.org/10.26434/chemrxiv.15007823/v1
+    event: research_opened
+  - label: GitHub
+    url: https://github.com/romboai
+    event: external_github_clicked
+  - label: Hugging Face
+    url: https://huggingface.co/romboai/rose-1h-nmr
+    event: research_opened
+
+rombo_articles:
+  - title: NMR compound identification
+    url: https://rombo.ai/use-cases/nmr-compound-identification/
+    description: Corporate use-case page for expert-assisted NMR identification. Canonical URL remains on rombo.ai.
+  - title: The missing layer in NMR machine learning
+    url: https://rombo.ai/blog/article-NMR-Machine-Learning
+    description: ROMBO AI essay on reusable spectral representations versus single-task NMR models.
+  - title: About ROMBO AI
+    url: https://rombo.ai/about/
+    description: Company background, team, and headquarters.
+  - title: Request a feasibility analysis
+    url: https://rombo.ai/contact/
+    description: Corporate contact path for industrial pilots outside the Spectra self-service product.
+
+research:
+  - title: ROSE-1H NMR
+    url: https://github.com/romboai/rose-1h-nmr
+    kind: code
+    description: Public repository for the 1H NMR foundation model.
+  - title: ROSE weights
+    url: https://huggingface.co/romboai/rose-1h-nmr
+    kind: weights
+    description: Released ROSE-Pretrain-L checkpoint and model card.
+  - title: ROSE preprint
+    url: https://doi.org/10.26434/chemrxiv.15007823/v1
+    kind: paper
+    description: ChemRxiv preprint for ROSE.
+  - title: ROSE archive
+    url: https://doi.org/10.5281/zenodo.22142631
+    kind: archive
+    description: Zenodo archival record for ROSE releases.

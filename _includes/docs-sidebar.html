@@ -1,0 +1,7 @@
+<nav class="docs-sidebar" aria-label="Documentation">
+  <p class="eyebrow">Documentation</p>
+  {% assign docs = site.docs | sort: "nav_order" %}
+  {% for doc in docs %}
+    <a href="{{ doc.url | relative_url }}"{% if page.url == doc.url %} aria-current="page"{% endif %}>{{ doc.nav | default: doc.title }}</a>
+  {% endfor %}
+</nav>

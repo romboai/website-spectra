@@ -1,0 +1,57 @@
+primary:
+  - label: Pricing
+    path: /pricing/
+  - label: Use cases
+    path: /use-cases/
+  - label: Docs
+    path: /docs/
+footer:
+  product:
+    title: Product
+    links:
+      - label: Pricing
+        path: /pricing/
+      - label: Sample analysis
+        path: /examples/sample-analysis/
+      - label: Changelog
+        path: /changelog/
+  documentation:
+    title: Documentation
+    links:
+      - label: Docs home
+        path: /docs/
+      - label: Getting started
+        path: /docs/getting-started/
+      - label: Limitations
+        path: /docs/limitations/
+      - label: FAQ
+        path: /docs/faq/
+  research:
+    title: Research
+    links:
+      - label: Research and methodology
+        path: /research/
+      - label: ROSE foundation model
+        url: https://github.com/romboai/rose-1h-nmr
+      - label: ChemRxiv preprint
+        url: https://doi.org/10.26434/chemrxiv.15007823/v1
+  company:
+    title: Company
+    links:
+      - label: Contact
+        path: /contact/
+      - label: ROMBO AI website
+        url: https://rombo.ai
+      - label: GitHub
+        url: https://github.com/romboai
+  legal:
+    title: Legal
+    links:
+      - label: Privacy
+        path: /privacy/
+      - label: Terms
+        path: /terms/
+      - label: Cookies
+        path: /cookies/
+      - label: Security
+        path: /security/

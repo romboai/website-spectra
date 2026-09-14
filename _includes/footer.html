@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      {% assign cols = site.data.navigation.footer %}
+      {% for col in cols %}
+      <div class="footer-col">
+        <h2>{{ col[1].title }}</h2>
+        {% for link in col[1].links %}
+          {% if link.url %}
+            <a href="{{ link.url }}"{% if link.url contains 'github.com' %} data-analytics="external_github_clicked"{% elsif link.url contains 'rombo.ai' %} data-analytics="external_rombo_clicked"{% endif %}>{{ link.label }}</a>
+          {% else %}
+            <a href="{{ link.path | relative_url }}">{{ link.label }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="footer-bottom">
+      <p class="mb-0">{{ site.data.product.brand }} · {{ site.data.footer.tagline }} · © {{ site.data.footer.copyright_start }} {{ site.data.company.legal_name }}</p>
+      <p class="mb-0"><a href="{{ site.data.footer.corporate_url }}" data-analytics="external_rombo_clicked">{{ site.data.footer.corporate_label }}</a></p>
+    </div>
+  </div>
+</footer>

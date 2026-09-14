@@ -1,0 +1,163 @@
+title: Spectra by ROMBO AI
+tagline: From NMR spectrum to molecular identity, with traceable evidence.
+description: >-
+  Spectra is an AI scientific agent for NMR compound identification.
+  It ranks candidate structures from 1H and 13C data, validates them
+  against predicted shifts, and returns traceable evidence for chemist review.
+url: https://spectra.rombo.ai
+baseurl: ""
+lang: en
+timezone: Europe/Rome
+
+# PLACEHOLDER_PRODUCT_URL is not used. The live product login is verified.
+# This is the only application URL setting. Templates must use site.product_url.
+product_url: https://spectra.rombo.ai/login
+lead_form_endpoint: ""
+contact_email: contact@rombo.ai
+fallback_cta_path: /contact/
+
+# Analytics — leave keys empty until configured. Do not commit secrets.
+posthog_key: ""
+posthog_host: https://eu.i.posthog.com
+# Live marketing currently also uses Google Analytics. Keep disabled here
+# until a consent decision is made. Do not hardcode measurement IDs in JS.
+google_analytics: ""
+
+# Consent: analytics scripts load only after explicit accept.
+consent_required: true
+
+# Staging builds should set noindex: true via --config _config.yml,_config.staging.yml
+noindex: false
+environment: production
+
+permalink: pretty
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+  docs:
+    output: true
+    permalink: /docs/:name/
+  use_cases:
+    output: true
+    permalink: /use-cases/:slug/
+  examples:
+    output: true
+    permalink: /examples/:name/
+  comparisons:
+    output: true
+    permalink: /compare/:name/
+  changelog:
+    output: true
+    permalink: /changelog/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: /assets/images/og-default.png
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      sitemap: true
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: docs
+      sitemap: true
+  - scope:
+      path: ""
+      type: use_cases
+    values:
+      layout: use-case
+      sitemap: true
+  - scope:
+      path: ""
+      type: examples
+    values:
+      layout: example
+      sitemap: true
+  - scope:
+      path: ""
+      type: comparisons
+    values:
+      layout: page
+      sitemap: true
+  - scope:
+      path: ""
+      type: changelog
+    values:
+      layout: changelog
+      sitemap: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      sitemap: true
+
+include:
+  - CNAME
+  - llms.txt
+  - llms-full.txt
+  - robots.txt
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - README.md
+  - MIGRATION_NOTES.md
+  - CONTENT_GUIDE.md
+  - SEO_KEYWORD_MAP.md
+  - ANALYTICS_PLAN.md
+  - DEPLOYMENT.md
+  - scripts
+  - workers
+  - tmp
+  - vendor/bundle
+  - .github
+  - .jekyll-cache
+  - .sass-cache
+
+sass:
+  style: compressed
+
+feed:
+  collections:
+    changelog:
+      path: /changelog.xml
+
+author:
+  name: ROMBO AI S.r.l.
+  url: https://rombo.ai
+
+twitter:
+  card: summary_large_image
+
+logo: /assets/images/logo.png
+
+social:
+  name: Spectra by ROMBO AI
+  links:
+    - https://rombo.ai
+    - https://github.com/romboai
+    - https://huggingface.co/romboai/rose-1h-nmr

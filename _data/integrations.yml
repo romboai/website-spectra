@@ -1,0 +1,33 @@
+# Confirmed product integrations versus conceptual workflow compatibility.
+# Do not render an integration as "connected" unless verified: true.
+status_note: >-
+  Spectra is intended to complement existing NMR acquisition and processing
+  workflows. No direct vendor integration is claimed on this site.
+items:
+  - id: bruker-topspin
+    name: TopSpin
+    owner: Bruker
+    relationship: conceptual
+    verified_integration: false
+    notes: Common acquisition and processing environment. Spectra can consume exported or raw vendor data where the live site lists Bruker as a source family.
+  - id: mnova
+    name: Mnova
+    owner: Mestrelab Research
+    relationship: conceptual
+    verified_integration: false
+    notes: Common processing and reporting environment. No confirmed connector is published.
+  - id: jeol-delta
+    name: Delta
+    owner: JEOL
+    relationship: conceptual
+    verified_integration: false
+    notes: Common JEOL processing environment. The live site lists JEOL as a source family.
+  - id: acd-labs
+    name: ACD/Labs
+    owner: ACD/Labs
+    relationship: conceptual
+    verified_integration: false
+    notes: Common structure-elucidation and processing suite. No confirmed connector is published.
+trademark_note: >-
+  All product names and trademarks belong to their respective owners.
+  Mentions describe typical laboratory workflows, not partnerships or certified integrations.
