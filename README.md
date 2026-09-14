@@ -2,7 +2,7 @@
 
 Jekyll site for [Spectra by ROMBO AI](https://spectra.rombo.ai), the NMR compound-identification product.
 
-This repository is the **marketing, documentation and SEO** site. The live product application is a separate SpectraPro deployment that currently also answers `https://spectra.rombo.ai`. Read `MIGRATION_NOTES.md` and `DEPLOYMENT.md` before pointing DNS at GitHub Pages.
+This repository is the **marketing, documentation and SEO** site. The live product application is a separate SpectraPro deployment that currently also answers `https://spectra.rombo.ai`. Read `DEPLOYMENT.md` before pointing DNS at GitHub Pages.
 
 ## Requirements
 
@@ -35,7 +35,7 @@ bash scripts/qa.sh
 ## Add a documentation page
 
 1. Create `_docs/your-page.md` with `title`, `description`, unique `h1` or `title`, `permalink: /docs/your-page/`, and `nav_order`.
-2. Keep claims inside what `CONTENT_GUIDE.md` allows.
+2. Keep claims conservative: no unverified KPIs, no “guaranteed identification”, and ranking is never confirmation.
 3. Rebuild and confirm the sidebar link.
 
 ## Add a use case
@@ -59,7 +59,7 @@ The only application URL setting is `product_url` in `_config.yml`. Templates mu
 
 ## Configure analytics
 
-Set `posthog_key` and `posthog_host` in `_config.yml` or a private production config. Scripts load only after cookie consent. See `ANALYTICS_PLAN.md`.
+Set `posthog_key` and `posthog_host` in `_config.yml` or a private production config. Scripts load only after cookie consent.
 
 ## Configure the form endpoint
 
@@ -67,4 +67,4 @@ Set `lead_form_endpoint` to the Cloudflare Worker URL. Leave it empty to fall ba
 
 ## Deployment
 
-GitHub Actions builds and deploys from **`develop`**, which is the confirmed production branch of this repository. See `DEPLOYMENT.md`.
+GitHub Actions builds and deploys from **`main`**. See `DEPLOYMENT.md`.

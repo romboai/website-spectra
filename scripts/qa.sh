@@ -22,7 +22,7 @@ bundle exec htmlproofer "$SITE" \
 echo "== Secret pattern scan =="
 if grep -RIn -E 'hook\.eu2\.make\.com/[A-Za-z0-9]+|VITE_HUBSPOT_API_KEY\s*=\s*['\''\"][^'\''\"]+' \
   --exclude-dir=.git --exclude-dir=_site --exclude-dir=vendor \
-  --exclude-dir=.bundle --exclude='MIGRATION_NOTES.md' --exclude='qa.sh' \
+  --exclude-dir=.bundle --exclude='qa.sh' \
   "$ROOT"; then
   echo "Possible secret pattern found." >&2
   exit 1

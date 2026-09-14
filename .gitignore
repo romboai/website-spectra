@@ -1,5 +1,6 @@
 # Dependencies
 vendor/bundle/
+vendor/cache/
 .bundle/
 node_modules/
 
@@ -8,6 +9,8 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+.jekyll-cache-dev/
+tmp/
 
 # Pagefind
 _pagefind/
@@ -16,19 +19,31 @@ pagefind/
 # Environment and secrets
 .env
 .env.*
+.envrc
 *.pem
 *.key
 
 # Logs and OS
 *.log
 .DS_Store
+.AppleDouble
+.LSOverride
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
 # Editor
 .idea/
 .vscode/
 *.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
 
 # Ruby
 *.gem
 .rbenv-gemsets
+.ruby-gemset
+.byebug_history
+coverage/

@@ -14,7 +14,7 @@ The site works without analytics. Navigation and documentation do not require Ja
 
 ## Optional analytics
 
-If you accept, PostHog may load using the project key configured for this site. Events are listed in ANALYTICS_PLAN.md. We do not send:
+If you accept, PostHog may load using the project key configured for this site. We record page views and interaction events such as CTA clicks, documentation opens, and form submit outcomes. We do not send:
 
 - form field values
 - spectrum or file names
