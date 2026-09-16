@@ -58,6 +58,10 @@ Getting started: login, upload, results. Running an analysis: objective, context
 
 A downloadable example spectrum under `assets/examples/`, if we may publish one.
 
+## Benchmark
+
+Set `published: true` in `_data/benchmark.yml` and fill tasks, datasets, leakage policy, metrics, calibration plot and failure cases. The `/benchmark/` page stays out of the build until then.
+
 ## Sample analysis measured data
 
 Per-atom observed/predicted/residual tables for the teaching case (recommended: luteolin vs kaempferol, C15H10O6). Until supplied, the public example stays narrative-only.

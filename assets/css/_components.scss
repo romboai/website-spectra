@@ -458,6 +458,41 @@
   margin-bottom: 0;
 }
 
+.sample-board {
+  margin: 1.5rem 0 2rem;
+}
+
+.sample-candidate {
+  border: 1px solid var(--border);
+  margin-bottom: 0.65rem;
+  padding: 0 1rem;
+}
+
+.sample-candidate summary {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  padding: 0.95rem 0;
+  font-weight: 600;
+}
+
+.sample-rank {
+  color: var(--rust);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.residual-bar {
+  display: inline-block;
+  width: 4rem;
+  height: 0.45rem;
+  margin-right: 0.4rem;
+  background: color-mix(in srgb, var(--rust) calc(var(--residual) * 40%), var(--border));
+  vertical-align: middle;
+}
+
 @media (min-width: 640px) {
   .cta-band-inner {
     flex-direction: row;

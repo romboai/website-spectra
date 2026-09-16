@@ -1,0 +1,72 @@
+{% comment %}
+Read-only sample analysis. Renders per-candidate evidence when
+site.data.samples[include.id] exists; otherwise the caller keeps narrative copy.
+{% endcomment %}
+{% assign sample = nil %}
+{% if site.data.samples %}
+  {% assign sample = site.data.samples[include.id] %}
+{% endif %}
+{% if sample %}
+<div class="sample-board" data-analytics="sample_view">
+  {% if sample.question %}
+  <p class="lede">{{ sample.question }}</p>
+  {% endif %}
+  <div class="sample-candidates">
+    {% for cand in sample.candidates %}
+    <details class="sample-candidate"{% if forloop.first %} open{% endif %} data-candidate="{{ cand.name | slugify }}">
+      <summary>
+        <span class="sample-rank">{{ cand.rank }}</span>
+        <strong>{{ cand.name }}</strong>
+        {% if cand.match %}<span>Match {{ cand.match }}</span>{% endif %}
+        {% if cand.rmsd_13c %}<span>13C RMSD {{ cand.rmsd_13c }}</span>{% endif %}
+      </summary>
+      {% if cand.image %}
+      <p><img src="{{ cand.image | relative_url }}" alt="{{ cand.name }}"></p>
+      {% endif %}
+      {% if cand.notes %}
+      <p>{{ cand.notes }}</p>
+      {% endif %}
+      {% if cand.atoms and cand.atoms.size > 0 %}
+      <div class="compare-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Atom</th>
+              <th scope="col">δ observed</th>
+              <th scope="col">δ predicted</th>
+              <th scope="col">Residual</th>
+              <th scope="col">Assigned</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for atom in cand.atoms %}
+            {% assign abs_res = atom.residual | times: 1 %}
+            {% if abs_res < 0 %}{% assign abs_res = abs_res | times: -1 %}{% endif %}
+            <tr>
+              <td>{{ atom.label }}</td>
+              <td>{{ atom.observed }}</td>
+              <td>{{ atom.predicted }}</td>
+              <td>
+                <span class="residual-bar" style="--residual: {{ abs_res }}"></span>
+                {{ atom.residual }}
+              </td>
+              <td>{% if atom.assigned %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+      {% if cand.unexplained and cand.unexplained.size > 0 %}
+      <p><strong>Unexplained signals</strong></p>
+      <ul>
+        {% for sig in cand.unexplained %}
+        <li>{{ sig }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </details>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
