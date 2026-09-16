@@ -20,7 +20,7 @@
         <a href="{{ item.path | relative_url }}"{% if page.url == item.path or page.url contains item.path %} aria-current="page"{% endif %}>{{ item.label }}</a>
       {% endfor %}
     </nav>
-    <a class="btn btn-primary header-cta" href="{{ primary_href }}" data-cta-src="header" data-analytics="try_spectra_clicked" aria-label="Try Spectra">{{ primary_label }}</a>
+    <a class="btn btn-primary header-cta" href="{{ primary_href }}" data-cta-src="header" data-analytics="cta_click" aria-label="Try Spectra">{{ primary_label }}</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" data-menu-toggle>Menu</button>
   </div>
   {% include mobile-navigation.html %}

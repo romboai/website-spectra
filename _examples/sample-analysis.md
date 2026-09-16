@@ -36,7 +36,7 @@ Before treating a similar real case as ready, check referencing to residual DMSO
 
 These three closely related flavonoids (two flavonols and a flavone) share the formula C15H10O6. Luteolin is a flavone (no 3-OH). Quercetin and kaempferol are flavonols. The C-3 region is where 13C can separate them.
 
-<div class="sample-board" data-analytics="sample_view">
+<div class="sample-board">
   <details class="sample-candidate" open data-candidate="quercetin">
     <summary><span class="sample-rank">1</span> <strong>Quercetin</strong> <span>Match 0.94</span> <span>13C RMSD 1.8 ppm</span></summary>
     <p>Highest match and lowest 13C RMSD of the three. Open this candidate first and ask which carbons still carry residual. A 0.94 match is a reason to inspect, not to close the case.</p>

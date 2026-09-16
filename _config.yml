@@ -129,6 +129,7 @@ exclude:
   - README.md
   - DEPLOYMENT.md
   - TEAM_FACTS_NEEDED.md
+  - docs/ANALYTICS.md
   - sales
   - scripts
   - workers

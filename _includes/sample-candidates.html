@@ -7,7 +7,7 @@ site.data.samples[include.id] exists; otherwise the caller keeps narrative copy.
   {% assign sample = site.data.samples[include.id] %}
 {% endif %}
 {% if sample %}
-<div class="sample-board" data-analytics="sample_view">
+<div class="sample-board">
   {% if sample.question %}
   <p class="lede">{{ sample.question }}</p>
   {% endif %}

@@ -40,7 +40,11 @@
 
   function pageview() {
     var path = window.location.pathname;
-    var map = {
+    if (path === "/pricing/") track("pricing_view");
+    if (path === "/pilot/") track("pilot_page_view");
+    if (path.indexOf("/docs/") === 0) track("docs_page_view", { path: path });
+    if (path === "/examples/sample-analysis/") track("sample_view");
+    var legacy = {
       "/": "homepage_viewed",
       "/docs/": "docs_opened",
       "/docs/getting-started/": "getting_started_opened",
@@ -48,8 +52,7 @@
       "/research/": "research_opened",
       "/changelog/": "changelog_opened"
     };
-    var name = map[path];
-    if (name) track(name);
+    if (legacy[path]) track(legacy[path]);
   }
 
   function track(eventName, extra) {
@@ -69,6 +72,18 @@
   document.addEventListener("click", function (event) {
     var target = event.target.closest("[data-analytics]");
     if (!target) return;
-    track(target.getAttribute("data-analytics"));
+    var extra = {};
+    var location = target.getAttribute("data-cta-src");
+    var plan = target.getAttribute("data-plan");
+    if (location) extra.location = location;
+    if (plan) extra.plan = plan;
+    track(target.getAttribute("data-analytics"), extra);
+  });
+
+  document.querySelectorAll(".sample-candidate").forEach(function (el) {
+    el.addEventListener("toggle", function () {
+      if (!el.open) return;
+      track("sample_candidate_open", { candidate: el.getAttribute("data-candidate") || undefined });
+    });
   });
 })();

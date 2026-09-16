@@ -7,7 +7,7 @@ eyebrow: Analytical labs
 ---
 
 <p class="hero-actions">
-  <a class="btn btn-primary" href="{{ '/pilot/' | relative_url }}" data-analytics="cta_click">Plan a pilot</a>
+  <a class="btn btn-primary" href="{{ '/pilot/' | relative_url }}" data-cta-src="labs_hero" data-analytics="cta_click">Plan a pilot</a>
   <a class="btn btn-secondary" href="{{ site.app_url }}/login" data-cta-src="labs_try" data-analytics="cta_click">Analyze a spectrum free</a>
 </p>
 
