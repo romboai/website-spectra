@@ -82,6 +82,12 @@ product:
   next_experiment_suggestion:
     value: null
     verified: false
+  dpa_available:
+    value: null
+    verified: false
+  private_deployment:
+    value: null
+    verified: false
 
 data:
   upload_formats_detail:
@@ -106,6 +112,9 @@ data:
     value: null
     verified: false
   subprocessors:
+    value: null
+    verified: false
+  encryption:
     value: null
     verified: false
 
@@ -135,6 +144,9 @@ pricing:
     value: null
     verified: false
   founding_price_note:
+    value: null
+    verified: false
+  monthly_annual_switch:
     value: null
     verified: false
 

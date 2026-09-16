@@ -1,14 +1,15 @@
-{% include cta-config.html %}
 <section class="section hero-band" id="hero" aria-labelledby="hero-title">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">{{ site.data.product.kicker | default: "Compound identification" }}</p>
-      <h1 id="hero-title">{{ site.data.product.tagline }}</h1>
-      <p class="lede">{{ site.data.product.subheading }}</p>
+      <p class="eyebrow">NMR compound identification</p>
+      <h1 id="hero-title">Know which structure your NMR data actually supports.</h1>
+      <p class="lede">Upload 1H and 13C spectra from Bruker, JEOL, Varian or JCAMP-DX. Spectra ranks candidate structures and shows, shift by shift, where each one fits and where it fails — so you confirm faster and know which experiment to run next.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="{{ primary_href }}" data-cta-src="home_hero" data-analytics="try_spectra_clicked" aria-label="Try Spectra">{{ primary_label }}</a>
-        <p class="hero-note">{{ site.data.product.audience }}</p>
+        <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="home_hero" data-analytics="cta_click" aria-label="Analyze a spectrum free">Analyze a spectrum free</a>
+        <a class="btn btn-secondary" href="{{ '/examples/sample-analysis/' | relative_url }}" data-analytics="sample_view">See a worked example</a>
       </div>
+      <p class="hero-note">3 free analyses.{% include fact.html path="product.typical_runtime" %}{% if fact_ok %} Typical result in {{ fact_node.value }}.{% endif %}</p>
+      <p class="hero-tertiary"><a href="{{ '/pilot/' | relative_url }}">Evaluating for a lab or company? Talk to us about a pilot</a></p>
     </div>
     {% include example-card.html %}
   </div>

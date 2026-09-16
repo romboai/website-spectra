@@ -105,10 +105,49 @@
 }
 
 .hero-note {
-  margin: 0;
+  margin: 0.85rem 0 0;
   color: var(--text-muted);
   font-family: var(--mono);
   font-size: 12px;
+}
+
+.hero-tertiary {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+}
+
+.hero-tertiary a {
+  color: var(--text-muted);
+}
+
+.proof-band {
+  padding-block: 1.25rem;
+}
+
+.plan-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.pricing-steps ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.compare-table-wrap {
+  overflow-x: auto;
+}
+
+.compare-table-wrap table {
+  width: 100%;
+}
+
+.founding-banner {
+  margin-top: 1.5rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
 }
 
 .example-card {

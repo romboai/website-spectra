@@ -7,7 +7,17 @@
       {% for item in faq_items %}
       <details>
         <summary>{{ item.question }}</summary>
-        <p>{{ item.answer }}{% if item.id == "which-data" %} See <a href="{{ '/docs/supported-data/' | relative_url }}">supported data</a>.{% endif %}{% if item.id == "trust-ranking" %} See <a href="{{ '/docs/evidence-and-confidence/' | relative_url }}">evidence and confidence</a>.{% endif %}{% if item.id == "pricing" %} See <a href="{{ '/pricing/' | relative_url }}">pricing</a>.{% endif %}</p>
+        <p>
+          {{ item.answer }}
+          {% if item.id == "which-data" %}
+            {% include fact.html path="data.upload_formats_detail" %}
+            {% if fact_ok %} <a href="{{ '/docs/supported-data/' | relative_url }}">Details per vendor</a>.{% endif %}
+          {% endif %}
+          {% if item.id == "trust-ranking" %}
+            {% include fact.html path="proof.benchmark_published" %}
+            {% if fact_ok %} Our benchmark shows how match relates to correctness.{% endif %}
+          {% endif %}
+        </p>
       </details>
       {% endfor %}
     </div>

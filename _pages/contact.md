@@ -10,7 +10,7 @@ eyebrow: Contact
   <article class="card">
     <h2>Try it yourself</h2>
     <p>Sign in and run analyses on your own 1H and 13C data.</p>
-    <p><a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="contact_try">Analyze a spectrum free</a></p>
+    <p><a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="contact_try" data-analytics="cta_click">Analyze a spectrum free</a></p>
   </article>
   <article class="card">
     <h2>Plan a pilot</h2>
@@ -23,7 +23,7 @@ eyebrow: Contact
 
 ## Headquarters
 
-Spectra is a product of **{{ site.data.company.legal_name }}**.
+Spectra is a product of **{{ site.data.company.legal_name }}**
 
 {{ site.data.company.address.line1 }}  
 {{ site.data.company.address.line2 }}  

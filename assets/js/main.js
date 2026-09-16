@@ -76,7 +76,7 @@
         event.preventDefault();
         return;
       }
-      if (form.getAttribute("data-lead-unconfigured") != null) {
+      if (form.hasAttribute("data-lead-unconfigured")) {
         event.preventDefault();
         error && error.classList.add("is-visible");
         window.spectraTrack && window.spectraTrack("lead_form_submit_error");

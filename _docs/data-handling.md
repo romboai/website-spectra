@@ -9,7 +9,7 @@ nav_order: 9
 
 ## What you upload
 
-NMR files and the metadata you attach in the application. Marketing forms should not receive those files.
+NMR files and the metadata you attach in the application. Do not send those files through the marketing contact form.
 
 {% include fact.html path="data.retention" %}
 {% if fact_ok %}
@@ -50,6 +50,6 @@ NMR files and the metadata you attach in the application. Marketing forms should
 {% endfor %}
 {% endif %}
 
-{% unless site.data.facts.data.retention.verified or site.data.facts.data.training_use.verified or site.data.facts.data.deletion.verified or site.data.facts.data.hosting_region.verified %}
+{% unless site.data.facts.data.retention.verified or site.data.facts.data.training_use.verified or site.data.facts.data.deletion.verified or site.data.facts.data.hosting_region.verified or site.data.facts.data.subprocessors.verified %}
 Contact us for our current data processing terms before uploading unpublished work. Start from [contact](/contact/).
 {% endunless %}

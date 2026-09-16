@@ -17,9 +17,11 @@
   question: How do I know whether to trust a ranking?
   answer: >-
     Look at match and residual error together, and at the signals no candidate
-    explains. Read Evidence and confidence in the docs.
+    explains. Read <a href="/docs/evidence-and-confidence/">Evidence and confidence</a>
+    in the docs.
 - id: pricing
   question: How much does it cost?
   answer: >-
     Free includes 3 analyses. Pro is €79/month or €790/year. Lab is €299/month
-    for 5 users. Enterprise and pilots are scoped with you.
+    for 5 users. Enterprise and pilots are scoped with you. See
+    <a href="/pricing/">pricing</a>.
