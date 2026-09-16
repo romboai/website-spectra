@@ -15,15 +15,16 @@ Recommended split (human decision):
 
 1. Keep the repository production branch as **`main`**.
 2. Enable GitHub Pages with **GitHub Actions** as the source (not the default Jekyll builder).
-3. `CNAME` contains `spectra.rombo.ai`.
+3. `CNAME` contains `spectrahome.rombo.ai` (temporary marketing hostname; do not put `spectra.rombo.ai` here while the app still owns that DNS).
 4. Production workflow: `.github/workflows/pages.yml`
 5. Pull-request tests: `.github/workflows/test.yml`
 
 ## DNS and CNAME
 
-- Record: `spectra.rombo.ai` → GitHub Pages (only after the split is approved)
-- File: `CNAME`
-- HTTPS should stay on
+- Live Pages hostname: `spectrahome.rombo.ai` → CNAME `romboai.github.io`
+- Product hostname: `spectra.rombo.ai` stays on the app host until the split is approved
+- File: `CNAME` (must match the Pages custom domain, no trailing space)
+- HTTPS is enforced on `spectrahome.rombo.ai`
 
 ## GitHub Actions
 
@@ -69,7 +70,7 @@ Rotate any webhook secret that was previously committed to the old React landing
 
 ## Production checklist
 
-- [ ] `product_url` still points at the live login
+- [ ] `product_url` still points at the application login
 - [ ] `lead_form_endpoint` is the Worker, not a Make.com URL
 - [ ] No secrets in `_site` or frontend JS
 - [ ] `noindex` is false in production

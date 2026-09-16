@@ -19,7 +19,7 @@ LC-MS first, NMR after isolation. Known flavonols, terpenes and peptides still c
 
 ## Where time is lost
 
-Isolating compounds that a 13C residual would have identified as kaempferol-like on day one. The public Spectra example uses exactly that chemical neighbourhood as a teaching schematic.
+Isolating compounds that a 13C residual would have identified as kaempferol-like on day one. The teaching example uses that chemical neighbourhood.
 
 ## How Spectra assists
 

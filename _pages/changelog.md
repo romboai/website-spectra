@@ -1,7 +1,7 @@
 ---
 title: Changelog
 h1: Spectra changelog
-description: Dated product updates for Spectra by ROMBO AI, starting from the public alpha on spectra.rombo.ai.
+description: Dated product updates for Spectra by ROMBO AI, starting from the public alpha.
 permalink: /changelog/
 eyebrow: Updates
 ---

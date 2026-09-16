@@ -1,9 +1,10 @@
+{% assign faq_items = site.data.faq %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {% for item in site.data.faq %}
+    {% for item in faq_items %}
     {
       "@type": "Question",
       "name": {{ item.question | jsonify }},

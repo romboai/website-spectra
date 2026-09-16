@@ -2,27 +2,54 @@
 title: Data handling
 nav: Data handling
 h1: Data handling
-description: What Spectra documentation can say about uploads, retention, training use and deletion without inventing policy.
+description: What you upload to Spectra and how we handle it.
 permalink: /docs/data-handling/
 nav_order: 9
 ---
 
-## What is uploaded
+## What you upload
 
-NMR files and the metadata you attach in the application. Marketing forms on this website should never receive those files.
+NMR files and the metadata you attach in the application. Marketing forms should not receive those files.
 
-## What is retained
+{% include fact.html path="data.retention" %}
+{% if fact_ok %}
+## How long we keep it
 
-**Needs legal/product review.** No retention period is published here.
+{{ fact_node.value }}
+{% endif %}
 
-## Training use
+{% include fact.html path="data.training_use" %}
+{% if fact_ok %}
+## Model training
 
-**Needs legal/product review.** This site does not claim that customer spectra are, or are not, used for training. Ask for the current policy before uploading unpublished chemistry.
+{{ fact_node.value }}
+{% endif %}
 
-## Deletion
+{% include fact.html path="data.deletion" %}
+{% if fact_ok %}
+## Deleting your data
 
-**Needs legal/product review.** There is no invented self-serve deletion SLA on this page. Enterprise agreements can specify deletion.
+{{ fact_node.value }}
+{% endif %}
 
-## Enterprise options
+{% include fact.html path="data.hosting_region" %}
+{% if fact_ok %}
+## Where it is processed
 
-Pilots can be scoped with additional handling constraints. Start from [contact](/contact/) and [security](/security/).
+{{ fact_node.value }}
+{% endif %}
+
+{% include fact.html path="data.subprocessors" %}
+{% if fact_ok %}
+## Subprocessors
+
+| Name | Purpose | Region |
+| --- | --- | --- |
+{% for row in fact_node.value %}
+| {{ row.name }} | {{ row.purpose }} | {{ row.region }} |
+{% endfor %}
+{% endif %}
+
+{% unless site.data.facts.data.retention.verified or site.data.facts.data.training_use.verified or site.data.facts.data.deletion.verified or site.data.facts.data.hosting_region.verified %}
+Contact us for our current data processing terms before uploading unpublished work. Start from [contact](/contact/).
+{% endunless %}

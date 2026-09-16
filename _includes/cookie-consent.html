@@ -1,10 +1,9 @@
 {% if site.consent_required %}
-<div class="cookie-banner" id="cookie-banner" hidden>
-  <p class="mb-0"><strong>Analytics cookies</strong></p>
-  <p>We use optional analytics to understand which public pages are useful. We do not send form fields, spectrum names, structures, or sample descriptions. See the <a href="{{ '/cookies/' | relative_url }}">cookie notice</a>.</p>
-  <div class="btn-row">
-    <button class="btn btn-primary" type="button" data-consent="accept">Accept analytics</button>
-    <button class="btn btn-secondary" type="button" data-consent="reject">Reject</button>
+<div class="cookie-banner" id="cookie-banner" hidden role="dialog" aria-label="Cookie preferences">
+  <p>Optional analytics cookies. We do not send form fields or sample data. <a href="{{ '/cookies/' | relative_url }}">Cookie notice</a></p>
+  <div class="cookie-banner-actions">
+    <button type="button" data-consent="reject">Reject</button>
+    <button type="button" data-consent="accept">Accept</button>
   </div>
 </div>
 {% endif %}

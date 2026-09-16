@@ -1,10 +1,6 @@
 {% assign mode = site.data.product.access_mode %}
 {% assign cta_set = site.data.product.cta[mode] %}
-{% if site.product_url and site.product_url != "" %}
-  {% assign product_href = site.product_url %}
-{% else %}
-  {% assign product_href = site.fallback_cta_path %}
-{% endif %}
+{% assign product_href = site.app_url | append: "/login" %}
 {% if cta_set.primary.url_key == "product_url" %}
   {% assign primary_href = product_href %}
 {% else %}

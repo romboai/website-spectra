@@ -1,11 +1,11 @@
 ---
 title: Sample analysis
-h1: Sample analysis — CASE-2043 schematic
-description: Annotated walkthrough of the public Spectra example — an unknown in DMSO-d6 with three ranked flavonols. No confidential laboratory result is claimed.
+h1: Sample analysis — CASE-2043
+description: Walkthrough of the Spectra teaching example — an unknown in DMSO-d6 with three ranked flavonoids.
 permalink: /examples/sample-analysis/
 ---
 
-This page explains the **public schematic** shown on the live Spectra homepage. It is labelled there as an example. It is not a measured client case, not a benchmark, and not a screenshot of a confidential session.
+This page walks through the teaching example on the homepage: an unknown in DMSO-d6, reviewed from 1H and 13C at 600 MHz.
 
 ## Analytical question
 
@@ -17,17 +17,14 @@ An unknown compound in DMSO-d6 needs a shortlist. The chemist has 1H and 13C at 
 - Field: 600 MHz
 - Solvent: DMSO-d6
 - Status on the card: for review
-- Public note: 128 candidates screened, evidence per shift
-
-No FID, no peak list and no raw integrals are published with the schematic. Do not invent them.
 
 ## Quality checks
 
-Before trusting any similar real case, confirm referencing to residual DMSO, inspect whether the 13C is complete, and decide if the sample is a single compound. The schematic assumes a reviewable unknown, not a crude extract.
+Before trusting any similar real case, confirm referencing to residual DMSO, inspect whether the 13C is complete, and decide if the sample is a single compound.
 
 ## Candidate generation
 
-The product story is retrieval over a large compound library followed by ranking. The schematic does not name the library. We therefore do not state a retrieval-space size.
+Spectra retrieves candidates over a large compound library and then ranks them.
 
 ## Ranked candidates
 
@@ -37,22 +34,22 @@ The product story is retrieval over a large compound library followed by ranking
 | 2 | Luteolin | 0.71 | 3.4 ppm |
 | 3 | Kaempferol | 0.66 | 4.1 ppm |
 
-These three flavonols are chemically close. The table is teaching the review objects (rank, match, residual), not publishing a validated identification of quercetin.
+These three closely related flavonoids (two flavonols and a flavone) are chemically close. The table teaches the review objects (rank, match, residual).
 
 ## Evidence
 
-The homepage promises evidence per shift. This documentation page cannot show those shift assignments because they were not published as a table. In a real case you would open the top candidate and ask which carbons carry the 1.8 ppm residual.
+In a real case you would open the top candidate and ask which carbons carry the 1.8 ppm residual. Luteolin is a flavone (no 3-OH); quercetin and kaempferol are flavonols. The C-3 region is where 13C can separate them.
 
 ## Remaining uncertainty
 
-Luteolin and kaempferol remain on the list. That is the point: a 0.94 match still leaves analogues on the desk. The status stays **for review**.
+Luteolin and kaempferol remain on the list. A 0.94 match still leaves analogues on the desk. The status stays **for review**.
 
 ## Next experiment
 
-If this were a real unknown, a chemist might request a cleaner 13C, an authentic quercetin overlay, or a complementary 2D experiment the laboratory already validates. We do not prescribe a pulse sequence that the product has not published.
+If this were a real unknown, a chemist might request a cleaner 13C, an authentic overlay, or a complementary 2D experiment the laboratory already validates.
 
 ## Final expert decision
 
-The expert decides. Possible honest outcomes: confirm quercetin against a standard, dereplicate as a known flavonol, or keep the sample unknown if residuals or chromatography disagree.
+The expert decides. Possible outcomes: confirm quercetin against a standard, dereplicate as a known flavonoid, or keep the sample unknown if residuals or chromatography disagree.
 
-{% include cta.html %}
+{% include cta.html src="sample_analysis" %}

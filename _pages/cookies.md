@@ -21,8 +21,6 @@ If you accept, PostHog may load using the project key configured for this site. 
 - structures
 - sample descriptions
 
-The live product application has historically also loaded Google Analytics (`G-YEP854033P`). That tag is **not** copied into this marketing build. A separate consent decision is required if product analytics should continue.
-
 ## Manage your choice
 
-Clear site data for spectra.rombo.ai or use the banner the next time the consent cookie is absent.
+Clear site data for this domain, or use the banner the next time the consent record is absent.

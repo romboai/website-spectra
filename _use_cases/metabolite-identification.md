@@ -35,7 +35,7 @@ A shortlist of metabolite structures consistent with the NMR, with leftovers tha
 
 ## Limitations
 
-We do not claim automated pathway mapping, quantitative metabolomics, or MSI identification levels. Biofluids are mixtures; protein and lipid overlap are out of scope for a one-compound ranking.
+Spectra does not automate pathway mapping, quantitative metabolomics, or MSI identification levels. Biofluids are mixtures; protein and lipid overlap are out of scope for a one-compound ranking. NMR metabolomics on complex mixtures is typically 1H-dominated; the best fit today is isolated or enriched material with 13C data.
 
 ## Recommended validation
 

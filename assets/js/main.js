@@ -60,6 +60,9 @@
     var key = input.getAttribute("data-utm");
     if (params.get(key)) input.value = params.get(key);
   });
+  document.querySelectorAll("[data-referrer]").forEach(function (input) {
+    if (document.referrer) input.value = document.referrer;
+  });
 
   document.querySelectorAll("[data-lead-form]").forEach(function (form) {
     var success = form.querySelector("[data-success]");
@@ -73,7 +76,12 @@
         event.preventDefault();
         return;
       }
-      if (form.action.indexOf("mailto:") === 0) return;
+      if (form.getAttribute("data-lead-unconfigured") != null) {
+        event.preventDefault();
+        error && error.classList.add("is-visible");
+        window.spectraTrack && window.spectraTrack("lead_form_submit_error");
+        return;
+      }
       event.preventDefault();
       if (button) {
         button.disabled = true;
@@ -90,11 +98,11 @@
           success && success.classList.add("is-visible");
           error && error.classList.remove("is-visible");
           form.reset();
-          window.spectraTrack && window.spectraTrack("lead_form_submitted");
+          window.spectraTrack && window.spectraTrack("lead_form_submit_success");
         })
         .catch(function () {
           error && error.classList.add("is-visible");
-          window.spectraTrack && window.spectraTrack("lead_form_failed");
+          window.spectraTrack && window.spectraTrack("lead_form_submit_error");
         })
         .finally(function () {
           if (button) {

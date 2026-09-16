@@ -1,6 +1,6 @@
 {% include cta-config.html %}
 <div class="btn-row">
-  <a class="btn btn-primary" href="{{ primary_href }}" data-analytics="primary_cta_clicked" aria-label="{{ include.primary_label | default: primary_label | replace: 'Try', 'Try Spectra' }}">{{ include.primary_label | default: primary_label }}</a>
+  <a class="btn btn-primary" href="{{ primary_href }}" data-cta-src="{{ include.src | default: 'body_cta' }}" data-analytics="primary_cta_clicked" aria-label="{{ include.primary_label | default: primary_label | replace: 'Try', 'Try Spectra' }}">{{ include.primary_label | default: primary_label }}</a>
   {% unless include.hide_secondary %}
   <a class="btn btn-secondary" href="{{ include.secondary_href | default: secondary_href | relative_url }}" data-analytics="{{ include.secondary_event | default: 'docs_opened' }}">{{ include.secondary_label | default: secondary_label }}</a>
   {% endunless %}

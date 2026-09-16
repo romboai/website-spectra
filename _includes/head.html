@@ -10,17 +10,22 @@
 <meta name="theme-color" content="#131010" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 {% seo %}
+{% include fact.html path="company.social_x_handle" %}
+{% if fact_ok %}
+<meta name="twitter:site" content="@{{ fact_node.value | remove_first: '@' }}">
+<meta name="twitter:creator" content="@{{ fact_node.value | remove_first: '@' }}">
+{% endif %}
 {% include schema/organization.html %}
-{% if page.schema == "software" or page.layout == "landing" %}
+{% if page.schema == "software" %}
 {% include schema/software-application.html %}
 {% endif %}
-{% if page.schema == "faq" or page.layout == "landing" %}
+{% if page.schema == "faq" %}
 {% include schema/faq.html %}
 {% endif %}
-{% unless page.layout == "landing" %}
+{% if page.collection == "docs" or page.collection == "use_cases" %}
 {% include schema/breadcrumb.html %}
-{% endunless %}
-{% if page.schema == "article" or page.layout == "docs" or page.layout == "post" or page.layout == "use-case" %}
+{% endif %}
+{% if page.collection == "changelog" %}
 {% include schema/article.html %}
 {% endif %}
 {% include cookie-consent.html %}

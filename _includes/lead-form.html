@@ -1,14 +1,15 @@
 {% assign endpoint = site.lead_form_endpoint %}
-{% assign action = endpoint %}
 {% if endpoint == nil or endpoint == "" %}
-  {% assign action = "mailto:" | append: site.contact_email %}
+<form class="form" id="{{ include.id | default: 'lead-form' }}" method="post" action="#" data-lead-form data-lead-unconfigured>
+{% else %}
+<form class="form" id="{{ include.id | default: 'lead-form' }}" method="post" action="{{ endpoint }}" data-lead-form>
 {% endif %}
-<form class="form" id="{{ include.id | default: 'lead-form' }}" method="post" action="{{ action }}" data-lead-form>
   <input class="hp" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
   <input type="hidden" name="utm_source" data-utm="utm_source">
   <input type="hidden" name="utm_medium" data-utm="utm_medium">
   <input type="hidden" name="utm_campaign" data-utm="utm_campaign">
   <input type="hidden" name="utm_content" data-utm="utm_content">
+  <input type="hidden" name="referrer" data-referrer>
   <input type="hidden" name="landing_page" value="{{ page.url }}">
 
   <label>
@@ -36,22 +37,25 @@
       <option value="dereplication">Dereplication</option>
       <option value="unknown">Unknown identification</option>
       <option value="natural-products">Natural products</option>
-      <option value="metabolites">Metabolite identification</option>
+      <option value="analytical-labs">Analytical / contract lab</option>
+      <option value="core-facilities">NMR core facility</option>
       <option value="enterprise-pilot">Enterprise pilot</option>
     </select>
   </label>
   <label>
-    Message <span class="hint">(optional — do not include structures, spectrum filenames, or confidential sample details)</span>
+    Message
+    <span class="hint">Please don't include structures or confidential sample details in this first message.</span>
     <textarea name="message" rows="4" maxlength="2000"></textarea>
   </label>
   <label style="display:flex;gap:0.6rem;align-items:flex-start;font-weight:500">
     <input type="checkbox" name="consent" required style="margin-top:0.3rem">
     <span>I agree that ROMBO AI may use these details to respond to this enquiry, as described in the <a href="{{ '/privacy/' | relative_url }}">privacy notice</a>.</span>
   </label>
-  <button class="btn btn-primary" type="submit" data-analytics="lead_form_submitted">{{ include.submit_label | default: "Request a pilot" }}</button>
+  <button class="btn btn-primary" type="submit">{{ include.submit_label | default: "Request a pilot" }}</button>
   <p class="form-status success" role="status" data-success>Thank you. We will reply to the work email you provided.</p>
   <p class="form-status error" role="alert" data-error>The form could not be sent. Email <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a> instead.</p>
-  {% if endpoint == nil or endpoint == "" %}
-  <p class="hint">This form currently opens your email client. A server-side endpoint can be configured in <code>site.lead_form_endpoint</code>.</p>
-  {% endif %}
 </form>
+{% include fact.html path="company.booking_url" %}
+{% if fact_ok %}
+<p class="mt-6"><a class="btn btn-secondary" href="{{ fact_node.value }}">Book a 20-minute call</a></p>
+{% endif %}

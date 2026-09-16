@@ -2,31 +2,68 @@
 title: Supported NMR data
 nav: Supported data
 h1: Supported data
-description: Verified NMR nuclei and file families for Spectra. Formats that are not confirmed are omitted.
+description: NMR nuclei and file families for Spectra.
 permalink: /docs/supported-data/
 nav_order: 3
 ---
 
-Only items stated on the live product, or otherwise reviewed, appear as supported. Everything else is omitted or marked “contact us”.
-
-## Experiment types we list
+## Experiment types
 
 - **1H NMR**
 - **13C NMR**
 
-The live homepage example is 1H + 13C at 600 MHz. Other nuclei and 2D experiments may be useful in the laboratory; they are not published here as a support matrix.
+The teaching example uses 1H + 13C at 600 MHz.
 
+{% include fact.html path="data.upload_formats_detail" %}
+{% if fact_ok %}
+## What to upload
+
+| Vendor | File | Notes |
+| --- | --- | --- |
+{% for row in fact_node.value %}
+| {{ row.vendor }} | {{ row.upload }} | {{ row.notes }} |
+{% endfor %}
+{% else %}
 ## Source families
 
 {% for item in site.data.formats.vendor_families %}
-- **{{ item.label }}** — {{ item.notes }}
+- **{{ item.label }}**
 {% endfor %}
 
 ## Exchange format
 
 {% for item in site.data.formats.exchange_formats %}
-- **{{ item.label }}** — {{ item.notes }}
+- **{{ item.label }}**
 {% endfor %}
+{% endif %}
+
+{% include fact.html path="data.max_upload_size" %}
+{% if fact_ok %}
+## Upload size
+
+Maximum upload size is {{ fact_node.value }}.
+{% endif %}
+
+{% include fact.html path="data.solvents" %}
+{% if fact_ok %}
+## Solvents
+
+{{ fact_node.value }}
+{% endif %}
+
+{% include fact.html path="product.one_h_only_supported" %}
+{% if fact_ok %}
+## 1H-only submissions
+
+{{ fact_node.value }}
+{% endif %}
+
+{% include fact.html path="product.low_field_supported" %}
+{% if fact_ok %}
+## Low-field data
+
+{{ fact_node.value }}
+{% endif %}
 
 ## Metadata
 
@@ -36,14 +73,8 @@ The live homepage example is 1H + 13C at 600 MHz. Other nuclei and 2D experiment
 
 **Optional context:** molecular formula, exact mass or MS, synthetic route notes.
 
-## Size and quality limits
-
-No public file-size quota is published. If an upload fails, see [troubleshooting](/docs/troubleshooting/) or [contact us](/contact/).
-
 ## Contact us for
 
 - Other vendor export dialects
 - 2D-only cases
 - Very large datasets or private-library evaluation
-
-Do not assume a format is supported because a competitor lists it.

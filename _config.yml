@@ -4,23 +4,20 @@ description: >-
   Spectra is an AI scientific agent for NMR compound identification.
   It ranks candidate structures from 1H and 13C data, validates them
   against predicted shifts, and returns traceable evidence for chemist review.
-url: https://spectra.rombo.ai
+url: https://spectrahome.rombo.ai
+marketing_url: https://spectrahome.rombo.ai
+app_url: https://spectra.rombo.ai
 baseurl: ""
 lang: en
 timezone: Europe/Rome
 
-# PLACEHOLDER_PRODUCT_URL is not used. The live product login is verified.
-# This is the only application URL setting. Templates must use site.product_url.
 product_url: https://spectra.rombo.ai/login
 lead_form_endpoint: ""
 contact_email: contact@rombo.ai
 fallback_cta_path: /contact/
 
-# Analytics — leave keys empty until configured. Do not commit secrets.
 posthog_key: ""
 posthog_host: https://eu.i.posthog.com
-# Live marketing currently also uses Google Analytics. Keep disabled here
-# until a consent decision is made. Do not hardcode measurement IDs in JS.
 google_analytics: ""
 
 # Consent: analytics scripts load only after explicit accept.
@@ -43,6 +40,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-last-modified-at
 
 collections:
   pages:
@@ -70,6 +68,8 @@ defaults:
     values:
       layout: page
       image: /assets/images/og-default.png
+      seo:
+        type: website
   - scope:
       path: ""
       type: pages
@@ -106,6 +106,8 @@ defaults:
     values:
       layout: changelog
       sitemap: true
+      seo:
+        type: article
   - scope:
       path: ""
       type: posts
@@ -126,6 +128,8 @@ exclude:
   - node_modules
   - README.md
   - DEPLOYMENT.md
+  - TEAM_FACTS_NEEDED.md
+  - sales
   - scripts
   - workers
   - tmp
@@ -145,9 +149,6 @@ feed:
 author:
   name: ROMBO AI S.r.l.
   url: https://rombo.ai
-
-twitter:
-  card: summary_large_image
 
 logo: /assets/images/logo.png
 

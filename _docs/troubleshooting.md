@@ -9,11 +9,11 @@ nav_order: 10
 
 ## I cannot sign in
 
-Use [{{ site.product_url }}]({{ site.product_url }}). The live login is Auth0-hosted. Try the same email, passkey or Google account you used at sign-up. If you are blocked, email [{{ site.contact_email }}](mailto:{{ site.contact_email }}).
+Use [{{ site.app_url }}/login]({{ site.app_url }}/login). Try the same email, passkey or Google account you used at sign-up. If you are blocked, email [{{ site.contact_email }}](mailto:{{ site.contact_email }}).
 
 ## My file is rejected
 
-Confirm the export is 1H or 13C from Bruker, JEOL, Varian or JCAMP-DX. Re-export from the processing software rather than sending an unnamed binary. If the family is different, [contact us](/contact/) instead of assuming support.
+Confirm the export is 1H or 13C from Bruker, JEOL, Varian or JCAMP-DX. Re-export from the processing software rather than sending an unnamed binary. If the family is different, [contact us](/contact/).
 
 ## The shortlist looks implausible
 
@@ -25,8 +25,8 @@ Confirm the export is 1H or 13C from Bruker, JEOL, Varian or JCAMP-DX. Re-export
 
 ## Match is high but I do not believe it
 
-Trust the residual error and the chemistry. High match on a missing-library case is a known failure mode. See [evidence and confidence](/docs/evidence-and-confidence/).
+Trust the residual error and the chemistry. A high match when the true molecule is outside the library is a known failure mode. See [evidence and confidence](/docs/evidence-and-confidence/).
 
 ## I need this for a regulated method
 
-Stop. This product is a public alpha without a published validation package. Open an [enterprise conversation](/contact/).
+Spectra is a public alpha. Open an [enterprise conversation](/pilot/).

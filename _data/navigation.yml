@@ -40,6 +40,8 @@ footer:
     links:
       - label: Contact
         path: /contact/
+      - label: Pilot
+        path: /pilot/
       - label: ROMBO AI website
         url: https://rombo.ai
       - label: GitHub

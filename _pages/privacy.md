@@ -1,12 +1,12 @@
 ---
 title: Privacy notice
 h1: Privacy notice
-description: Privacy information for the Spectra marketing website and pointers to product data questions.
+description: Privacy information for the Spectra marketing website.
 permalink: /privacy/
 eyebrow: Legal
 ---
 
-This notice covers the **marketing website** at https://spectra.rombo.ai operated by {{ site.data.company.legal_name }}.
+This notice covers the marketing website at {{ site.marketing_url }}, operated by {{ site.data.company.legal_name }}
 
 ## Controller
 
@@ -21,7 +21,7 @@ This notice covers the **marketing website** at https://spectra.rombo.ai operate
 - Marketing attribution (UTM parameters and referrer domain), if analytics is accepted
 - Information you voluntarily submit in the contact form: name, work email, organization, optional role, use-case category, optional message
 
-We configure analytics **not** to send form field values, spectrum names, structures, or sample descriptions.
+We configure analytics not to send form field values, spectrum names, structures, or sample descriptions.
 
 ## Legal basis
 
@@ -29,16 +29,16 @@ Enquiries are processed to respond to your request and, where required, on the b
 
 ## Retention
 
-Contact messages are kept long enough to answer the request and manage a pilot conversation. A precise corporate retention schedule still needs legal review; see [data handling](/docs/data-handling/).
+Contact messages are kept long enough to answer the request and manage a pilot conversation.
 
 ## Your rights
 
 Depending on applicable law, you may request access, correction, deletion, or restriction by emailing [{{ site.data.company.email }}](mailto:{{ site.data.company.email }}).
 
-## Product application
+## Spectra application
 
-Uploaded NMR files in the logged-in product are a separate processing activity. Ask product or legal for the current application policy; this marketing notice does not invent one.
+For personal data processed in the Spectra application, contact {% include fact.html path="company.privacy_email" %}{% if fact_ok %}{{ fact_node.value }}{% else %}{{ site.contact_email }}{% endif %}.
 
 ## Changes
 
-We will update this page when the reviewed policy is available.
+We will update this page when our practices change.

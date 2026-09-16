@@ -1,72 +1,67 @@
 - id: what-it-does
-  question: What exactly does Spectra do?
+  question: What does Spectra do?
   answer: >-
-    Spectra guides a laboratory from NMR data to an explainable shortlist of
-    molecular identities. It retrieves plausible candidates, compares predicted
-    and measured shifts, and returns match information, residual error, and
-    evidence for chemist review. Ranking is not confirmation.
+    Spectra takes 1H and 13C NMR data, retrieves and ranks candidate structures,
+    and shows the evidence for each: match value, residual error and per-shift
+    agreement. It is a decision aid; the chemist makes the identification.
+- id: which-data
+  question: Which data can I upload?
+  answer: >-
+    1H and 13C spectra from Bruker, JEOL and Varian systems, or JCAMP-DX.
 - id: replacement
-  question: Is it a replacement for Mnova, TopSpin or ACD/Labs?
+  question: Does it replace Mnova, TopSpin or ACD/Labs?
   answer: >-
-    No. Spectra is a reasoning, ranking and evidence layer. Acquisition,
-    processing, peak picking and reporting can remain in the tools already used
-    in the laboratory.
+    No. Keep acquisition and processing where they are. Spectra is the ranking
+    and evidence step after them.
 - id: mixtures
   question: Is it only for pure compounds?
   answer: >-
-    No. The public product description includes verification of knowns,
-    dereplication of mixtures, and identification of unknowns. Mixtures,
-    impurities and overlapping signals remain harder cases and may require
-    additional experiments.
+    No. Spectra supports verification of knowns, dereplication of mixtures, and
+    identification of unknowns. Mixtures, impurities and overlapping signals
+    remain harder cases and may require additional experiments.
 - id: libraries
   question: Does it only work with proprietary libraries?
   answer: >-
-    No. The distinctive value is combining large-scale compound libraries with
-    foundation-model ranking and physics-guided validation. Customer-private
-    libraries may be discussed for enterprise pilots; that capability is not
-    described as a default self-service feature here.
+    No. Spectra combines large-scale compound libraries with foundation-model
+    ranking and physics-guided validation. Customer-private libraries can be
+    discussed for enterprise pilots.
 - id: unknown-vs-verify
   question: Does it do verification or also unknown identification?
   answer: >-
-    Both appear in the live product description. Verification of a proposed
-    identity is usually the lower-risk path. Open-world identification of an
-    unknown is possible but carries more residual uncertainty and more often
-    needs a next experiment.
+    Both. Verification of a proposed identity is usually the lower-risk path.
+    Identification of an unknown is possible but carries more residual
+    uncertainty and more often needs a next experiment.
 - id: only-nmr
   question: Does it only use NMR?
   answer: >-
-    The current public product is an NMR compound-identification agent. Primary
-    inputs stated on the live site are 1H and 13C data. Molecular formula, exact
-    mass, MS or synthesis context may be supplied as additional context when
-    available. Spectra is not positioned here as a standalone MS or IR product.
+    Spectra is an NMR compound-identification agent. Primary inputs are 1H and
+    13C data. Molecular formula, exact mass, MS or synthesis context may be
+    supplied as additional context when available.
 - id: hallucinations
   question: How do you avoid generative-model hallucinations?
   answer: >-
     Candidate generation is not treated as sufficient. Hypotheses are ranked
     against retrieved structures and then checked by comparing predicted and
-    measured shifts. Candidates the data cannot support should fall in rank or
-    be discarded.
+    measured shifts. Candidates the data cannot support fall in rank or are
+    discarded.
 - id: confidence
   question: How is confidence in a result assessed?
   answer: >-
-    The live product surfaces a match value, 13C RMSD, and shift-level evidence.
+    Spectra surfaces a match value, 13C RMSD, and shift-level evidence.
     Confidence is conditional on the submitted data, the search space, and the
     quality of the spectrum. A high match is still a hypothesis until a chemist
     reviews it.
 - id: regulated
   question: Is it suitable for regulated laboratories?
   answer: >-
-    Spectra can support a documented review trail, but this website does not
-    claim a completed validation package, 21 CFR Part 11 certification, or any
-    other regulatory approval. Regulated use requires a separate enterprise
-    discussion.
+    Spectra can support a documented review trail. Regulated use is scoped as
+    an enterprise conversation, including method validation on your samples.
 - id: time-to-value
   question: How long does it take to see value?
   answer: >-
-    Self-service users can sign in and submit a spectrum from the live product.
-    The fastest evaluations usually start with verification or dereplication on
-    already-available 1H and 13C datasets. Enterprise pilots are scoped around
-    a real case.
+    You can sign in and submit a spectrum. The fastest evaluations usually
+    start with verification or dereplication on 1H and 13C datasets you already
+    have. Enterprise pilots are scoped around a real case.
 - id: chemist-in-control
   question: Who makes the final identification?
   answer: >-
@@ -78,4 +73,4 @@
   answer: >-
     Free includes 3 analyses. Pro is €79 per month or €790 per year. Lab is
     €299 per month for 5 users. Enterprise is custom. See the pricing page
-    for who each plan is for. A paid plan does not confirm a molecular identity.
+    for who each plan is for.

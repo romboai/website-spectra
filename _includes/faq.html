@@ -1,11 +1,13 @@
+{% assign faq_source = include.source | default: "faq" %}
+{% assign faq_items = site.data[faq_source] %}
 <section class="section" id="faq" aria-labelledby="faq-title">
   <div class="wrap">
     <h2 id="faq-title">Frequently asked questions</h2>
     <div class="faq">
-      {% for item in site.data.faq %}
+      {% for item in faq_items %}
       <details>
         <summary>{{ item.question }}</summary>
-        <p>{{ item.answer }}</p>
+        <p>{{ item.answer }}{% if item.id == "which-data" %} See <a href="{{ '/docs/supported-data/' | relative_url }}">supported data</a>.{% endif %}{% if item.id == "trust-ranking" %} See <a href="{{ '/docs/evidence-and-confidence/' | relative_url }}">evidence and confidence</a>.{% endif %}{% if item.id == "pricing" %} See <a href="{{ '/pricing/' | relative_url }}">pricing</a>.{% endif %}</p>
       </details>
       {% endfor %}
     </div>

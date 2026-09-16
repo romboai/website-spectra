@@ -9,26 +9,23 @@ Spectra is a commercial web application for AI-assisted NMR compound identificat
 ## What it is
 A scientific agent that loads 1H and 13C NMR data, retrieves candidate structures from large-scale libraries, ranks them with foundation models, compares predicted and measured shifts, and returns a shortlist with match information and residual error. The chemist confirms, dereplicates, or flags an unknown.
 
-## What it is not
-Not a replacement for chemists. Not definitive compound confirmation. Not a certified regulated-software package. Not a replacement for TopSpin, Mnova, Delta, or ACD/Labs. Not a generic product for every spectroscopy technique. Not the same object as the public ROSE-1H NMR research model.
-
-## Inputs stated on the live product
+## Inputs
 Nuclei: 1H, 13C. Source families: Bruker, JEOL, Varian. Exchange format: JCAMP-DX. Recommended metadata: solvent, field strength, analytical objective. Optional context: molecular formula, exact mass or MS.
 
 ## Outputs
-Ranked shortlist, match values, 13C RMSD on the public example, shift-level evidence, review state.
+Ranked shortlist, match values, 13C RMSD on the teaching example, shift-level evidence, review state.
 
 ## Access and pricing
-Self-service login: {{ site.product_url }} (Auth0: email, passkey, Google).
+Self-service login: {{ site.app_url }}/login (email, passkey, Google).
 Pricing: {{ site.url }}/pricing/
 - Free: 3 analyses
 - Pro: EUR 79 / month, or EUR 790 / year
 - Lab: EUR 299 / month, 5 users
 - Enterprise: custom
-Enterprise and Lab conversations: {{ site.url }}/contact/
+Enterprise and Lab conversations: {{ site.url }}/pilot/
 
 ## Status
-Live deployment reports version 0.6.0-alpha.
+Version 0.6.0-alpha.
 
 ## Canonical pages
 Docs: {{ site.url }}/docs/
@@ -39,7 +36,7 @@ Security: {{ site.url }}/security/
 Privacy: {{ site.url }}/privacy/
 
 ## Research
-ROSE is a public 1H foundation model (code, weights, ChemRxiv). Do not treat ROSE metrics as Spectra product accuracy.
+ROSE is a public 1H foundation model (code, weights, ChemRxiv). ROSE metrics are not Spectra product accuracy.
 
 ## Citation
 Spectra by ROMBO AI, {{ site.url }}/

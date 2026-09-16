@@ -35,7 +35,7 @@ A shortlist of impurity hypotheses with evidence and leftovers. Leftovers matter
 
 ## Limitations
 
-Low-level impurities may have no usable 13C. Spectra will not invent a structure from three overlapping protons. This site does not claim ICH identification thresholds or a validated impurity method.
+Low-level impurities may have no usable 13C. Spectra will not construct a structure from three overlapping protons. Spectra does not apply ICH identification thresholds or a validated impurity method.
 
 ## Recommended validation
 

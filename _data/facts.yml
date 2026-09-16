@@ -1,0 +1,150 @@
+# Public facts. Templates render a value only when verified is true and value is non-empty.
+# Integrate with evidence.yml: numerical KPIs stay there and remain hidden unless verified and public.
+
+company:
+  legal_name:
+    value: "ROMBO AI S.r.l."
+    verified: true
+  address:
+    value: "Open Campus, SS 195 KM 2,300, 09123 Cagliari, Italy"
+    verified: true
+  vat_number:
+    value: null
+    verified: false
+  rea:
+    value: null
+    verified: false
+  share_capital:
+    value: null
+    verified: false
+  contact_email:
+    value: "contact@rombo.ai"
+    verified: true
+  privacy_email:
+    value: null
+    verified: false
+  social_x_handle:
+    value: null
+    verified: false
+  linkedin_url:
+    value: null
+    verified: false
+  booking_url:
+    value: null
+    verified: false
+
+product:
+  version:
+    value: "0.6.0-alpha"
+    verified: true
+  stage_label:
+    value: "Public alpha"
+    verified: true
+  typical_runtime:
+    value: null
+    verified: false
+  match_definition:
+    value: null
+    verified: false
+  shift_predictor:
+    value: null
+    verified: false
+  predictor_error_1h_ppm:
+    value: null
+    verified: false
+  predictor_error_13c_ppm:
+    value: null
+    verified: false
+  libraries:
+    value: null
+    verified: false
+  library_size:
+    value: null
+    verified: false
+  one_h_only_supported:
+    value: null
+    verified: false
+  low_field_supported:
+    value: null
+    verified: false
+  export_formats:
+    value: null
+    verified: false
+  audit_trail:
+    value: null
+    verified: false
+  api_available:
+    value: null
+    verified: false
+  rose_role_in_product:
+    value: null
+    verified: false
+  next_experiment_suggestion:
+    value: null
+    verified: false
+
+data:
+  upload_formats_detail:
+    value: null
+    verified: false
+  max_upload_size:
+    value: null
+    verified: false
+  solvents:
+    value: null
+    verified: false
+  retention:
+    value: null
+    verified: false
+  training_use:
+    value: null
+    verified: false
+  deletion:
+    value: null
+    verified: false
+  hosting_region:
+    value: null
+    verified: false
+  subprocessors:
+    value: null
+    verified: false
+
+pricing:
+  vat_note:
+    value: null
+    verified: false
+  free_expiry:
+    value: null
+    verified: false
+  pro_analyses_included:
+    value: null
+    verified: false
+  lab_analyses_included:
+    value: null
+    verified: false
+  academic_offer:
+    value: null
+    verified: false
+  credit_packs:
+    value: null
+    verified: false
+  pilot_scope:
+    value: null
+    verified: false
+  pilot_price:
+    value: null
+    verified: false
+  founding_price_note:
+    value: null
+    verified: false
+
+proof:
+  benchmark_published:
+    value: false
+    verified: true
+  customer_logos:
+    value: null
+    verified: false
+  case_studies:
+    value: null
+    verified: false

@@ -23,11 +23,11 @@ Rolling baselines create false peaks and hide weak impurities. Correct obvious b
 
 ## Solvent
 
-The live example uses DMSO-d6. Always state the solvent. Residual solvent and water signals are otherwise easy to treat as analyte peaks.
+The teaching example uses DMSO-d6. Always state the solvent. Residual solvent and water signals are otherwise easy to treat as analyte peaks.
 
 ## Field strength
 
-State the spectrometer frequency. The public example uses 600 MHz. Predicted versus measured residuals are not comparable across an undeclared field.
+State the spectrometer frequency. The teaching example uses 600 MHz. Predicted versus measured residuals are not comparable across an undeclared field.
 
 ## Nucleus
 

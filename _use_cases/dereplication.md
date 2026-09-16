@@ -23,7 +23,7 @@ Chromatography on known flavonols, sugars or fatty-acid remnants. The cost is in
 
 ## How Spectra assists
 
-The live product language includes dereplication explicitly: retrieve knowns and analogues, validate shifts, and leave “already known” versus “still unknown” as a human call.
+Use Spectra to retrieve knowns and analogues, validate shifts, and leave “already known” versus “still unknown” as a human call.
 
 ## Data typically required
 

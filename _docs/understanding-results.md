@@ -7,7 +7,7 @@ permalink: /docs/understanding-results/
 nav_order: 6
 ---
 
-The live homepage preview shows three objects worth learning: candidate name, match, and 13C RMSD.
+Three objects to learn first: candidate name, match, and 13C RMSD.
 
 ## Candidate ranking
 
@@ -15,15 +15,22 @@ Rank is a sort order over hypotheses that survived retrieval and physics-guided 
 
 ## Assignments and explained peaks
 
-Where the product shows shift-level evidence, read which observed signals are claimed by the candidate. Explained is not the same as uniquely explained.
+Read which observed signals are claimed by the candidate. Explained is not the same as uniquely explained.
 
 ## Unexplained peaks
 
-Signals that no candidate accounts for are often the scientifically important part: an impurity, a second component, a solvent, or a wrong window. Do not ignore them because the top match looks familiar.
+Signals that no candidate accounts for are often the scientifically important part: an impurity, a second component, a solvent, or a wrong window.
 
 ## Contradictions
 
-A candidate with a large 13C RMSD, or a mismatch on a distinctive carbon, should fall even if the 1H looks plausible. Analogues such as flavonols in the public example are close in 1H and separate more clearly when 13C residual error is visible.
+A candidate with a large 13C RMSD, or a mismatch on a distinctive carbon, should fall even if the 1H looks plausible. Close flavonoids in the teaching example separate more clearly when 13C residual error is visible.
+
+{% include fact.html path="product.match_definition" %}
+{% if fact_ok %}
+## What the match value means
+
+{{ fact_node.value }}
+{% endif %}
 
 ## Confidence and evidence score
 
@@ -31,7 +38,7 @@ Treat match and RMSD as complementary. High match plus low residual error is a s
 
 ## Suggested next experiment
 
-If several candidates remain close, the honest outcome is another measurement: cleaner 13C, a complementary 2D experiment the laboratory already runs, MS for formula, or isolation. The product should make that residual uncertainty visible.
+If several candidates remain close, the honest outcome is another measurement: cleaner 13C, a complementary 2D experiment the laboratory already runs, MS for formula, or isolation.
 
 ## Traceable report
 

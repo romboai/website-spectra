@@ -1,12 +1,12 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": {% if page.collection == "docs" %}"TechArticle"{% else %}"Article"{% endif %},
+  "@type": "Article",
   "headline": {{ page.title | jsonify }},
   "description": {{ page.description | default: page.excerpt | strip_html | truncate: 160 | jsonify }},
   "url": "{{ site.url }}{{ page.url }}",
-  "datePublished": {{ page.date | default: site.time | date: "%Y-%m-%d" | jsonify }},
-  "dateModified": {{ page.last_modified_at | default: page.date | default: site.time | date: "%Y-%m-%d" | jsonify }},
+  "datePublished": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date: "%Y-%m-%d" | jsonify }},
   "author": {
     "@type": "Organization",
     "name": {{ site.data.company.legal_name | jsonify }}

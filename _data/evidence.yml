@@ -1,4 +1,4 @@
-# Claim and evidence registry.
+# Claim evidence index. Numerical KPIs stay hidden unless verified and public.
 # Templates may render a numerical KPI only when verified: true AND public: true.
 # Historical landing-page KPIs are retained here for review and must stay hidden.
 

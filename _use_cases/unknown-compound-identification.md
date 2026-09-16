@@ -31,11 +31,11 @@ The public workflow is built for this case: load 1H and 13C, retrieve, discard w
 
 ## Resulting output
 
-A shortlist plus an explicit residual. The public CASE-2043 schematic is this job in miniature: three flavonols, ranked, still “for review”.
+A shortlist plus an explicit residual. The CASE-2043 teaching example is this job in miniature: three closely related flavonoids (two flavonols and a flavone), ranked, still “for review”.
 
 ## Limitations
 
-If the molecule is absent from the searchable space, Spectra cannot retrieve it. Elucidation from first principles is then the correct path. We do not claim de novo structure elucidation as a completed, guaranteed capability.
+If the molecule is absent from the searchable space, Spectra cannot retrieve it. Elucidation from first principles is then the correct path. Spectra does not complete de novo structure elucidation as a guaranteed capability.
 
 ## Recommended validation
 

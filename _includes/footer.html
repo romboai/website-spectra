@@ -17,6 +17,24 @@
     </div>
     <div class="footer-bottom">
       <p class="mb-0">{{ site.data.product.brand }} · {{ site.data.footer.tagline }} · © {{ site.data.footer.copyright_start }} {{ site.data.company.legal_name }}</p>
+      {% include fact.html path="company.address" %}
+      {% if fact_ok %}<p class="mb-0 footer-legal">{{ fact_node.value }}</p>{% endif %}
+      {% include fact.html path="company.vat_number" %}
+      {% assign vat_ok = fact_ok %}
+      {% assign vat_val = fact_node.value %}
+      {% include fact.html path="company.rea" %}
+      {% assign rea_ok = fact_ok %}
+      {% assign rea_val = fact_node.value %}
+      {% include fact.html path="company.share_capital" %}
+      {% assign cap_ok = fact_ok %}
+      {% assign cap_val = fact_node.value %}
+      {% if vat_ok or rea_ok or cap_ok %}
+      <p class="mb-0 footer-legal">
+        {% if vat_ok %}VAT {{ vat_val }}{% endif %}
+        {% if rea_ok %}{% if vat_ok %} · {% endif %}REA {{ rea_val }}{% endif %}
+        {% if cap_ok %}{% if vat_ok or rea_ok %} · {% endif %}Share capital {{ cap_val }}{% endif %}
+      </p>
+      {% endif %}
       <p class="mb-0"><a href="{{ site.data.footer.corporate_url }}" data-analytics="external_rombo_clicked">{{ site.data.footer.corporate_label }}</a></p>
     </div>
   </div>

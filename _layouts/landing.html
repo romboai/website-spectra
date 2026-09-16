@@ -2,4 +2,6 @@
 layout: default
 ---
 {{ content }}
-{% include faq.html %}
+{% if page.url == "/" %}
+{% include faq.html source="faq_home" %}
+{% endif %}

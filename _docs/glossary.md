@@ -15,15 +15,15 @@ nav_order: 12
 
 **Foundation model.** Here, a model pretrained on large spectral corpora. ROSE is the public 1H research model; Spectra is the product.
 
-**JCAMP-DX.** A common spectroscopic exchange format named on the live product.
+**JCAMP-DX.** A common spectroscopic exchange format.
 
-**Match.** A ranking score shown on the public example. Not a confirmation probability.
+**Match.** A ranking score shown with each candidate. Not a confirmation probability.
 
 **Open-world identification.** Identifying a compound without an assumed structure. Higher residual risk than verification.
 
 **Physics-guided validation.** Comparing predicted and measured shifts and discarding hypotheses the data cannot support.
 
-**RMSD.** Root-mean-square deviation; on the public example, a 13C shift residual.
+**RMSD.** Root-mean-square deviation; on the teaching example, a 13C shift residual.
 
 **ROSE.** Public 1H NMR foundation model (Reusable One-dimensional Spectrum Embeddings).
 

@@ -1,11 +1,9 @@
 ---
 title: How Spectra fits with existing NMR software
 h1: How Spectra fits with existing NMR software
-description: Spectra is a ranking and evidence layer for NMR compound identification. It does not replace TopSpin, Mnova, Delta or ACD/Labs unless you choose to change those validated tools.
+description: Spectra is a ranking and evidence layer for NMR compound identification. Keep TopSpin, Mnova, Delta or ACD/Labs for acquisition and processing.
 permalink: /compare/existing-nmr-software/
 ---
-
-This is a positioning page, not a feature-matrix shoot-out. We do not compare prices, and we do not call Spectra the best NMR software.
 
 ## The job each class of tool already does
 
@@ -18,21 +16,13 @@ Those products are trademarks of their owners. Mentioning them describes a typic
 
 ## Where Spectra sits
 
-Spectra ranks candidate structures from 1H and 13C data and returns evidence for chemist review. The live product names Bruker, JEOL, Varian and JCAMP-DX as spectrum sources. That is **data-source compatibility**.
+Spectra ranks candidate structures from 1H and 13C data and returns evidence for chemist review. It accepts Bruker, JEOL, Varian and JCAMP-DX spectra.
 
-It is **not** a confirmed plugin, API connector, or certified integration into any of the four tools above.
-
-## What we do not claim
-
-- Replacement of acquisition software
-- Replacement of your validated processing method
-- Feature-by-feature superiority
-- Identical peak-picking behaviour
-- Any statement about competitor pricing or licensing
+Keep processing in the tools you already validate. Export, upload to Spectra, and keep those methods unchanged.
 
 ## When to keep your current stack unchanged
 
-If a method is validated in TopSpin or Mnova, keep processing there. Export spectra, then use Spectra as a second-pass ranking layer. That is the conservative path for regulated groups.
+If a method is validated in TopSpin or Mnova, keep processing there. Export spectra, then use Spectra as a second-pass ranking layer.
 
 ## See also
 

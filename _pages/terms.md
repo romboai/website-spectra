@@ -6,11 +6,11 @@ permalink: /terms/
 eyebrow: Legal
 ---
 
-These terms apply to the public marketing and documentation site at https://spectra.rombo.ai.
+These terms apply to the public marketing and documentation site at {{ site.marketing_url }}.
 
 ## The site
 
-Content is provided by {{ site.data.company.legal_name }} for information about Spectra. Documentation describes current public behaviour and known limits. It is not a warranty of identification performance.
+Content is provided by {{ site.data.company.legal_name }} for information about Spectra. Documentation describes current behaviour and known limits. It is not a warranty of identification performance.
 
 ## The product
 

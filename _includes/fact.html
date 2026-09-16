@@ -1,0 +1,19 @@
+{% comment %}
+Sets fact_node and fact_ok for a dotted path under site.data.facts.
+Usage:
+  {% include fact.html path="product.typical_runtime" %}
+  {% if fact_ok %}{{ fact_node.value }}{% endif %}
+{% endcomment %}
+{% assign fact_node = site.data.facts %}
+{% assign fact_ok = false %}
+{% if include.path %}
+  {% assign fact_parts = include.path | split: "." %}
+  {% for part in fact_parts %}
+    {% assign fact_node = fact_node[part] %}
+  {% endfor %}
+  {% if fact_node and fact_node.verified %}
+    {% if fact_node.value != nil and fact_node.value != "" and fact_node.value != false %}
+      {% assign fact_ok = true %}
+    {% endif %}
+  {% endif %}
+{% endif %}

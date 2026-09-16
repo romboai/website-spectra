@@ -311,14 +311,57 @@
 
 .cookie-banner {
   position: fixed;
-  inset: auto 1rem 1rem 1rem;
+  inset: auto 0 0 0;
   z-index: 50;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1.25rem;
+  padding: 0.5rem 1.25rem;
   background: var(--bg);
-  border: 1px solid var(--border);
+  border: 0;
+  border-top: 1px solid var(--border-weak);
   border-radius: 0;
-  padding: 1rem 1.1rem;
   box-shadow: none;
-  max-width: 36rem;
+  max-width: none;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-weak);
+}
+
+.cookie-banner p {
+  margin: 0;
+  max-width: 42rem;
+}
+
+.cookie-banner a {
+  color: inherit;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin: 0;
+}
+
+.cookie-banner button {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.cookie-banner button:hover,
+.cookie-banner a:hover {
+  color: var(--text);
 }
 
 .cookie-banner[hidden] {

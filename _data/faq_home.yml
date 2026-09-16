@@ -1,0 +1,25 @@
+- id: what-it-does
+  question: What does Spectra do?
+  answer: >-
+    Spectra takes 1H and 13C NMR data, retrieves and ranks candidate structures,
+    and shows the evidence for each: match value, residual error and per-shift
+    agreement. It is a decision aid; the chemist makes the identification.
+- id: which-data
+  question: Which data can I upload?
+  answer: >-
+    1H and 13C spectra from Bruker, JEOL and Varian systems, or JCAMP-DX.
+- id: replacement
+  question: Does it replace Mnova, TopSpin or ACD/Labs?
+  answer: >-
+    No. Keep acquisition and processing where they are. Spectra is the ranking
+    and evidence step after them.
+- id: trust-ranking
+  question: How do I know whether to trust a ranking?
+  answer: >-
+    Look at match and residual error together, and at the signals no candidate
+    explains. Read Evidence and confidence in the docs.
+- id: pricing
+  question: How much does it cost?
+  answer: >-
+    Free includes 3 analyses. Pro is €79/month or €790/year. Lab is €299/month
+    for 5 users. Enterprise and pilots are scoped with you.

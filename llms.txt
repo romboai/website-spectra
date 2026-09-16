@@ -7,14 +7,14 @@ permalink: /llms.txt
 > AI-assisted NMR compound identification. Ranked candidates, physics-guided shift validation, chemist remains responsible for confirmation.
 
 - Official site: {{ site.url }}/
-- Product login: {{ site.product_url }}
+- Product login: {{ site.app_url }}/login
 - Pricing: {{ site.url }}/pricing/
 - Documentation: {{ site.url }}/docs/
 - Getting started: {{ site.url }}/docs/getting-started/
 - Limitations: {{ site.url }}/docs/limitations/
 - Use cases: {{ site.url }}/use-cases/
 - Sample analysis: {{ site.url }}/examples/sample-analysis/
-- Research (ROSE vs product): {{ site.url }}/research/
+- Research: {{ site.url }}/research/
 - Security: {{ site.url }}/security/
 - Privacy: {{ site.url }}/privacy/
 - Changelog: {{ site.url }}/changelog/

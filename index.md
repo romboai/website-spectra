@@ -39,7 +39,7 @@ schema: software
 <section class="section section-alt" id="features">
   <div class="wrap">
     <h2>What you receive</h2>
-    <p class="lede">A shortlist is useful only if it can be inspected. The live homepage preview shows the kind of objects a chemist reviews — not a guaranteed identity.</p>
+    <p class="lede">A shortlist is useful only if it can be inspected. The preview shows the kind of objects a chemist reviews.</p>
     <div class="grid-3">
       <article class="card">
         <h3>Ranked candidate shortlist</h3>
@@ -77,7 +77,7 @@ schema: software
 <section class="section section-alt" id="compatibility">
   <div class="wrap prose">
     <h2>Compatible with the instruments and software you already use</h2>
-    <p>Spectra is intended to sit after acquisition and processing, not instead of them. The live product names Bruker, JEOL, Varian and JCAMP-DX as spectrum sources. That is workflow compatibility, not a certified connector to TopSpin, Mnova, Delta or ACD/Labs.</p>
+    <p>Spectra is intended to sit after acquisition and processing, not instead of them. It accepts Bruker, JEOL, Varian and JCAMP-DX spectra. That is workflow compatibility, not a certified connector to TopSpin, Mnova, Delta or ACD/Labs.</p>
     <p><a href="{{ '/compare/existing-nmr-software/' | relative_url }}">How Spectra fits with existing NMR software</a> · <a href="{{ '/docs/supported-data/' | relative_url }}">Supported data</a></p>
   </div>
 </section>
@@ -101,6 +101,6 @@ schema: software
 <section class="section cta-band" id="beta">
   <div class="wrap cta-band-inner">
     <h2>Ready to identify your next unknown?</h2>
-    <a class="btn btn-primary" href="{{ site.product_url }}" data-analytics="try_spectra_clicked" aria-label="Try Spectra">Try</a>
+    <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="home_footer" data-analytics="try_spectra_clicked" aria-label="Try Spectra">Try</a>
   </div>
 </section>
