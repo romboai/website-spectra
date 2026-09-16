@@ -9,6 +9,8 @@ nav_order: 6
 
 Three objects to learn first: candidate name, match, and 13C RMSD.
 
+{% include screenshot.html file="shortlist.png" caption="Ranked shortlist" alt="Spectra ranked shortlist" %}
+
 ## Candidate ranking
 
 Rank is a sort order over hypotheses that survived retrieval and physics-guided comparison. It is not a posterior probability of “the” molecule.
@@ -16,6 +18,8 @@ Rank is a sort order over hypotheses that survived retrieval and physics-guided 
 ## Assignments and explained peaks
 
 Read which observed signals are claimed by the candidate. Explained is not the same as uniquely explained.
+
+{% include screenshot.html file="per-shift.png" caption="Per-shift residuals" alt="Spectra per-shift evidence view" %}
 
 ## Unexplained peaks
 

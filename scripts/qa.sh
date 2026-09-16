@@ -37,7 +37,7 @@ if grep -RIn 'PLACEHOLDER_SET_PRODUCT_URL\|PLACEHOLDER.example.invalid' \
 fi
 
 echo "== Unverified KPI display =="
-kpi_hits="$(grep -RIn -E '\b82%\b|\b97%\b|94M\+|21\+' "$SITE" || true)"
+kpi_hits="$(grep -RIn -E '\b82%\b|\b97%\b|94M\+|21\+' "$SITE" | grep -vE ':[0-9]{2}:21\+|published_time|datePublished|dateModified|updated>|published>' || true)"
 if [[ -n "$kpi_hits" ]] && echo "$kpi_hits" | grep -viqE 'research|evidence registry|hidden|not shown|not display'; then
   echo "$kpi_hits"
   echo "Historical unverified KPI may be visible in output." >&2

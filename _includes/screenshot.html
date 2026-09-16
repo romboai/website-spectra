@@ -1,0 +1,8 @@
+{% assign shot_path = "/assets/docs/" | append: include.file %}
+{% assign shot = site.static_files | where: "path", shot_path | first %}
+{% if shot %}
+<figure class="docs-screenshot">
+  <img src="{{ shot_path | relative_url }}" alt="{{ include.alt | default: include.caption | default: 'Spectra screenshot' }}">
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>
+{% endif %}

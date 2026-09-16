@@ -6,6 +6,7 @@ description: Answers to practical Spectra questions.
 permalink: /docs/faq/
 nav_order: 11
 schema: faq
+excerpt: ""
 ---
 
 {% for item in site.data.faq %}

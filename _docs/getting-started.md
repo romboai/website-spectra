@@ -13,6 +13,8 @@ nav_order: 2
 2. Create an account or sign in. Login offers email, passkey and Google.
 3. If your organization needs a scoped evaluation instead of self-service, [request a pilot](/pilot/).
 
+{% include screenshot.html file="login.png" caption="Sign in to Spectra" alt="Spectra login screen" %}
+
 ## Minimum workflow
 
 1. Choose an analytical question: verify a proposed structure, inspect an impurity, dereplicate a mixture, or identify an unknown.
@@ -22,9 +24,15 @@ nav_order: 2
 5. Inspect the ranked shortlist and shift-level residuals.
 6. Decide: confirm, dereplicate, flag unknown, or acquire another experiment.
 
-## Where to obtain sample data
+{% include screenshot.html file="upload.png" caption="Upload 1H and 13C" alt="Spectra upload screen" %}
 
-If you do not yet have a cleared spectrum, use the [sample analysis](/examples/sample-analysis/) to learn the review objects. Do not upload data you are not allowed to share with a hosted service.
+{% include screenshot.html file="results.png" caption="Ranked shortlist" alt="Spectra results shortlist" %}
+
+## Example data
+
+If you do not yet have a cleared spectrum, read the [sample analysis](/examples/sample-analysis/) to learn the review objects. Do not upload data you are not allowed to share with a hosted service.
+
+{% include example-file.html %}
 
 ## What you will receive
 

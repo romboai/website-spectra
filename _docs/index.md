@@ -22,3 +22,12 @@ This documentation is for chemists evaluating or using Spectra.
 9. [Troubleshooting](/docs/troubleshooting/)
 10. [FAQ](/docs/faq/)
 11. [Glossary](/docs/glossary/)
+12. [Account and billing](/docs/account-and-billing/)
+{% include fact.html path="product.export_formats" %}
+{% if fact_ok %}
+13. [Exporting results](/docs/exporting-results/)
+{% endif %}
+{% include fact.html path="product.api_available" %}
+{% if fact_ok %}
+14. [API](/docs/api/)
+{% endif %}

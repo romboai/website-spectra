@@ -5,6 +5,7 @@ description: How laboratories use Spectra on their own NMR identification work.
 permalink: /customers/
 eyebrow: Customers
 sitemap: false
+excerpt: ""
 ---
 
 {% include fact.html path="proof.case_studies" %}
