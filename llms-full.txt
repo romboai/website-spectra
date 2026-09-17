@@ -24,9 +24,6 @@ Pricing: {{ site.url }}/pricing/
 - Enterprise: custom
 Enterprise and Lab conversations: {{ site.url }}/pilot/
 
-## Status
-Version 0.6.0-alpha.
-
 ## Canonical pages
 Docs: {{ site.url }}/docs/
 Use cases: {{ site.url }}/use-cases/

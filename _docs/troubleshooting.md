@@ -29,4 +29,4 @@ Trust the residual error and the chemistry. A high match when the true molecule 
 
 ## I need this for a regulated method
 
-Spectra is a public alpha. Open an [enterprise conversation](/pilot/).
+Open an [enterprise conversation](/pilot/).

@@ -35,11 +35,11 @@ company:
 
 product:
   version:
-    value: "0.6.0-alpha"
-    verified: true
+    value: null
+    verified: false
   stage_label:
-    value: "Public alpha"
-    verified: true
+    value: null
+    verified: false
   typical_runtime:
     value: null
     verified: false

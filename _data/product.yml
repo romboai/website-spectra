@@ -5,8 +5,6 @@ auth_name: Spectra AI
 category: AI NMR compound identification software
 kicker: Compound identification
 access_mode: self_service
-version: 0.6.0-alpha
-version_label: Public alpha
 status: available
 login_path: /login
 tagline: From NMR spectrum to molecular identity, with traceable evidence.

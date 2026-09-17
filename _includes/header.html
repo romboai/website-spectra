@@ -6,15 +6,6 @@
       <span class="brand-name">Spectra</span>
       <span class="brand-by">by ROMBO AI</span>
     </a>
-    {% include fact.html path="product.stage_label" %}
-    {% assign stage_ok = fact_ok %}
-    {% assign stage_label = fact_node.value %}
-    {% include fact.html path="product.version" %}
-    {% if stage_ok and fact_ok %}
-    <a class="stage-badge" href="{{ '/changelog/' | relative_url }}">{{ stage_label }} · v{{ fact_node.value | replace: '-alpha', '' }}</a>
-    {% elsif stage_ok %}
-    <a class="stage-badge" href="{{ '/changelog/' | relative_url }}">{{ stage_label }}</a>
-    {% endif %}
     <nav class="nav-desktop" aria-label="Primary">
       {% for item in site.data.navigation.primary %}
         <a href="{{ item.path | relative_url }}"{% if page.url == item.path or page.url contains item.path %} aria-current="page"{% endif %}>{{ item.label }}</a>
