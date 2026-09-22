@@ -1,9 +1,9 @@
 {% assign endpoint = site.lead_form_endpoint %}
+{% assign action = endpoint %}
 {% if endpoint == nil or endpoint == "" %}
-<form class="form" id="{{ include.id | default: 'lead-form' }}" method="post" action="#" data-lead-form data-lead-unconfigured>
-{% else %}
-<form class="form" id="{{ include.id | default: 'lead-form' }}" method="post" action="{{ endpoint }}" data-lead-form>
+  {% assign action = "mailto:" | append: site.contact_email %}
 {% endif %}
+<form class="form" id="{{ include.id | default: 'lead-form' }}" method="post" action="{{ action }}" data-lead-form>
   <input class="hp" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
   <input type="hidden" name="utm_source" data-utm="utm_source">
   <input type="hidden" name="utm_medium" data-utm="utm_medium">

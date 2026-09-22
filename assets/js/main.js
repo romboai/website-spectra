@@ -81,6 +81,7 @@
         event.preventDefault();
         return;
       }
+      if (form.action.indexOf("mailto:") === 0) return;
       if (form.hasAttribute("data-lead-unconfigured")) {
         event.preventDefault();
         error && error.classList.add("is-visible");
