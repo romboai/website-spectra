@@ -2,39 +2,47 @@
 title: Running an analysis
 nav: Running an analysis
 h1: Running an analysis
-description: How to submit a Spectra case, describe the objective, and inspect the first shortlist.
+description: How a Spectra project moves from uploaded NMR files through preprocessing, peak picking and identification.
 permalink: /docs/running-an-analysis/
 nav_order: 5
 ---
 
-## Upload
+## Put the files in the project
 
-Sign in at [{{ site.app_url }}/login]({{ site.app_url }}/login) and add the 1H and 13C files you prepared. Prefer the vendor family or JCAMP-DX export listed in [supported data](/docs/supported-data/).
+Sign in at [{{ site.app_url }}/login]({{ site.app_url }}/login), open the project, and upload the spectra into the workspace. Prefer the vendor family or JCAMP-DX export listed in [supported data](/docs/supported-data/).
 
-## Describe the objective
+The input step lists what Spectra detected. Check nucleus, solvent and field before you continue. Optional context sits under **Additional information**: formula, exact mass, solvent, and an expected structure when this is a verification.
 
-State the job in plain language: “verify this proposed impurity”, “dereplicate the major component”, “identify an unknown in DMSO-d6”. Verification and open-world identification carry different risk even when the interface looks similar.
+{% include screenshot.html file="objective.png" caption="Project input before you continue" alt="Spectra input step" %}
 
-{% include screenshot.html file="objective.png" caption="Set the analytical objective" alt="Spectra objective field" %}
+{% include screenshot.html file="context.png" caption="Optional context. The grey text in each field is a hint, not a value saved for this sample." alt="Spectra additional information dialog" %}
 
-## Add context
+Notes that the form does not hold — sample preparation, concentration, a suspected impurity, acquisition conditions — can be stated in chat. Spectra keeps those project facts with the analysis.
 
-Solvent, field, proposed structure (for verification), and any formula or MS you are allowed to share.
+## Confirm preprocessing
 
-{% include screenshot.html file="context.png" caption="Solvent, field and proposed structure" alt="Spectra context fields" %}
+Preprocessing covers reading the dataset, normalization, phase and baseline, reference and solvent, then a quality handoff into peak picking.
 
-## Review quality warnings
+Confirm input when the preview is the spectrum you meant to analyse. That confirmation authorizes preprocessing only.
 
-If Spectra warns about referencing, missing nucleus, or unusable windows, fix the data first. A warning you dismiss will still appear in the residual error.
+- Already processed spectra skip preprocessing and keep the processed data for review.
+- Imported correlation lists skip the processed-matrix path and continue toward peak picking.
+- If a raw 2D file needs a processing recipe, Spectra asks for the missing fields and stops. It does not invent them.
 
-{% include screenshot.html file="quality-warnings.png" caption="Quality warnings before ranking" alt="Spectra quality warnings" %}
+{% include screenshot.html file="quality-warnings.png" caption="Preprocessing and quality notes" alt="Spectra preprocessing step" %}
 
-## Run the workflow
+## Confirm peak picking
 
-The steps are: load, retrieve, validate against predicted shifts, review. Wait for the shortlist rather than re-submitting the same files.
+After preprocessing, review the processed spectrum, then confirm that step. Peak picking then runs on each acquisition Spectra detected.
 
-## Inspect the shortlist
+1D spectra produce signals and peaks. HSQC, COSY, HMBC, TOCSY and NOESY produce correlations. A 2D spectrum is not run through the 1D peak list. Identification stays locked until the 1D acquisitions in the project are complete.
 
-Open the top candidates and the ones that were discarded for large residual error. You are looking for a story that a colleague could audit.
+{% include screenshot.html file="peaks.png" caption="Peak list for the aromatic monoterpene example" alt="Spectra peak list with chemical shifts and multiplicities" %}
+
+## Confirm identification
+
+Confirm the peak list when you accept it. Identification then ranks structure hypotheses against the 1H evidence, 13C when present, 2D correlations when present, and any formula you supplied.
+
+You can also ask in chat to advance a step or to rerun one acquisition with different options. Chat and the on-screen controls drive the same analysis. Spectra stops at the next gate until you confirm.
 
 Next: [understanding results](/docs/understanding-results/).

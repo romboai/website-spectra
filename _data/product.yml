@@ -41,7 +41,7 @@ cta:
       label: Read the docs
       path: /docs/
     enterprise:
-      label: Request a pilot
+      label: Talk to sales
       path: /contact/
   request_access:
     primary:
@@ -51,15 +51,5 @@ cta:
       label: View sample analysis
       path: /examples/sample-analysis/
     enterprise:
-      label: Request a pilot
-      path: /contact/
-  pilot_only:
-    primary:
-      label: Bring a case
-      path: /contact/
-    secondary:
-      label: Request a pilot
-      path: /contact/
-    enterprise:
-      label: Request a pilot
+      label: Talk to sales
       path: /contact/

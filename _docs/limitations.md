@@ -11,7 +11,9 @@ Read this page before using Spectra in a quality, regulatory, or publication set
 
 ## Data coverage
 
-Spectra accepts 1H and 13C from Bruker, JEOL, Varian or JCAMP-DX. Other nuclei, 2D-only packages, and undocumented vendor dialects are outside the current support matrix.
+Spectra projects take 1H and 13C from Bruker, JEOL, Varian or JCAMP-DX, and can include HSQC, COSY, HMBC, TOCSY and NOESY in the same project. Other nuclei and undocumented vendor dialects are outside the current support matrix. A project that contains only 2D spectra still needs a 1H before a structure shortlist is a fair request.
+
+1H alone, without formula, mass, 13C or 2D, can finish as an empty ranking with a recommended next experiment. That empty ranking is a result.
 
 ## Identification risk
 

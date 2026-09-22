@@ -40,6 +40,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
+  min-width: 0;
   color: inherit;
   text-decoration: none;
 }
@@ -66,7 +67,7 @@
 .nav-desktop {
   display: none;
   align-items: center;
-  gap: 1.35rem;
+  gap: 1.05rem;
 }
 
 .nav-desktop a {
@@ -103,11 +104,13 @@
   font-size: 0.85rem;
 }
 
-.header-cta {
+a.header-cta {
   display: none;
 }
 
 .menu-toggle {
+  flex-shrink: 0;
+  margin-left: auto;
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text);
@@ -143,7 +146,7 @@
 }
 
 .section {
-  padding: 3.5rem 0;
+  padding: 2.25rem 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -260,6 +263,7 @@
 
 .prose {
   max-width: var(--width-prose);
+  overflow-x: auto;
 }
 
 .prose p,
@@ -276,8 +280,12 @@
 }
 
 @media (min-width: 860px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
   .nav-desktop,
-  .header-cta {
+  a.header-cta {
     display: flex;
   }
 

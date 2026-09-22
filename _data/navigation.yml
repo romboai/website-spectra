@@ -1,8 +1,10 @@
 primary:
-  - label: Pricing
-    path: /pricing/
   - label: Use cases
     path: /use-cases/
+  - label: Security
+    path: /security/
+  - label: Pricing
+    path: /pricing/
   - label: Docs
     path: /docs/
 footer:
@@ -20,8 +22,10 @@ footer:
     links:
       - label: Docs home
         path: /docs/
-      - label: Getting started
-        path: /docs/getting-started/
+      - label: Supported data
+        path: /docs/supported-data/
+      - label: Data handling
+        path: /docs/data-handling/
       - label: Limitations
         path: /docs/limitations/
       - label: FAQ
@@ -40,8 +44,6 @@ footer:
     links:
       - label: Contact
         path: /contact/
-      - label: Pilot
-        path: /pilot/
       - label: ROMBO AI website
         url: https://rombo.ai
       - label: GitHub

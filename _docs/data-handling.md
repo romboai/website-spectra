@@ -9,7 +9,19 @@ nav_order: 9
 
 ## What you upload
 
-NMR files and the metadata you attach in the application. Do not send those files through the marketing contact form.
+NMR files and the metadata you attach in the application. Send them only after you are signed in.
+
+## Before client or unpublished spectra
+
+Settle these points with us before that upload:
+
+- Where the files are hosted
+- How long they are kept
+- Whether they are used to train models
+- How you delete a spectrum or a project
+- Which subprocessors handle them
+
+The marketing contact form is for the enquiry. [Security](/security/) collects the same questions for a data-processing review. [Contact](/contact/) opens that conversation.
 
 {% include fact.html path="data.retention" %}
 {% if fact_ok %}
@@ -49,7 +61,3 @@ NMR files and the metadata you attach in the application. Do not send those file
 | {{ row.name }} | {{ row.purpose }} | {{ row.region }} |
 {% endfor %}
 {% endif %}
-
-{% unless site.data.facts.data.retention.verified or site.data.facts.data.training_use.verified or site.data.facts.data.deletion.verified or site.data.facts.data.hosting_region.verified or site.data.facts.data.subprocessors.verified %}
-Contact us for our current data processing terms before uploading unpublished work. Start from [contact](/contact/).
-{% endunless %}

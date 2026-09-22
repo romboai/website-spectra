@@ -10,7 +10,7 @@ Templates omit any fact that is not `verified: true` with a non-empty `value` in
 | `company.privacy_email` | Privacy notice | Dedicated privacy contact, or keep `contact@rombo.ai`? |
 | `company.social_x_handle` | `twitter:site` / `twitter:creator` | X/Twitter handle, if any? |
 | `company.linkedin_url` | Organization `sameAs` | Company LinkedIn URL? |
-| `company.booking_url` | Contact and pilot | URL for a 20-minute booking calendar? |
+| `company.booking_url` | Contact | URL for a 20-minute booking calendar? |
 | `product.typical_runtime` | Homepage CTA microcopy | Typical time from upload to shortlist? |
 | `product.match_definition` | Docs, “how to trust a result” | What does the match value mean, mathematically? |
 | `product.shift_predictor` | How it works | Which predictor (name / method) compares shifts? |
@@ -38,17 +38,13 @@ Templates omit any fact that is not `verified: true` with a non-empty `value` in
 | `data.encryption` | Security | What encryption is used in transit and at rest? |
 | `pricing.vat_note` | Pricing billing FAQ | VAT inclusive or exclusive? |
 | `pricing.free_expiry` | Pricing billing FAQ | Do the 3 free analyses expire or reset? |
-| `pricing.pro_analyses_included` | Pricing table | Analyses included on Pro? |
-| `pricing.lab_analyses_included` | Pricing table | Analyses included on Lab? |
 | `pricing.academic_offer` | Pricing | Academic discount or plan? |
 | `pricing.credit_packs` | Pricing | Extra analysis packs? |
-| `pricing.pilot_scope` | `/pilot/` | What a standard pilot includes. |
-| `pricing.pilot_price` | `/pilot/` | Pilot price, if any public figure. |
 | `pricing.founding_price_note` | Pricing banner | Founding-price note, if still offered. |
 | `pricing.monthly_annual_switch` | Pricing billing FAQ | Can a customer switch between monthly and annual billing? |
 | `proof.customer_logos` | Homepage proof strip | Logos with written permission. |
 | `proof.case_studies` | `/customers/` | Published case studies. |
-| `LEAD_FORM_ENDPOINT` | Production build, contact/pilot forms | Cloudflare Worker URL for the lead proxy. Add GitHub secret `LEAD_FORM_ENDPOINT`. Also allow origin `https://spectrahome.rombo.ai` on the Worker. |
+| `LEAD_FORM_ENDPOINT` | Production build, contact form | Cloudflare Worker URL for the lead proxy. Add GitHub secret `LEAD_FORM_ENDPOINT`. Also allow origin `https://spectrahome.rombo.ai` on the Worker. |
 
 ## Screenshots to supply (`assets/docs/`)
 

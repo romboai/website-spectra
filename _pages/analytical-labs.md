@@ -7,7 +7,7 @@ eyebrow: Analytical labs
 ---
 
 <p class="hero-actions">
-  <a class="btn btn-primary" href="{{ '/pilot/' | relative_url }}" data-cta-src="labs_hero" data-analytics="cta_click">Plan a pilot</a>
+  <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}" data-cta-src="labs_hero" data-analytics="cta_click">Talk to sales</a>
   <a class="btn btn-secondary" href="{{ site.app_url }}/login" data-cta-src="labs_try" data-analytics="cta_click">Analyze a spectrum free</a>
 </p>
 
@@ -47,10 +47,10 @@ Spectra will not construct a structure from three overlapping protons. It does n
 
 Authentic overlay or a standard for the accepted structure. Escalate when residuals stay large or two analogues cannot be separated.
 
-Bring a set of real identification problems from your lab. We run them through Spectra with you.
+Bring a set of real identification problems from your lab. We run them through Spectra with you. Client spectra need data-processing terms before upload. See [security](/security/).
 
 <p class="hero-actions">
-  <a class="btn btn-primary" href="{{ '/pilot/' | relative_url }}">Request a pilot</a>
+  <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Talk to sales</a>
 </p>
 
 <p class="mt-6"><a href="{{ '/use-cases/compound-verification/' | relative_url }}">Compound verification</a> · <a href="{{ '/use-cases/impurity-identification/' | relative_url }}">Impurity identification</a></p>

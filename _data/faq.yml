@@ -24,7 +24,7 @@
   answer: >-
     No. Spectra combines large-scale compound libraries with foundation-model
     ranking and physics-guided validation. Customer-private libraries can be
-    discussed for enterprise pilots.
+    discussed for an enterprise agreement.
 - id: unknown-vs-verify
   question: Does it do verification or also unknown identification?
   answer: >-
@@ -61,16 +61,25 @@
   answer: >-
     You can sign in and submit a spectrum. The fastest evaluations usually
     start with verification or dereplication on 1H and 13C datasets you already
-    have. Enterprise pilots are scoped around a real case.
+    have. An enterprise agreement is scoped around a real case.
 - id: chemist-in-control
   question: Who makes the final identification?
   answer: >-
     The chemist. Spectra produces a ranked shortlist and evidence. Final
     interpretation, reporting, and any quality or regulatory decision remain
     with the human expert.
+- id: unpublished-data
+  question: Can I upload client or unpublished spectra?
+  answer: >-
+    Sign in before any upload. Agree data-processing terms before a client
+    sample or an unpublished structure: hosting, retention, training use,
+    deletion and subprocessors. The contact form is for the enquiry. See
+    security and data handling.
 - id: pricing
   question: How much does Spectra cost?
   answer: >-
-    Free includes 3 analyses. Pro is €79 per month or €790 per year. Lab is
-    €299 per month for 5 users. Enterprise is custom. See the pricing page
-    for who each plan is for.
+    Free includes 3 analyses and shift-level evidence. Pro is €79 per month
+    or €790 per year for one user, with 20 analyses per month, advanced LLM
+    models, higher-accuracy algorithms and physics-guided ranking. Enterprise
+    is custom: talk to sales. VAT is confirmed before a purchase order. See
+    the pricing page.

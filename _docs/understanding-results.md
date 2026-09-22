@@ -2,32 +2,36 @@
 title: Understanding Spectra results
 nav: Understanding results
 h1: Understanding results
-description: How to read Spectra candidate ranking, match values, 13C RMSD, unexplained shifts and the review decision.
+description: How to read a Spectra identification — ranked structures, accept and reject, and an empty result that names the next experiment.
 permalink: /docs/understanding-results/
 nav_order: 6
 ---
 
-Three objects to learn first: candidate name, match, and 13C RMSD.
+Identification publishes a ranking, or it publishes that no single structure is defensible. Both are results.
 
-{% include screenshot.html file="shortlist.png" caption="Ranked shortlist" alt="Spectra ranked shortlist" %}
+{% include screenshot.html file="shortlist.png" caption="Ranked candidates" alt="Spectra ranked identification candidates" %}
 
-## Candidate ranking
+## Ranked candidates
 
-Rank is a sort order over hypotheses that survived retrieval and physics-guided comparison. It is not a posterior probability of “the” molecule.
+Each candidate is a concrete structure with a name, a formula when one is known, and the evidence that supports or limits it. Rank is the order in which to review those hypotheses. It is not a probability that the top row is the molecule.
 
-## Assignments and explained peaks
+Carbon evidence cites peaks that are actually in the spectrum. Two-dimensional evidence cites correlations from the HSQC, COSY, HMBC, TOCSY or NOESY you uploaded. A fragment or a motif is not offered as a finished structure.
 
-Read which observed signals are claimed by the candidate. Explained is not the same as uniquely explained.
+{% include screenshot.html file="per-shift.png" caption="Evidence behind a candidate" alt="Spectra candidate evidence" %}
 
-{% include screenshot.html file="per-shift.png" caption="Per-shift residuals" alt="Spectra per-shift evidence view" %}
+## Accept or reject
 
-## Unexplained peaks
+When the ranking is complete, accept one candidate or reject it with a comment. Accept and reject stay unavailable while identification is still running.
 
-Signals that no candidate accounts for are often the scientifically important part: an impurity, a second component, a solvent, or a wrong window.
+Rejecting a candidate can start a new identification. The rejected structure and your comment stay with the project. A failed run is closed: the next attempt is a new run, not an edit of the failed one.
 
-## Contradictions
+## No defensible structure
 
-A candidate with a large 13C RMSD, or a mismatch on a distinctive carbon, should fall even if the 1H looks plausible. Close flavonoids in the teaching example separate more clearly when 13C residual error is visible.
+If the data cannot support one structure — often 1H alone, without formula, mass, 13C or 2D — Spectra can finish with an empty ranking. The result names what is still unresolved and which measurement to run next. That is a completed identification, not a crash.
+
+## How to read a close call
+
+Read match and residual error together when both are shown. A high match with a large 13C residual, or a mismatch on a distinctive carbon, is a reason to keep the analogue on the desk. Signals that no candidate explains are often the impurity, the second component, or the solvent.
 
 {% include fact.html path="product.match_definition" %}
 {% if fact_ok %}
@@ -36,14 +40,8 @@ A candidate with a large 13C RMSD, or a mismatch on a distinctive carbon, should
 {{ fact_node.value }}
 {% endif %}
 
-## Confidence and evidence score
+See [evidence and confidence](/docs/evidence-and-confidence/).
 
-Treat match and RMSD as complementary. High match plus low residual error is a stronger invitation to review, not a certificate. See [evidence and confidence](/docs/evidence-and-confidence/).
+## What you keep
 
-## Suggested next experiment
-
-If several candidates remain close, the honest outcome is another measurement: cleaner 13C, a complementary 2D experiment the laboratory already runs, MS for formula, or isolation.
-
-## Traceable report
-
-Keep the shortlist, the data versions, and your decision together. Spectra assists the record; it does not replace your LIMS or ELN.
+Keep the project, the files you uploaded, the accepted or rejected candidate, and your comment together. Spectra holds that review. It does not replace your LIMS or ELN.

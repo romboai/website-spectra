@@ -29,7 +29,7 @@ Enquiries are processed to respond to your request and, where required, on the b
 
 ## Retention
 
-Contact messages are kept long enough to answer the request and manage a pilot conversation.
+Contact messages are kept long enough to answer the request and manage the conversation.
 
 ## Your rights
 

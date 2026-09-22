@@ -17,6 +17,11 @@
     });
   }
 
+  var docsNav = document.querySelector("[data-docs-nav]");
+  if (docsNav && window.matchMedia("(max-width: 979px)").matches) {
+    docsNav.open = false;
+  }
+
   var tocHost = document.querySelector("[data-toc]");
   if (tocHost) {
     var headings = document.querySelectorAll(".docs-content h2, .docs-content h3");

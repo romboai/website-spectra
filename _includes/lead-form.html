@@ -39,7 +39,7 @@
       <option value="natural-products">Natural products</option>
       <option value="analytical-labs">Analytical / contract lab</option>
       <option value="core-facilities">NMR core facility</option>
-      <option value="enterprise-pilot">Enterprise pilot</option>
+      <option value="enterprise">Enterprise</option>
     </select>
   </label>
   <label>
@@ -51,7 +51,7 @@
     <input type="checkbox" name="consent" required style="margin-top:0.3rem">
     <span>I agree that ROMBO AI may use these details to respond to this enquiry, as described in the <a href="{{ '/privacy/' | relative_url }}">privacy notice</a>.</span>
   </label>
-  <button class="btn btn-primary" type="submit">{{ include.submit_label | default: "Request a pilot" }}</button>
+  <button class="btn btn-primary" type="submit">{{ include.submit_label | default: "Send message" }}</button>
   <p class="form-status success" role="status" data-success>Thank you. We will reply to the work email you provided.</p>
   <p class="form-status error" role="alert" data-error>The form could not be sent. Email <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a> instead.</p>
 </form>

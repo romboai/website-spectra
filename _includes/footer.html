@@ -16,7 +16,7 @@
       {% endfor %}
     </div>
     <div class="footer-bottom">
-      <p class="mb-0">{{ site.data.product.brand }} · {{ site.data.footer.tagline }} · © {{ site.data.footer.copyright_start }} {{ site.data.company.legal_name }}</p>
+      <p class="mb-0">{{ site.data.product.brand }} · © {{ site.data.footer.copyright_start }} {{ site.data.company.legal_name }}</p>
       {% include fact.html path="company.address" %}
       {% if fact_ok %}<p class="mb-0 footer-legal">{{ fact_node.value }}</p>{% endif %}
       {% include fact.html path="company.vat_number" %}

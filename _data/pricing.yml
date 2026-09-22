@@ -4,7 +4,8 @@ last_reviewed: 2026-09-14
 plans:
   - id: free
     name: Free
-    price_label: 3 analyses
+    price_label: €0
+    price_note: 3 analyses
     amount: null
     interval: null
     seats: 1
@@ -14,7 +15,6 @@ plans:
     cta_label: Start free
     cta: product_url
     features:
-      - 3 analyses
       - 1 user
       - Shift-level evidence
   - id: pro
@@ -26,42 +26,33 @@ plans:
     annual_label: €790 / year
     seats: 1
     audience: Chemists who need identification as part of routine work.
-    summary: Monthly or annual billing for ongoing self-service identification work.
+    summary: 20 analyses per month, billed monthly or annually.
     who: Individual chemists and researchers who need regular analyses beyond the free allotment.
     cta_label: Get Pro
     cta: product_url
+    price_note: 20 analyses per month · €790 / year
     features:
-      - Monthly or annual billing
       - 1 user
       - Shift-level evidence
-  - id: lab
-    name: Lab
-    price_label: €299 / month
-    amount: 299
-    interval: month
-    seats: 5
-    audience: Groups that need a shared workspace.
-    summary: Shared laboratory access for five users.
-    who: Analytical groups that need a common workspace for up to five people.
-    cta_label: Get Lab
-    cta: product_url
-    cta_secondary_label: Talk to us
-    cta_secondary_path: /contact/
-    features:
-      - 5 users
-      - Shared workspace
-      - Shift-level evidence
+      - Advanced LLM models
+      - Higher-accuracy algorithms
+      - Physics-guided ranking
   - id: enterprise
     name: Enterprise
     price_label: Custom
+    price_note: Scoped with you
     amount: null
     interval: null
-    seats: custom
-    audience: Organisations that need a scoped agreement.
-    summary: Scoped pricing for larger teams, pilots, and private-deployment conversations.
+    seats: Custom
+    audience: Teams that need a shared workspace.
+    summary: Scoped pricing for larger teams and private-deployment conversations.
     who: Pharmaceutical R&D, impurity teams, and organisations that need a negotiated agreement.
-    cta_label: Plan a pilot
-    cta: pilot
+    cta_label: Talk to sales
+    cta: contact
     features:
       - Custom team size
       - Shift-level evidence
+      - Advanced LLM models
+      - Higher-accuracy algorithms
+      - Physics-guided ranking
+      - Shared workspace

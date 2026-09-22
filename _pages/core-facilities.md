@@ -7,8 +7,8 @@ eyebrow: Core facilities
 ---
 
 <p class="hero-actions">
-  <a class="btn btn-primary" href="{{ '/pricing/' | relative_url }}" data-analytics="plan_cta_click" data-plan="lab">See the Lab plan</a>
-  <a class="btn btn-secondary" href="{{ '/pilot/' | relative_url }}">Talk to us about a pilot</a>
+  <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Talk to sales</a>
+  <a class="btn btn-secondary" href="{{ '/pricing/' | relative_url }}">See pricing</a>
 </p>
 
 ## Target user
@@ -47,9 +47,9 @@ Spectra does not replace facility SOPs, spectrometer booking, or the spectroscop
 
 Run a compound the facility already knows. If Spectra ranks it correctly and shows why, the next unknown is a fair test.
 
-The Lab plan covers five users at €299/month. Enterprise is scoped with you.
+A core facility is an Enterprise agreement: seats, who can open another user's spectrum, and how the shortlist reaches the consultation note. Individual chemists start on Free or Pro.
 
 <p class="hero-actions">
-  <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="core_lab" data-analytics="plan_cta_click" data-plan="lab">Get Lab</a>
+  <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Talk to sales</a>
   <a class="btn btn-secondary" href="{{ '/pricing/' | relative_url }}">Compare plans</a>
 </p>

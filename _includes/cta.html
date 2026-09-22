@@ -5,6 +5,6 @@
   <a class="btn btn-secondary" href="{{ include.secondary_href | default: secondary_href | relative_url }}" data-analytics="{{ include.secondary_event | default: 'docs_opened' }}">{{ include.secondary_label | default: secondary_label }}</a>
   {% endunless %}
   {% if include.show_enterprise %}
-  <a class="btn btn-secondary" href="{{ enterprise_href | relative_url }}" data-analytics="request_pilot_clicked">{{ enterprise_label }}</a>
+  <a class="btn btn-secondary" href="{{ enterprise_href | relative_url }}" data-analytics="cta_click">{{ enterprise_label }}</a>
   {% endif %}
 </div>

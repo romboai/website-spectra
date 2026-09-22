@@ -7,6 +7,18 @@
 
 .docs-sidebar {
   font-size: 0.92rem;
+  border: 1px solid var(--border);
+  padding: 0.35rem 1rem 0.85rem;
+}
+
+.docs-sidebar summary {
+  cursor: pointer;
+  padding: 0.75rem 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .docs-sidebar a {
@@ -73,6 +85,7 @@
   width: 100%;
   height: auto;
   border: 1px solid var(--border);
+  border-radius: 0.75rem;
 }
 
 .docs-screenshot figcaption {
@@ -90,5 +103,11 @@
   .docs-sidebar {
     position: sticky;
     top: calc(var(--header-h) + 1rem);
+    border: 0;
+    padding: 0;
+  }
+
+  .docs-sidebar summary {
+    display: none;
   }
 }

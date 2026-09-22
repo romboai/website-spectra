@@ -1,7 +1,7 @@
 ---
 layout: landing
 title: Pricing and access
-description: Spectra plans — Free with 3 analyses, Pro at €79 per month or €790 per year, Lab at €299 per month for 5 users, and custom Enterprise.
+description: Spectra plans — Free with 3 analyses, Pro at €79 per month or €790 per year with 20 analyses per month, and custom Enterprise. Talk to sales for Enterprise.
 permalink: /pricing/
 schema: software
 redirect_from:
@@ -30,28 +30,14 @@ redirect_from:
       <li>
         <p class="step-num">{{ plan.name }}</p>
         <h3>{{ plan.price_label }}</h3>
-        {% if plan.annual_label %}
-        <p class="muted">or {{ plan.annual_label }}</p>
-        {% endif %}
-        <p>{{ plan.audience }}</p>
+        <p class="plan-note">{{ plan.price_note }}</p>
+        <p class="plan-audience">{{ plan.audience }}</p>
         {% if plan.features %}
         <ul>
           {% for feature in plan.features %}
           <li>{{ feature }}</li>
           {% endfor %}
-          {% if plan.id == "pro" %}
-            {% include fact.html path="pricing.pro_analyses_included" %}
-            {% if fact_ok %}<li>{{ fact_node.value }}</li>{% endif %}
-            {% include fact.html path="product.export_formats" %}
-            {% if fact_ok %}<li>Export as {{ fact_node.value }}</li>{% endif %}
-          {% endif %}
-          {% if plan.id == "lab" %}
-            {% include fact.html path="pricing.lab_analyses_included" %}
-            {% if fact_ok %}<li>{{ fact_node.value }}</li>{% endif %}
-            {% include fact.html path="product.export_formats" %}
-            {% if fact_ok %}<li>Export as {{ fact_node.value }}</li>{% endif %}
-          {% endif %}
-          {% if plan.id == "free" or plan.id == "enterprise" %}
+          {% if plan.id == "pro" or plan.id == "free" or plan.id == "enterprise" %}
             {% include fact.html path="product.export_formats" %}
             {% if fact_ok %}<li>Export as {{ fact_node.value }}</li>{% endif %}
           {% endif %}
@@ -60,8 +46,10 @@ redirect_from:
         <div class="plan-cta-row">
           {% if plan.cta == "product_url" %}
           <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="pricing_{{ plan.id }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
+          {% elsif plan.cta == "contact" %}
+          <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}" data-cta-src="pricing_{{ plan.id }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
           {% else %}
-          <a class="btn btn-primary" href="{{ '/pilot/' | relative_url }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
+          <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
           {% endif %}
           {% if plan.cta_secondary_label %}
           <a class="btn btn-secondary" href="{{ plan.cta_secondary_path | relative_url }}">{{ plan.cta_secondary_label }}</a>
@@ -89,65 +77,98 @@ redirect_from:
         <tbody>
           <tr>
             <th scope="row">Analyses included</th>
-            <td>3</td>
-            <td>{% include fact.html path="pricing.pro_analyses_included" %}{% if fact_ok %}{{ fact_node.value }}{% endif %}</td>
-            <td>{% include fact.html path="pricing.lab_analyses_included" %}{% if fact_ok %}{{ fact_node.value }}{% endif %}</td>
-            <td>Scoped with you</td>
+            {% for plan in site.data.pricing.plans %}
+            <td>
+              {% if plan.id == "free" %}3
+              {% elsif plan.id == "enterprise" %}Scoped with you
+              {% else %}
+                {% include fact.html path="pricing.pro_analyses_included" %}
+                {% if fact_ok %}{{ fact_node.value }}{% else %}<a href="{{ '/contact/' | relative_url }}">Confirm with us</a>{% endif %}
+              {% endif %}
+            </td>
+            {% endfor %}
           </tr>
           <tr>
             <th scope="row">Users</th>
-            <td>1</td>
-            <td>1</td>
-            <td>5</td>
-            <td>Custom</td>
+            {% for plan in site.data.pricing.plans %}
+            <td>{{ plan.seats }}</td>
+            {% endfor %}
           </tr>
           <tr>
             <th scope="row">Shift-level evidence</th>
+            {% for plan in site.data.pricing.plans %}
             <td>Yes</td>
-            <td>Yes</td>
-            <td>Yes</td>
-            <td>Yes</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <th scope="row">Advanced LLM models</th>
+            {% for plan in site.data.pricing.plans %}
+            <td>{% if plan.id == "free" %}No{% else %}Yes{% endif %}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <th scope="row">Higher-accuracy algorithms</th>
+            {% for plan in site.data.pricing.plans %}
+            <td>{% if plan.id == "free" %}No{% else %}Yes{% endif %}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <th scope="row">Physics-guided ranking</th>
+            {% for plan in site.data.pricing.plans %}
+            <td>{% if plan.id == "free" %}No{% else %}Yes{% endif %}</td>
+            {% endfor %}
           </tr>
           {% include fact.html path="product.export_formats" %}
           {% if fact_ok %}
           <tr>
             <th scope="row">Export formats</th>
+            {% for plan in site.data.pricing.plans %}
             <td>{{ fact_node.value }}</td>
-            <td>{{ fact_node.value }}</td>
-            <td>{{ fact_node.value }}</td>
-            <td>{{ fact_node.value }}</td>
+            {% endfor %}
           </tr>
           {% endif %}
           <tr>
             <th scope="row">Shared workspace</th>
-            <td></td>
-            <td></td>
-            <td>Yes</td>
-            <td>Yes</td>
+            {% for plan in site.data.pricing.plans %}
+            <td>{% if plan.id == "enterprise" %}Yes{% else %}No{% endif %}</td>
+            {% endfor %}
           </tr>
           {% include fact.html path="product.dpa_available" %}
           {% if fact_ok %}
+          {% assign dpa_val = fact_node.value %}
           <tr>
             <th scope="row">Data processing agreement</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>{{ fact_node.value }}</td>
+            {% for plan in site.data.pricing.plans %}
+            <td>{% if plan.id == "enterprise" %}{{ dpa_val }}{% endif %}</td>
+            {% endfor %}
           </tr>
           {% endif %}
           {% include fact.html path="product.private_deployment" %}
           {% if fact_ok %}
+          {% assign deploy_val = fact_node.value %}
           <tr>
             <th scope="row">Private deployment options</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>{{ fact_node.value }}</td>
+            {% for plan in site.data.pricing.plans %}
+            <td>{% if plan.id == "enterprise" %}{{ deploy_val }}{% endif %}</td>
+            {% endfor %}
           </tr>
           {% endif %}
         </tbody>
       </table>
     </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="po-title">
+  <div class="wrap prose">
+    <h2 id="po-title">What a purchase order can cite</h2>
+    <ul>
+      <li>Free — €0, 3 analyses, 1 user</li>
+      <li>Pro — €79 per month or €790 per year, 20 analyses per month, 1 user, advanced LLM models, higher-accuracy algorithms, physics-guided ranking</li>
+      <li>Enterprise — custom, scoped with you, plus the Pro identification features</li>
+    </ul>
+    <p>Write before the order if you need VAT treatment or whether the free analyses expire. <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a> or the <a href="{{ '/contact/' | relative_url }}">contact form</a>.</p>
+    <p>The chemist confirms the structure. Pro starts from sign-in. Enterprise starts when you <a href="{{ '/contact/' | relative_url }}">talk to sales</a>.</p>
   </div>
 </section>
 

@@ -13,7 +13,15 @@ Use [{{ site.app_url }}/login]({{ site.app_url }}/login). Try the same email, pa
 
 ## My file is rejected
 
-Confirm the export is 1H or 13C from Bruker, JEOL, Varian or JCAMP-DX. Re-export from the processing software rather than sending an unnamed binary. If the family is different, [contact us](/contact/).
+Confirm the export is 1H, 13C, or one of HSQC, COSY, HMBC, TOCSY and NOESY, from Bruker, JEOL, Varian or JCAMP-DX. Upload it into the project file tree. A drop into the chat does not add the spectrum to the analysis. Re-export from the processing software rather than sending an unnamed binary. If the family is different, [contact us](/contact/).
+
+## The next step stays locked
+
+Each step waits for a confirmation: input, then preprocessing, then peak picking, then identification. A raw 2D file that still needs a processing recipe stops and asks for those fields. Identification stays locked until the 1D acquisitions in the project are complete.
+
+## Identification finished with no structure
+
+An empty ranking with a recommended next experiment is a completed result when 1H alone cannot separate a structure. Add 13C, a 2D experiment, a formula or a mass, then run identification again. A failed run is closed: start a new one rather than editing the failed result.
 
 ## The shortlist looks implausible
 
@@ -29,4 +37,4 @@ Trust the residual error and the chemistry. A high match when the true molecule 
 
 ## I need this for a regulated method
 
-Open an [enterprise conversation](/pilot/).
+Open an [enterprise conversation](/contact/).

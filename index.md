@@ -140,7 +140,7 @@ schema: software
   <div class="wrap prose">
     <h2>Works with your current stack</h2>
     <p>Keep processing in TopSpin, Delta or Mnova. Export, upload to Spectra, and keep your validated methods unchanged. No plugin, no install.</p>
-    <p><a href="{{ '/compare/existing-nmr-software/' | relative_url }}">How Spectra fits with existing NMR software</a></p>
+    <p><a href="{{ '/compare/existing-nmr-software/' | relative_url }}">How Spectra fits with existing NMR software</a> · <a href="{{ '/docs/supported-data/' | relative_url }}">Supported data</a></p>
   </div>
 </section>
 
@@ -152,21 +152,21 @@ schema: software
   </div>
 </section>
 
-{% include fact.html path="data.training_use" %}
-{% if fact_ok %}
-{% assign training_val = fact_node.value %}
 <section class="section" id="your-data">
   <div class="wrap prose">
     <h2>Your data</h2>
+    <p>Sign in before you upload. Client samples and unpublished structures need data-processing terms first: where the files are hosted, how long they are kept, whether they train models, and how you delete them.</p>
+    {% include fact.html path="data.training_use" %}
+    {% if fact_ok %}
     <p>
-      Your spectra are {{ training_val }}.
+      Your spectra are {{ fact_node.value }}.
       {% include fact.html path="data.retention" %}{% if fact_ok %} Retained {{ fact_node.value }}.{% endif %}
       {% include fact.html path="data.hosting_region" %}{% if fact_ok %} Hosted in {{ fact_node.value }}.{% endif %}
     </p>
-    <p><a href="{{ '/docs/data-handling/' | relative_url }}">Data handling</a></p>
+    {% endif %}
+    <p><a href="{{ '/security/' | relative_url }}">Security</a> · <a href="{{ '/docs/data-handling/' | relative_url }}">Data handling</a></p>
   </div>
 </section>
-{% endif %}
 
 <section class="section" id="research">
   <div class="wrap prose">

@@ -19,9 +19,17 @@
     Look at match and residual error together, and at the signals no candidate
     explains. Read <a href="/docs/evidence-and-confidence/">Evidence and confidence</a>
     in the docs.
+- id: unpublished-data
+  question: Can I upload client or unpublished spectra?
+  answer: >-
+    Sign in before any upload. Agree data-processing terms before a client
+    sample or an unpublished structure. See
+    <a href="/security/">security</a>.
 - id: pricing
   question: How much does it cost?
   answer: >-
-    Free includes 3 analyses. Pro is €79/month or €790/year. Lab is €299/month
-    for 5 users. Enterprise and pilots are scoped with you. See
+    Free includes 3 analyses and shift-level evidence. Pro is €79/month or
+    €790/year for one user, with 20 analyses per month, advanced LLM models,
+    higher-accuracy algorithms and physics-guided ranking. Enterprise is custom.
+    <a href="/contact/">Talk to sales</a>. See
     <a href="/pricing/">pricing</a>.

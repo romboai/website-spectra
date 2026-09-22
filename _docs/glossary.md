@@ -7,13 +7,17 @@ permalink: /docs/glossary/
 nav_order: 12
 ---
 
-**Candidate.** A structure hypothesis returned for review.
+**Accept / reject.** The chemist’s decision on a published candidate. Reject can record a comment and start a new identification.
+
+**Candidate.** A named, complete structure returned for review.
 
 **Dereplication.** Recognizing a known compound or close analogue in a mixture or extract so isolation effort is not wasted.
 
 **Evidence.** The observed signals and residuals used to support or reject a candidate.
 
 **Foundation model.** Here, a model pretrained on large spectral corpora. ROSE is the public 1H research model; Spectra is the product.
+
+**Gate.** A stop in the analysis. Input, preprocessing, peak picking and identification each wait until you confirm the step.
 
 **JCAMP-DX.** A common spectroscopic exchange format.
 
@@ -22,6 +26,8 @@ nav_order: 12
 **Open-world identification.** Identifying a compound without an assumed structure. Higher residual risk than verification.
 
 **Physics-guided validation.** Comparing predicted and measured shifts and discarding hypotheses the data cannot support.
+
+**Preprocessing.** Phase, baseline, reference and solvent preparation before peak picking. Already processed files can skip it.
 
 **RMSD.** Root-mean-square deviation; on the teaching example, a 13C shift residual.
 

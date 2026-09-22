@@ -1,8 +1,10 @@
 ---
 title: Contact
 h1: Talk to the Spectra team
-description: Contact ROMBO AI about Spectra, a lab evaluation, or an enterprise pilot.
+description: Contact ROMBO AI about Spectra, a lab evaluation, or an enterprise agreement.
 permalink: /contact/
+redirect_from:
+  - /pilot/
 eyebrow: Contact
 ---
 
@@ -13,9 +15,9 @@ eyebrow: Contact
     <p><a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="contact_try" data-analytics="cta_click">Analyze a spectrum free</a></p>
   </article>
   <article class="card">
-    <h2>Plan a pilot</h2>
-    <p>Bring real identification problems from your lab. We will scope an evaluation with you.</p>
-    <p><a class="btn btn-secondary" href="{{ '/pilot/' | relative_url }}">Plan a pilot</a></p>
+    <h2>Talk to sales</h2>
+    <p>Bring real identification problems from your lab. We will scope an enterprise agreement with you.</p>
+    <p><a class="btn btn-secondary" href="#lead-form">Talk to sales</a></p>
   </article>
 </div>
 
@@ -28,3 +30,5 @@ Spectra is a product of **{{ site.data.company.legal_name }}**
 {{ site.data.company.address.line1 }}  
 {{ site.data.company.address.line2 }}  
 {{ site.data.company.address.postal_code }} {{ site.data.company.address.city }} — {{ site.data.company.address.country }}
+
+[{{ site.contact_email }}](mailto:{{ site.contact_email }}) · {{ site.data.company.phone }}

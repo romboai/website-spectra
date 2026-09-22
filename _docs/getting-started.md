@@ -2,7 +2,7 @@
 title: Getting started with Spectra
 nav: Getting started
 h1: Getting started
-description: How to access Spectra, run a first 1H and 13C analysis, and interpret the shortlist.
+description: How to sign in, open a project, upload NMR files, and move through Input, Preprocessing, Peak picking and Identification.
 permalink: /docs/getting-started/
 nav_order: 2
 ---
@@ -11,31 +11,42 @@ nav_order: 2
 
 1. Open [{{ site.app_url }}/login]({{ site.app_url }}/login).
 2. Create an account or sign in. Login offers email, passkey and Google.
-3. If your organization needs a scoped evaluation instead of self-service, [request a pilot](/pilot/).
+3. If your organization needs a scoped evaluation instead of self-service, [talk to sales](/contact/).
 
-{% include screenshot.html file="login.png" caption="Sign in to Spectra" alt="Spectra login screen" %}
+## Create a project
 
-## Minimum workflow
+From Home, drop the spectra on the launchpad or choose a dataset folder. One project identifies one molecule: include every spectrum of that sample. A file dropped into the chat is an attachment to the message, not a spectrum in the project. Recent cases stay on Home so you can reopen one later.
 
-1. Choose an analytical question: verify a proposed structure, inspect an impurity, dereplicate a mixture, or identify an unknown.
-2. Gather 1H and 13C data from Bruker, JEOL, Varian or JCAMP-DX.
-3. Record solvent and field strength.
-4. Submit the case in Spectra.
-5. Inspect the ranked shortlist and shift-level residuals.
-6. Decide: confirm, dereplicate, flag unknown, or acquire another experiment.
+The figures below are the aromatic monoterpene example shipped with Spectra: one processed 1H spectrum at 400 MHz. Identification ranked three cymene isomers. The chemist still accepts or rejects.
 
-{% include screenshot.html file="upload.png" caption="Upload 1H and 13C" alt="Spectra upload screen" %}
+## Add the spectra
 
-{% include screenshot.html file="results.png" caption="Ranked shortlist" alt="Spectra results shortlist" %}
+Opening the project reads the files already there and shows an input preview. Spectra looks for these acquisitions:
+
+- **1H** and **13C**
+- optional **HSQC**, **COSY**, **HMBC**, **TOCSY** and **NOESY**
+
+{% include screenshot.html file="upload.png" caption="Home: drop a dataset, or open the example" alt="Spectra home with dataset upload and the aromatic monoterpene example" %}
+
+## Four steps, each waiting for you
+
+The workspace shows four steps. Later steps stay locked until you confirm the one in front of you. The same confirmation can be the on-screen control or a message in chat.
+
+1. **Input.** Preview the detected acquisitions.
+2. **Preprocessing.** Phase, baseline, reference and solvent. Already processed files skip this step. A peak list starts further along.
+3. **Peak picking.** Signals on 1D spectra, correlations on 2D spectra.
+4. **Identification.** A ranked shortlist, or an explicit result that no single structure is defensible, with the measurement to run next.
+
+{% include screenshot.html file="results.png" caption="Identification shortlist" alt="Spectra identification result" %}
+
+## Close the case
+
+When a ranking is published, accept one candidate or reject it and say why. Spectra ranks and explains. The chemist decides.
 
 ## Example data
 
-If you do not yet have a cleared spectrum, read the [sample analysis](/examples/sample-analysis/) to learn the review objects. Do not upload data you are not allowed to share with a hosted service.
+If you do not yet have a cleared spectrum, read the [sample analysis](/examples/sample-analysis/) to learn the review objects. Upload only files you are allowed to place in a hosted project.
 
 {% include example-file.html %}
-
-## What you will receive
-
-A shortlist, match information, residual error, and evidence that can be read shift by shift. The chemist closes the case.
 
 Next: [supported data](/docs/supported-data/).

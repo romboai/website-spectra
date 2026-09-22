@@ -41,7 +41,6 @@
   function pageview() {
     var path = window.location.pathname;
     if (path === "/pricing/") track("pricing_view");
-    if (path === "/pilot/") track("pilot_page_view");
     if (path.indexOf("/docs/") === 0) track("docs_page_view", { path: path });
     if (path === "/examples/sample-analysis/") track("sample_view");
     var legacy = {

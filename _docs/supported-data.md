@@ -9,10 +9,17 @@ nav_order: 3
 
 ## Experiment types
 
-- **1H NMR**
-- **13C NMR**
+A project can hold more than one acquisition.
 
-The teaching example uses 1H + 13C at 600 MHz.
+- **1H NMR** — primary proton spectrum
+- **13C NMR** — carbon spectrum
+- **HSQC** — 1H–13C correlation
+- **COSY** — 1H–1H correlation
+- **HMBC** — long-range correlation
+- **TOCSY** — spin-network correlation
+- **NOESY** — spatial proximity
+
+1H and 13C carry the structure shortlist. The 2D experiments add correlations to that same project. The teaching example uses 1H + 13C at 600 MHz.
 
 {% include fact.html path="data.upload_formats_detail" %}
 {% if fact_ok %}
@@ -65,6 +72,14 @@ Maximum upload size is {{ fact_node.value }}.
 {{ fact_node.value }}
 {% endif %}
 
+## Before the first real sample
+
+State the solvent and the spectrometer frequency. You can enter formula, exact mass, solvent and an expected structure under **Additional information** before identification.
+
+Processed spectra can skip preprocessing. A peak list can enter at peak picking. A raw 2D file that still needs a processing recipe stops and asks for those fields.
+
+Write to us before you standardise a method on 1H alone, a benchtop or low-field spectrometer, a project that contains only 2D spectra, or a very large file. Other nuclei and undocumented vendor dialects sit outside the current support matrix. Preparation checks are in [preparing NMR data](/docs/preparing-nmr-data/).
+
 ## Metadata
 
 **Required in practice:** the spectrum itself and enough context to interpret it (at least nucleus and, when known, solvent and field).
@@ -76,5 +91,5 @@ Maximum upload size is {{ fact_node.value }}.
 ## Contact us for
 
 - Other vendor export dialects
-- 2D-only cases
+- Projects that contain only 2D spectra
 - Very large datasets or private-library evaluation

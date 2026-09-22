@@ -99,6 +99,21 @@
   align-items: center;
 }
 
+.hero-grid > * {
+  min-width: 0;
+}
+
+.hero-shot {
+  margin: 2.25rem 0 0;
+}
+
+.hero-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+}
+
 .hero-copy .lede {
   font-size: 17px;
   max-width: 52ch;
@@ -132,16 +147,39 @@
 }
 
 .pricing-steps ul {
-  margin: 0.75rem 0 0;
+  margin: 0.85rem 0 0;
   padding-left: 1.1rem;
+}
+
+.pricing-steps .plan-note,
+.pricing-steps .plan-audience {
+  margin: 0;
+}
+
+.pricing-steps .plan-note {
+  min-height: 3em;
+  color: var(--text-muted);
+}
+
+.pricing-steps .plan-audience {
+  margin-top: 0.85rem;
+  min-height: 3em;
 }
 
 .compare-table-wrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .compare-table-wrap table {
   width: 100%;
+  min-width: 36rem;
+}
+
+.compare-table-wrap th[scope="row"] {
+  position: sticky;
+  left: 0;
+  background: var(--bg);
 }
 
 .founding-banner {
@@ -152,6 +190,8 @@
 
 .example-card {
   align-self: start;
+  max-width: 100%;
+  overflow-x: auto;
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 0;
@@ -161,6 +201,7 @@
 
 .example-card-meta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 0.75rem;
@@ -185,6 +226,7 @@
 
 .example-card table {
   margin: 0;
+  min-width: 22rem;
 }
 
 .example-card th,
@@ -307,6 +349,8 @@
 .form input,
 .form select,
 .form textarea {
+  width: 100%;
+  max-width: 100%;
   font: inherit;
   color: var(--text);
   background: var(--surface);
@@ -346,6 +390,10 @@
 .form-status.error {
   background: var(--error-bg);
   color: var(--error-text);
+}
+
+body:has(#cookie-banner:not([hidden])) {
+  padding-bottom: 6.5rem;
 }
 
 .cookie-banner {
@@ -425,12 +473,27 @@
   font-size: 0.92rem;
 }
 
-.pricing-steps .btn {
-  margin-top: 0.25rem;
+.pricing-steps > li {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-steps .plan-cta-row {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.pricing-steps .plan-cta-row .btn {
+  width: 100%;
+  margin-top: 0;
 }
 
 .pricing-steps h3 {
-  font-size: 1.15rem;
+  margin: 0.35rem 0 0;
+  font-size: 1.65rem;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .use-case-grid h2,
@@ -493,6 +556,31 @@
   vertical-align: middle;
 }
 
+@media (max-width: 639px) {
+  .hero-actions,
+  .plan-cta-row,
+  .cta-band-inner {
+    align-items: stretch;
+  }
+
+  .hero-actions .btn,
+  .plan-cta-row .btn,
+  .cta-band-inner .btn {
+    width: 100%;
+  }
+
+  .btn {
+    letter-spacing: 0.08em;
+    padding-inline: 1rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  body:has(#cookie-banner:not([hidden])) {
+    padding-bottom: 8.5rem;
+  }
+}
+
 @media (min-width: 640px) {
   .cta-band-inner {
     flex-direction: row;
@@ -500,8 +588,7 @@
     justify-content: space-between;
   }
 
-  .steps,
-  .pricing-steps {
+  .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -525,9 +612,12 @@
   }
 
   .grid-4,
-  .steps,
-  .pricing-steps {
+  .steps {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .pricing-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .use-case-grid {

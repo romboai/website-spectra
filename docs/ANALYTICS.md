@@ -12,9 +12,8 @@ PostHog is loaded from `_includes/posthog.html` → `assets/js/analytics.js`. Au
 | `sample_view` | `/examples/sample-analysis/` is viewed, or a “worked example” link is clicked | — |
 | `sample_candidate_open` | A candidate accordion on the sample analysis is opened | `candidate` slug |
 | `pricing_view` | `/pricing/` is viewed | — |
-| `plan_cta_click` | A plan CTA is clicked | `plan` (`free`, `pro`, `lab`, `enterprise`) |
-| `pilot_page_view` | `/pilot/` is viewed | — |
-| `lead_form_submit_success` | Contact or pilot form POST succeeded | — |
+| `plan_cta_click` | A plan CTA is clicked | `plan` (`free`, `pro`, `enterprise`) |
+| `lead_form_submit_success` | Contact form POST succeeded | — |
 | `lead_form_submit_error` | Form POST failed, or the endpoint is unconfigured locally | — |
 | `docs_page_view` | Any `/docs/` page is viewed | `path` |
 

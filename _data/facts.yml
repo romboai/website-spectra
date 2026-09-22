@@ -126,8 +126,8 @@ pricing:
     value: null
     verified: false
   pro_analyses_included:
-    value: null
-    verified: false
+    value: "20 analyses per month"
+    verified: true
   lab_analyses_included:
     value: null
     verified: false
@@ -135,12 +135,6 @@ pricing:
     value: null
     verified: false
   credit_packs:
-    value: null
-    verified: false
-  pilot_scope:
-    value: null
-    verified: false
-  pilot_price:
     value: null
     verified: false
   founding_price_note:
