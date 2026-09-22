@@ -1,5 +1,5 @@
 <section class="section hero-band" id="hero" aria-labelledby="hero-title">
-  <div class="wrap">
+  <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">NMR compound identification</p>
       <h1 id="hero-title">Know which structure your NMR data actually supports.</h1>
@@ -11,8 +11,6 @@
       <p class="hero-note">3 free analyses.{% include fact.html path="product.typical_runtime" %}{% if fact_ok %} Typical result in {{ fact_node.value }}.{% endif %}</p>
       <p class="hero-tertiary"><a href="{{ '/contact/' | relative_url }}">Evaluating for a company? Talk to sales</a></p>
     </div>
-    <figure class="hero-shot">
-      <img src="{{ '/assets/images/identification.png' | relative_url }}" width="1186" height="731" alt="Spectra identification of an aromatic monoterpene, with p-cymene ranked first of three hypotheses">
-    </figure>
+    {% include example-card.html %}
   </div>
 </section>
