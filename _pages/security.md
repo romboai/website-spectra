@@ -10,9 +10,18 @@ Spectra is a hosted web application. A chemist signs in with Auth0 using email, 
 
 Marketing analytics on this site are optional and consent-gated. We do not send form field values, spectrum names, structures, or sample descriptions.
 
+## What is established
+
+| Area | Published position |
+| --- | --- |
+| Access | A user signs in before uploading spectra |
+| Upload channel | Spectra are uploaded only inside the signed-in application |
+| Marketing analytics | Optional and consent-gated; spectrum and sample fields are not sent |
+| Scientific responsibility | The chemist remains responsible for the final interpretation and decision |
+
 ## Before client or unpublished spectra
 
-Agree these terms with us before you upload a client sample or an unpublished structure:
+Do not upload a client sample or unpublished structure until your organization has agreed the applicable terms for:
 
 - Where the files are hosted
 - How long they are kept
@@ -21,7 +30,11 @@ Agree these terms with us before you upload a client sample or an unpublished st
 - Which subprocessors handle them
 - Whether a data processing agreement is part of the order
 
-Send spectra only from the signed-in application. For a data-processing review, email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) without attaching spectra or confidential project details. Handling notes are on [data handling](/docs/data-handling/).
+## Start a data-processing review
+
+Email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) with your intended use, approximate number of users, required region, retention expectations, deletion requirements, and deployment constraints. Do not attach spectra, structures, sample identifiers, or confidential project details to the first message.
+
+Handling notes are on [data handling](/docs/data-handling/). Regulated use and private deployment are enterprise evaluation topics, not self-service claims.
 
 {% include fact.html path="data.hosting_region" %}
 {% if fact_ok %}

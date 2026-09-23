@@ -134,19 +134,33 @@ schema: software
   </div>
 </section>
 
-<section class="section" id="your-data">
-  <div class="wrap prose">
-    <h2>Your data</h2>
-    <p>Sign in before you upload. Client samples and unpublished structures need data-processing terms first: where the files are hosted, how long they are kept, whether they train models, and how you delete them.</p>
-    {% include fact.html path="data.training_use" %}
-    {% if fact_ok %}
-    <p>
-      Your spectra are {{ fact_node.value }}.
-      {% include fact.html path="data.retention" %}{% if fact_ok %} Retained {{ fact_node.value }}.{% endif %}
-      {% include fact.html path="data.hosting_region" %}{% if fact_ok %} Hosted in {{ fact_node.value }}.{% endif %}
-    </p>
-    {% endif %}
-    <p><a href="{{ '/security/' | relative_url }}">Security</a> · <a href="{{ '/docs/data-handling/' | relative_url }}">Data handling</a></p>
+<section class="section" id="buyer-checklist">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow">Before your lab buys</p>
+      <h2>Check data terms, technical fit, and the review record.</h2>
+      <p>Three questions to settle before Spectra becomes part of a laboratory workflow.</p>
+    </div>
+    <div class="grid-3 buyer-grid">
+      <article class="card">
+        <p class="card-index">01 / DATA GOVERNANCE</p>
+        <h3>Can these spectra be uploaded?</h3>
+        <p>Client samples and unpublished structures require agreed terms for hosting, retention, model training, deletion, subprocessors, and any DPA.</p>
+        <p><a href="{{ '/security/' | relative_url }}">Review the security checklist →</a></p>
+      </article>
+      <article class="card">
+        <p class="card-index">02 / TECHNICAL FIT</p>
+        <h3>Does Spectra accept this dataset?</h3>
+        <p>1H and 13C drive the shortlist. Projects can add HSQC, COSY, HMBC, TOCSY, or NOESY. Source families are Bruker, JEOL, Varian, and JCAMP-DX.</p>
+        <p><a href="{{ '/docs/supported-data/' | relative_url }}">Check the input specification →</a></p>
+      </article>
+      <article class="card">
+        <p class="card-index">03 / REVIEW RECORD</p>
+        <h3>What remains after the decision?</h3>
+        <p>The project keeps the uploaded evidence, result, accepted or rejected candidate, and review comment together. It supports the record; it does not replace an ELN or LIMS.</p>
+        <p><a href="{{ '/docs/records-and-exports/' | relative_url }}">Review records and exports →</a></p>
+      </article>
+    </div>
   </div>
 </section>
 

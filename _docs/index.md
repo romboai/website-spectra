@@ -46,10 +46,7 @@ Follow [getting started](/docs/getting-started/) for the walkthrough, then [runn
 
 - [FAQ](/docs/faq/) — common questions about using Spectra
 - [Glossary](/docs/glossary/) — terminology used in the guides
-{% include fact.html path="product.export_formats" %}
-{% if fact_ok %}
-- [Exporting results](/docs/exporting-results/)
-{% endif %}
+- [Review records and exports](/docs/records-and-exports/) — what stays with a decision and what laboratories should confirm
 {% include fact.html path="product.api_available" %}
 {% if fact_ok %}
 - [API](/docs/api/)

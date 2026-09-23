@@ -159,6 +159,44 @@ redirect_from:
   </div>
 </section>
 
+<section class="section section-alt" aria-labelledby="buyer-checklist-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow">Laboratory buyer checklist</p>
+      <h2 id="buyer-checklist-title">Confirm operational fit before the order.</h2>
+    </div>
+    <div class="compare-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Requirement</th>
+            <th scope="col">Published fit</th>
+            <th scope="col">Confirm before purchase</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Data governance</th>
+            <td>Signed-in upload; no spectra sent through the marketing site</td>
+            <td>Hosting, retention, model-training use, deletion, subprocessors, and DPA</td>
+          </tr>
+          <tr>
+            <th scope="row">Technical input</th>
+            <td>1H, 13C, optional 2D correlations; Bruker, JEOL, Varian, and JCAMP-DX</td>
+            <td>Low-field, 1H-only methods, undocumented dialects, 2D-only projects, and large files</td>
+          </tr>
+          <tr>
+            <th scope="row">Review record</th>
+            <td>Files, result, accepted or rejected candidate, and review comment remain together</td>
+            <td>Required export format, ELN/LIMS transfer, signatures, retention, and regulated audit needs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-6"><a href="{{ '/security/' | relative_url }}">Security checklist</a> · <a href="{{ '/docs/supported-data/' | relative_url }}">Input specification</a> · <a href="{{ '/docs/records-and-exports/' | relative_url }}">Records and exports</a></p>
+  </div>
+</section>
+
 <section class="section" aria-labelledby="po-title">
   <div class="wrap prose">
     <h2 id="po-title">What a purchase order can cite</h2>

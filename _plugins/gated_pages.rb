@@ -12,7 +12,6 @@ module Spectra
       url = doc.url.to_s
       (url == "/benchmark/" && !flags[:benchmark]) ||
         (url == "/customers/" && !flags[:cases]) ||
-        (url == "/docs/exporting-results/" && !flags[:export]) ||
         (url == "/docs/api/" && !flags[:api])
     end
   end
@@ -27,10 +26,6 @@ Jekyll::Hooks.register :site, :post_read do |site|
     benchmark: site.data.dig("benchmark", "published") == true,
     cases: begin
       node = proof["case_studies"] || {}
-      node["verified"] && !Spectra::Gating.blank_fact?(node["value"])
-    end,
-    export: begin
-      node = product["export_formats"] || {}
       node["verified"] && !Spectra::Gating.blank_fact?(node["value"])
     end,
     api: begin

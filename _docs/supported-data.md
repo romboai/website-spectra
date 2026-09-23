@@ -7,17 +7,17 @@ permalink: /docs/supported-data/
 nav_order: 3
 ---
 
-## Experiment types
+## Input specification
 
-A project can hold more than one acquisition.
-
-- **1H NMR** — primary proton spectrum
-- **13C NMR** — carbon spectrum
-- **HSQC** — 1H–13C correlation
-- **COSY** — 1H–1H correlation
-- **HMBC** — long-range correlation
-- **TOCSY** — spin-network correlation
-- **NOESY** — spatial proximity
+| Input | Role in Spectra | Published support |
+| --- | --- | --- |
+| 1H NMR | Primary evidence for the structure shortlist | Supported |
+| 13C NMR | Carbon evidence and residual comparison | Supported |
+| HSQC | 1H–13C correlations in the same project | Optional |
+| COSY | 1H–1H correlations in the same project | Optional |
+| HMBC | Long-range correlations in the same project | Optional |
+| TOCSY | Spin-network correlations in the same project | Optional |
+| NOESY | Spatial-proximity correlations in the same project | Optional |
 
 1H and 13C carry the structure shortlist. The 2D experiments add correlations to that same project. The teaching example uses 1H + 13C at 600 MHz.
 
@@ -72,13 +72,18 @@ Maximum upload size is {{ fact_node.value }}.
 {{ fact_node.value }}
 {% endif %}
 
+## Processing state
+
+- Processed spectra can skip preprocessing and continue to review.
+- Imported correlation lists can enter the peak-picking stage.
+- A raw 2D file that needs a processing recipe stops and requests the missing fields.
+- A file attached in chat is not added to the project dataset.
+
 ## Before the first real sample
 
 State the solvent and the spectrometer frequency. You can enter formula, exact mass, solvent and an expected structure under **Additional information** before identification.
 
-Processed spectra can skip preprocessing. A peak list can enter at peak picking. A raw 2D file that still needs a processing recipe stops and asks for those fields.
-
-Write to us before you standardise a method on 1H alone, a benchtop or low-field spectrometer, a project that contains only 2D spectra, or a very large file. Other nuclei and undocumented vendor dialects sit outside the current support matrix. Preparation checks are in [preparing NMR data](/docs/preparing-nmr-data/).
+Before standardising a method, email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) about 1H-only use, a benchtop or low-field spectrometer, a project containing only 2D spectra, a very large file, or an undocumented vendor dialect. Other nuclei sit outside the current published support matrix. Preparation checks are in [preparing NMR data](/docs/preparing-nmr-data/).
 
 ## Metadata
 
@@ -88,7 +93,7 @@ Write to us before you standardise a method on 1H alone, a benchtop or low-field
 
 **Optional context:** molecular formula, exact mass or MS, synthetic route notes.
 
-## Contact us for
+## Confirm with us before purchase
 
 - Other vendor export dialects
 - Projects that contain only 2D spectra
