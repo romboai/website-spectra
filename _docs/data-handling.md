@@ -21,7 +21,7 @@ Settle these points with us before that upload:
 - How you delete a spectrum or a project
 - Which subprocessors handle them
 
-The marketing contact form is for the enquiry. [Security](/security/) collects the same questions for a data-processing review. [Contact](/contact/) opens that conversation.
+For a data-processing review, read [security](/security/) and email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) without attaching spectra or confidential project details.
 
 {% include fact.html path="data.retention" %}
 {% if fact_ok %}

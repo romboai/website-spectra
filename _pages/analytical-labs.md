@@ -7,7 +7,7 @@ eyebrow: Analytical labs
 ---
 
 <p class="hero-actions">
-  <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}" data-cta-src="labs_hero" data-analytics="cta_click">Talk to sales</a>
+  <a class="btn btn-primary" href="mailto:{{ site.contact_email }}" data-cta-src="labs_hero" data-analytics="cta_click">Email sales</a>
   <a class="btn btn-secondary" href="{{ site.app_url }}/login" data-cta-src="labs_try" data-analytics="cta_click">Analyze a spectrum free</a>
 </p>
 
@@ -50,7 +50,7 @@ Authentic overlay or a standard for the accepted structure. Escalate when residu
 Bring a set of real identification problems from your lab. We run them through Spectra with you. Client spectra need data-processing terms before upload. See [security](/security/).
 
 <p class="hero-actions">
-  <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Talk to sales</a>
+  <a class="btn btn-primary" href="mailto:{{ site.contact_email }}">Email sales</a>
 </p>
 
 <p class="mt-6"><a href="{{ '/use-cases/compound-verification/' | relative_url }}">Compound verification</a> · <a href="{{ '/use-cases/impurity-identification/' | relative_url }}">Impurity identification</a></p>

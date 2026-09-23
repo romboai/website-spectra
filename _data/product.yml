@@ -41,15 +41,15 @@ cta:
       label: Read the docs
       path: /docs/
     enterprise:
-      label: Talk to sales
-      path: /contact/
+      label: Email sales
+      path: mailto:contact@rombo.ai
   request_access:
     primary:
       label: Request access
-      path: /contact/
+      path: mailto:contact@rombo.ai
     secondary:
       label: View sample analysis
       path: /examples/sample-analysis/
     enterprise:
-      label: Talk to sales
-      path: /contact/
+      label: Email sales
+      path: mailto:contact@rombo.ai

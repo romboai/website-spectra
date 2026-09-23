@@ -18,7 +18,7 @@ Access to the Spectra application is governed by the terms presented at sign-up 
 
 ## Acceptable use of this website
 
-Do not attempt to disrupt the site, scrape in a way that impairs service, or submit confidential laboratory data through marketing forms.
+Do not attempt to disrupt the site, scrape in a way that impairs service, or send confidential laboratory data through marketing enquiries.
 
 ## Trademarks
 

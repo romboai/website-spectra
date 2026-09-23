@@ -19,17 +19,16 @@ This notice covers the marketing website at {{ site.marketing_url }}, operated b
 
 - Pages you visit, if you accept analytics cookies
 - Marketing attribution (UTM parameters and referrer domain), if analytics is accepted
-- Information you voluntarily submit in the contact form: name, work email, organization, optional role, use-case category, optional message
 
-We configure analytics not to send form field values, spectrum names, structures, or sample descriptions.
+The marketing website currently has no contact form. Email links open your email client, so message contents are not submitted through the website. We configure analytics not to send spectrum names, structures, or sample descriptions.
 
 ## Legal basis
 
-Enquiries are processed to respond to your request and, where required, on the basis of your consent to the privacy checkbox on the form. Analytics cookies are optional.
+Enquiries sent by email are processed to respond to your request. Analytics cookies are optional.
 
 ## Retention
 
-Contact messages are kept long enough to answer the request and manage the conversation.
+Email enquiries are kept long enough to answer the request and manage the conversation.
 
 ## Your rights
 

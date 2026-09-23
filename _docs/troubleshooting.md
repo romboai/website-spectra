@@ -22,7 +22,7 @@ First identify where the problem occurs: sign-in, upload, a confirmation gate, e
 3. Compare the detected acquisitions with what you intended to upload. If a file is rejected or an acquisition is missing, record any error before trying again.
 4. Re-export from your processing software in a documented supported family rather than sending an unnamed binary. Check the export and its metadata using [preparing NMR data](/docs/preparing-nmr-data/).
 
-If the family is different, the export dialect is undocumented, or the problem persists, [contact us](/contact/) with the non-sensitive details in the [support checklist](#before-contacting-support). Do not confirm input until the preview matches the intended data.
+If the family is different, the export dialect is undocumented, or the problem persists, email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) with the non-sensitive details in the [support checklist](#before-contacting-support). Do not confirm input until the preview matches the intended data.
 
 ## The next step stays locked
 
@@ -70,11 +70,11 @@ If residuals remain large or the data cannot separate close analogues, abstain f
 
 ## I need this for a regulated method
 
-Do not treat a shortlist as regulatory validation. Spectra does not carry a regulatory certification, and regulated-laboratory validation is not a self-service feature. Read [current limitations](/docs/limitations/) and open an [enterprise conversation](/contact/) about the intended use and validation requirements.
+Do not treat a shortlist as regulatory validation. Spectra does not carry a regulatory certification, and regulated-laboratory validation is not a self-service feature. Read [current limitations](/docs/limitations/) and email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) about the intended use and validation requirements.
 
 ## Before contacting support
 
-Email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) or use [contact](/contact/) to describe the issue. Start with the minimum non-sensitive information needed:
+Email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) to describe the issue. Start with the minimum non-sensitive information needed:
 
 - The stage affected and what you expected versus what happened.
 - The steps to reproduce it, including whether you used a workspace control or chat.
@@ -85,4 +85,4 @@ Email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) or use [contac
 
 Do not send passwords, sign-in codes, authentication tokens or session cookies. If a screenshot helps, crop or redact sample names, structures, spectra, project identifiers and personal information that are not needed to explain the issue.
 
-Do not attach client or unpublished spectra, raw datasets or confidential project content to the initial enquiry. The marketing contact form is for the enquiry, not the dataset. If support needs an example, first agree what may be shared and how; use a non-sensitive example where possible. Review [data handling](/docs/data-handling/) and [security](/security/) before sharing sensitive material.
+Do not attach client or unpublished spectra, raw datasets or confidential project content to the initial email. If support needs an example, first agree what may be shared and how; use a non-sensitive example where possible. Review [data handling](/docs/data-handling/) and [security](/security/) before sharing sensitive material.

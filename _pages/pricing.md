@@ -1,7 +1,7 @@
 ---
 layout: landing
 title: Pricing and access
-description: Spectra plans — Free with 3 analyses, Pro at €79 per month or €790 per year with 20 analyses per month, and custom Enterprise. Talk to sales for Enterprise.
+description: Spectra plans — Free with 3 analyses, Pro at €79 per month or €790 per year with 20 analyses per month, and custom Enterprise. Email sales for Enterprise.
 permalink: /pricing/
 schema: software
 redirect_from:
@@ -47,9 +47,9 @@ redirect_from:
           {% if plan.cta == "product_url" %}
           <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="pricing_{{ plan.id }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
           {% elsif plan.cta == "contact" %}
-          <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}" data-cta-src="pricing_{{ plan.id }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
+          <a class="btn btn-primary" href="mailto:{{ site.contact_email }}" data-cta-src="pricing_{{ plan.id }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
           {% else %}
-          <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
+          <a class="btn btn-primary" href="mailto:{{ site.contact_email }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
           {% endif %}
           {% if plan.cta_secondary_label %}
           <a class="btn btn-secondary" href="{{ plan.cta_secondary_path | relative_url }}">{{ plan.cta_secondary_label }}</a>
@@ -83,7 +83,7 @@ redirect_from:
               {% elsif plan.id == "enterprise" %}Scoped with you
               {% else %}
                 {% include fact.html path="pricing.pro_analyses_included" %}
-                {% if fact_ok %}{{ fact_node.value }}{% else %}<a href="{{ '/contact/' | relative_url }}">Confirm with us</a>{% endif %}
+                {% if fact_ok %}{{ fact_node.value }}{% else %}<a href="mailto:{{ site.contact_email }}">Confirm with us</a>{% endif %}
               {% endif %}
             </td>
             {% endfor %}
@@ -167,8 +167,8 @@ redirect_from:
       <li>Pro — €79 per month or €790 per year, 20 analyses per month, 1 user, advanced LLM models, higher-accuracy algorithms, physics-guided ranking</li>
       <li>Enterprise — custom, scoped with you, plus the Pro identification features</li>
     </ul>
-    <p>Write before the order if you need VAT treatment or whether the free analyses expire. <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a> or the <a href="{{ '/contact/' | relative_url }}">contact form</a>.</p>
-    <p>The chemist confirms the structure. To buy Pro, sign in, choose monthly or annual billing, and complete checkout. Enterprise starts when you <a href="{{ '/contact/' | relative_url }}">talk to sales</a>.</p>
+    <p>Write before the order if you need VAT treatment or whether the free analyses expire: <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>.</p>
+    <p>The chemist confirms the structure. To buy Pro, sign in, choose monthly or annual billing, and complete checkout. For Enterprise, <a href="mailto:{{ site.contact_email }}">email sales</a>.</p>
   </div>
 </section>
 

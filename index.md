@@ -112,7 +112,7 @@ schema: software
       <h3>Enterprise</h3>
       <p class="price"><strong>Custom</strong></p>
       <p>Shared workspace, custom team size, and a commercial path for procurement requirements.</p>
-      <a class="btn btn-secondary btn-block" href="{{ '/contact/' | relative_url }}" data-cta-src="home_pricing_enterprise">Talk to sales</a>
+      <a class="btn btn-secondary btn-block" href="mailto:{{ site.contact_email }}" data-cta-src="home_pricing_enterprise">Email sales</a>
       <small>For pharmaceutical R&amp;D, core facilities, and contract labs.</small>
     </article>
   </div>

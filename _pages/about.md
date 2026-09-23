@@ -1,5 +1,5 @@
 ---
 title: About Spectra
 permalink: /about/
-redirect_to: /contact/
+redirect_to: https://rombo.ai/about/
 ---

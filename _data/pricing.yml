@@ -47,7 +47,7 @@ plans:
     audience: Teams that need a shared workspace.
     summary: Scoped pricing for larger teams and private-deployment conversations.
     who: Pharmaceutical R&D, impurity teams, and organisations that need a negotiated agreement.
-    cta_label: Talk to sales
+    cta_label: Email sales
     cta: contact
     features:
       - Custom team size

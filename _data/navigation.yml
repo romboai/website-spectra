@@ -42,8 +42,6 @@ footer:
   company:
     title: Company
     links:
-      - label: Contact
-        path: /contact/
       - label: ROMBO AI website
         url: https://rombo.ai
       - label: GitHub

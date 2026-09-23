@@ -173,8 +173,8 @@ CTA: https://rombo.ai/contact/ oppure contact@rombo.ai
 ### Spectra
 
 - Self-service immediato → https://spectra.rombo.ai/login
-- Enterprise / security review / requisiti di deployment → https://spectrahome.rombo.ai/contact/
-- Il form marketing è su `spectrahome.rombo.ai/contact/`; fallback email: contact@rombo.ai
+- Enterprise / security review / requisiti di deployment → contact@rombo.ai
+- La pagina Contact del sito marketing è temporaneamente disattivata; usare l'email diretta senza chiedere spettri o dettagli confidenziali nel primo messaggio.
 
 ---
 
@@ -309,5 +309,5 @@ ROSE è ricerca, non prodotto.
 Non inventare KPI, certificazioni, integrazioni, API, brevetti numerati, policy dati o prezzi Platform.
 Listino Spectra pubblicabile: Free €0 con 3 analisi; Pro €79/mese o €790/anno, 20 analisi al mese; Enterprise custom, talk to sales.
 Ranking non è conferma. Non sostituire TopSpin/Mnova/Delta/ACD/Labs.
-Se manca un fatto, dillo e proponi contact@rombo.ai o /contact/.
+Se manca un fatto, dillo e proponi contact@rombo.ai.
 ```

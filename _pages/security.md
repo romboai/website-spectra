@@ -21,7 +21,7 @@ Agree these terms with us before you upload a client sample or an unpublished st
 - Which subprocessors handle them
 - Whether a data processing agreement is part of the order
 
-Send spectra only from the signed-in application. The marketing form is for the enquiry. Start from [contact](/contact/). Handling notes are on [data handling](/docs/data-handling/).
+Send spectra only from the signed-in application. For a data-processing review, email [{{ site.contact_email }}](mailto:{{ site.contact_email }}) without attaching spectra or confidential project details. Handling notes are on [data handling](/docs/data-handling/).
 
 {% include fact.html path="data.hosting_region" %}
 {% if fact_ok %}

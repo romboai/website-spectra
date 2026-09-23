@@ -14,7 +14,7 @@ timezone: Europe/Rome
 product_url: https://spectra.rombo.ai/login
 lead_form_endpoint: ""
 contact_email: contact@rombo.ai
-fallback_cta_path: /contact/
+fallback_cta_path: mailto:contact@rombo.ai
 
 posthog_key: ""
 posthog_host: https://eu.i.posthog.com

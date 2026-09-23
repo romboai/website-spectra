@@ -20,7 +20,7 @@ This guide takes you from sign-in to your first reviewed result. You can explore
 
 1. Open [{{ site.app_url }}/login]({{ site.app_url }}/login).
 2. Create an account or sign in. Login offers email, passkey and Google.
-3. If your organization needs a scoped evaluation instead of self-service, [talk to sales](/contact/).
+3. If your organization needs a scoped evaluation instead of self-service, [email sales](mailto:{{ site.contact_email }}).
 
 ## Create a project
 

@@ -12,4 +12,4 @@ nav_order: 15
 {{ fact_node.value }}
 {% endif %}
 
-For partner or enterprise API access, [contact us](/contact/).
+For partner or enterprise API access, email [{{ site.contact_email }}](mailto:{{ site.contact_email }}).

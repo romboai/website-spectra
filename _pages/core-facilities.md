@@ -7,7 +7,7 @@ eyebrow: Core facilities
 ---
 
 <p class="hero-actions">
-  <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Talk to sales</a>
+  <a class="btn btn-primary" href="mailto:{{ site.contact_email }}">Email sales</a>
   <a class="btn btn-secondary" href="{{ '/pricing/' | relative_url }}">See pricing</a>
 </p>
 
@@ -50,6 +50,6 @@ Run a compound the facility already knows. If Spectra ranks it correctly and sho
 A core facility is an Enterprise agreement: seats, who can open another user's spectrum, and how the shortlist reaches the consultation note. Individual chemists start on Free or Pro.
 
 <p class="hero-actions">
-  <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Talk to sales</a>
+  <a class="btn btn-primary" href="mailto:{{ site.contact_email }}">Email sales</a>
   <a class="btn btn-secondary" href="{{ '/pricing/' | relative_url }}">Compare plans</a>
 </p>
