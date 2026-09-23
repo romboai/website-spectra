@@ -16,7 +16,9 @@
       {% endfor %}
     </div>
     <div class="footer-bottom">
-      <p class="mb-0">{{ site.data.product.brand }} · © {{ site.data.footer.copyright_start }} {{ site.data.company.legal_name }}</p>
+      {% assign current_year = 'now' | date: '%Y' %}
+      {% assign copyright_start = site.data.footer.copyright_start | append: '' %}
+      <p class="mb-0">{{ site.data.product.brand }} · © {{ copyright_start }}{% if current_year != copyright_start %}–{{ current_year }}{% endif %} {{ site.data.company.legal_name }}</p>
       {% include fact.html path="company.address" %}
       {% if fact_ok %}<p class="mb-0 footer-legal">{{ fact_node.value }}</p>{% endif %}
       {% include fact.html path="company.vat_number" %}

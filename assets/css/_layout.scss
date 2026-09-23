@@ -17,7 +17,8 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -148,10 +149,11 @@ a.header-cta {
 .section {
   padding: 2.25rem 0;
   border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
 }
 
 .section-alt {
-  background: transparent;
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
   border-block: 0;
   border-bottom: 1px solid var(--border);
 }

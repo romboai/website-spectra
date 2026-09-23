@@ -29,6 +29,10 @@ body {
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--border) 24%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--border) 18%, transparent) 1px, transparent 1px);
+  background-size: 4rem 4rem;
 }
 
 img {
@@ -62,12 +66,20 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(1.875rem, 5vw, 2.875rem);
+  font-size: clamp(2.75rem, 7vw, 5.25rem);
   margin: 1rem 0 0;
 }
 
+h1 em {
+  display: block;
+  color: var(--rust);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
 h2 {
-  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  font-size: clamp(1.65rem, 3.5vw, 2.6rem);
   line-height: 1.15;
   margin: 0 0 0.85rem;
 }

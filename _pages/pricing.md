@@ -13,7 +13,7 @@ redirect_from:
     <div class="hero-copy">
       <p class="eyebrow">Pricing</p>
       <h1 id="pricing-title">Plans for NMR identification work</h1>
-      <p class="lede">Start free on your own data. Upgrade when Spectra becomes part of your routine.</p>
+      <p class="lede">Start free on your own data. Individual NMR operators can buy Pro directly after sign-in; lab teams can request procurement terms.</p>
     </div>
     {% include fact.html path="pricing.founding_price_note" %}
     {% if fact_ok %}
@@ -168,7 +168,7 @@ redirect_from:
       <li>Enterprise — custom, scoped with you, plus the Pro identification features</li>
     </ul>
     <p>Write before the order if you need VAT treatment or whether the free analyses expire. <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a> or the <a href="{{ '/contact/' | relative_url }}">contact form</a>.</p>
-    <p>The chemist confirms the structure. Pro starts from sign-in. Enterprise starts when you <a href="{{ '/contact/' | relative_url }}">talk to sales</a>.</p>
+    <p>The chemist confirms the structure. To buy Pro, sign in, choose monthly or annual billing, and complete checkout. Enterprise starts when you <a href="{{ '/contact/' | relative_url }}">talk to sales</a>.</p>
   </div>
 </section>
 

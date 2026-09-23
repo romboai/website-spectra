@@ -1,16 +1,21 @@
 <section class="section hero-band" id="hero" aria-labelledby="hero-title">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">NMR compound identification</p>
-      <h1 id="hero-title">Know which structure your NMR data actually supports.</h1>
-      <p class="lede">Upload 1H and 13C spectra from Bruker, JEOL, Varian or JCAMP-DX. Spectra ranks candidate structures and shows, shift by shift, where each one fits and where it fails — so you confirm faster and know which experiment to run next.</p>
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> AI-assisted NMR identification</p>
+      <h1 id="hero-title">From spectrum to <em>defensible identity.</em></h1>
+      <p class="lede">Spectra turns your 1H and 13C data into a ranked, reviewable shortlist. See where every structure fits, where it fails, and what to check next.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="home_hero" data-analytics="cta_click" aria-label="Analyze a spectrum free">Analyze a spectrum free</a>
-        <a class="btn btn-secondary" href="{{ '/examples/sample-analysis/' | relative_url }}" data-analytics="sample_view">See a worked example</a>
+        <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="home_hero" data-analytics="cta_click" aria-label="Start three free NMR analyses">Start free <span aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary" href="{{ '/pricing/' | relative_url }}">View pricing</a>
       </div>
-      <p class="hero-note">3 free analyses.{% include fact.html path="product.typical_runtime" %}{% if fact_ok %} Typical result in {{ fact_node.value }}.{% endif %}</p>
-      <p class="hero-tertiary"><a href="{{ '/contact/' | relative_url }}">Evaluating for a company? Talk to sales</a></p>
+      <p class="hero-note">3 analyses free · no installation · Pro from €79/month</p>
     </div>
     {% include example-card.html %}
+  </div>
+  <div class="wrap hero-specs" aria-label="Compatibility summary">
+    <span><b>01</b> 1H + 13C</span>
+    <span><b>02</b> Bruker · JEOL · Varian</span>
+    <span><b>03</b> JCAMP-DX</span>
+    <span><b>04</b> Chemist-reviewed</span>
   </div>
 </section>

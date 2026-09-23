@@ -28,7 +28,7 @@ plans:
     audience: Chemists who need identification as part of routine work.
     summary: 20 analyses per month, billed monthly or annually.
     who: Individual chemists and researchers who need regular analyses beyond the free allotment.
-    cta_label: Get Pro
+    cta_label: Buy Pro
     cta: product_url
     price_note: 20 analyses per month · €790 / year
     features:

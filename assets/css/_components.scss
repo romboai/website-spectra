@@ -10,7 +10,7 @@
   font-family: var(--mono);
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
@@ -97,6 +97,178 @@
   display: grid;
   gap: 2.5rem;
   align-items: center;
+}
+
+.hero-band {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0 !important;
+  background:
+    radial-gradient(circle at 74% 34%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 32%),
+    color-mix(in srgb, var(--bg) 92%, transparent);
+}
+
+.hero-band::before,
+.hero-band::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border: 1px solid color-mix(in srgb, var(--rust) 14%, transparent);
+  border-radius: 50%;
+}
+
+.hero-band::before {
+  width: 38rem;
+  height: 38rem;
+  right: -9rem;
+  top: -15rem;
+}
+
+.hero-band::after {
+  width: 24rem;
+  height: 24rem;
+  right: -2rem;
+  top: -8rem;
+}
+
+.hero-copy,
+.example-card,
+.hero-specs {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy h1 {
+  max-width: 12ch;
+}
+
+.status-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.hero-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.hero-specs span {
+  padding: 0.9rem 1rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.hero-specs b {
+  color: var(--rust);
+  margin-right: 0.55rem;
+}
+
+.section-heading {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 46rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2,
+.section-heading p {
+  margin: 0;
+}
+
+.card-index {
+  margin: 0 0 2.5rem;
+  color: var(--rust);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+}
+
+.card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-link {
+  margin: 1.5rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+}
+
+.section-link a,
+.text-link {
+  color: var(--text);
+  text-underline-offset: 0.3em;
+}
+
+.purchase-grid {
+  display: grid;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.purchase-intro,
+.price-card {
+  padding: 1.5rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-strong) 52%, transparent);
+}
+
+.purchase-intro h2 {
+  margin-top: 0.9rem;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card-featured {
+  box-shadow: inset 0 3px 0 var(--accent);
+}
+
+.price-card h3 {
+  font-size: 1.5rem;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin: 1.4rem 0;
+  color: var(--text);
+}
+
+.price strong {
+  font-size: 2.3rem;
+  letter-spacing: -0.04em;
+}
+
+.price-card .btn {
+  margin-top: auto;
+}
+
+.price-card small {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--text-weak);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+}
+
+.btn-block {
+  width: 100%;
 }
 
 .hero-grid > * {
@@ -589,7 +761,16 @@ body:has(#cookie-banner:not([hidden])) {
   }
 
   .hero-band {
-    padding-block: 5rem;
+    padding-top: 6.5rem;
+  }
+
+  .hero-specs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 5rem;
+  }
+
+  .purchase-grid {
+    grid-template-columns: 1.35fr 1fr 1fr;
   }
 
   .grid-2 {

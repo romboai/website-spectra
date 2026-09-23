@@ -8,70 +8,33 @@ schema: software
 
 {% include hero.html %}
 
-{% include fact.html path="proof.benchmark_published" %}
-{% assign bench_ok = fact_ok %}
-{% include fact.html path="proof.customer_logos" %}
-{% assign logos_ok = fact_ok %}
-{% assign logos = fact_node.value %}
-<section class="section proof-band" aria-label="Proof">
-  <div class="wrap">
-    <div class="trust-strip">
-      {% if bench_ok %}
-      <a href="{{ '/benchmark/' | relative_url }}">See the benchmark</a>
-      {% endif %}
-      <a href="{{ '/research/' | relative_url }}">Built on ROSE, our open 1H NMR foundation model</a>
-      {% if logos_ok %}
-        {% for logo in logos %}
-        <span class="proof-logo">{{ logo.name }}</span>
-        {% endfor %}
-      {% endif %}
-    </div>
-  </div>
-</section>
-
-<section class="section" id="why-identification-stalls">
-  <div class="wrap">
-    <h2>Why identification stalls</h2>
-    <div class="grid-3">
-      <article class="card">
-        <h3>Library hits that don't explain the carbons</h3>
-        <p>A familiar name at the top of a search is not the same as a structure your 13C supports.</p>
-      </article>
-      <article class="card">
-        <h3>Close analogues eat expert time</h3>
-        <p>Separating isomers and analogues shift by shift is slow, and it is where senior spectroscopists spend their day.</p>
-      </article>
-      <article class="card">
-        <h3>Decisions nobody can audit later</h3>
-        <p>When the reasoning lives in someone's head, the next reviewer starts from zero.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
 <section class="section section-alt" id="how-it-works">
   <div class="wrap">
-    <h2 class="section-kicker">How it works</h2>
+    <div class="section-heading">
+      <p class="eyebrow">A practical second pair of eyes</p>
+      <h2>Built around the way NMR operators already work.</h2>
+      <p>Keep acquisition and processing in your current software. Use Spectra for the identification step that comes after.</p>
+    </div>
     <ol class="steps">
       <li>
         <p class="step-num">01</p>
-        <h3>Upload your spectra</h3>
-        <p>1H and 13C from Bruker, JEOL, Varian or JCAMP-DX, exported the way you already do.</p>
+        <h3>Export</h3>
+        <p>Prepare 1H and 13C data from TopSpin, Delta, Mnova, or your existing workflow.</p>
       </li>
       <li>
         <p class="step-num">02</p>
-        <h3>Retrieve candidates</h3>
-        <p>Spectra searches large compound libraries{% include fact.html path="product.library_size" %}{% if fact_ok %} ({{ fact_node.value }}){% endif %} and ranks plausible structures.</p>
+        <h3>Upload</h3>
+        <p>Add the spectra and context. No plug-in and no change to your validated acquisition method.</p>
       </li>
       <li>
         <p class="step-num">03</p>
-        <h3>Check every candidate against predicted shifts</h3>
-        <p>{% include fact.html path="product.shift_predictor" %}{% if fact_ok %}Predicted with {{ fact_node.value }}. {% endif %}Candidates your data cannot support drop down or out.</p>
+        <h3>Compare</h3>
+        <p>Inspect ranked candidates, 13C residuals, per-shift evidence, and signals left unexplained.</p>
       </li>
       <li>
         <p class="step-num">04</p>
-        <h3>Review the evidence and decide</h3>
-        <p>Confirm, dereplicate, flag as unknown, or plan the next experiment.</p>
+        <h3>Decide</h3>
+        <p>Confirm, reject, flag an unknown, or choose the next experiment. You remain in control.</p>
       </li>
     </ol>
   </div>
@@ -79,45 +42,37 @@ schema: software
 
 <section class="section" id="features">
   <div class="wrap">
-    <h2>What you get</h2>
+    <div class="section-heading">
+      <p class="eyebrow">Evidence, not a black box</p>
+      <h2>Everything needed to review the answer.</h2>
+    </div>
     <div class="grid-3">
       <article class="card">
-        <h3>A ranked shortlist</h3>
-        <p>Ordered hypotheses with a match value, so attention starts where the data points.</p>
+        <p class="card-index">01 / RANK</p>
+        <h3>Ranked candidates</h3>
+        <p>Start with the structures that best fit the experimental evidence.</p>
       </article>
       <article class="card">
+        <p class="card-index">02 / INSPECT</p>
         <h3>Shift-level evidence</h3>
-        <p>13C RMSD and per-shift residuals make disagreements visible instead of hiding them in one score.</p>
+        <p>See 13C RMSD and residuals instead of trusting one opaque score.</p>
       </article>
       <article class="card">
-        <h3>Unexplained signals, made visible</h3>
-        <p>Peaks no candidate accounts for are often the real story: an impurity, a second component, or a structure outside the library.</p>
-      </article>
-      {% include fact.html path="product.next_experiment_suggestion" %}
-      {% if fact_ok %}
-      <article class="card">
-        <h3>A suggested next experiment</h3>
-        <p>{{ fact_node.value }}</p>
-      </article>
-      {% endif %}
-      {% include fact.html path="product.export_formats" %}
-      {% if fact_ok %}
-      <article class="card">
-        <h3>An exportable record</h3>
-        <p>Export as {{ fact_node.value }}.</p>
-      </article>
-      {% endif %}
-      <article class="card">
-        <h3>You make the call</h3>
-        <p>Spectra ranks and explains. The chemist decides.</p>
+        <p class="card-index">03 / QUESTION</p>
+        <h3>Unexplained signals</h3>
+        <p>Spot a likely impurity, second component, or structure outside the library.</p>
       </article>
     </div>
+    <p class="section-link"><a href="{{ '/examples/sample-analysis/' | relative_url }}">Open a worked analysis <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
 <section class="section section-alt" id="built-for">
   <div class="wrap">
-    <h2>Built for</h2>
+    <div class="section-heading">
+      <p class="eyebrow">For real NMR workloads</p>
+      <h2>Choose your operating context.</h2>
+    </div>
     <div class="grid-3">
       <article class="card">
         <h3><a href="{{ '/natural-products/' | relative_url }}">Natural products and ingredient labs</a></h3>
@@ -133,6 +88,33 @@ schema: software
       </article>
     </div>
     <p class="mt-6"><a href="{{ '/use-cases/' | relative_url }}">All use cases</a></p>
+  </div>
+</section>
+
+<section class="section" id="pricing-preview">
+  <div class="wrap purchase-grid">
+    <div class="purchase-intro">
+      <p class="eyebrow">Simple purchasing</p>
+      <h2>Try it free. Buy it when it earns a place in your workflow.</h2>
+      <p>No sales call for an individual subscription. Teams can request procurement and deployment terms.</p>
+      <a class="text-link" href="{{ '/pricing/' | relative_url }}">Compare all plan details →</a>
+    </div>
+    <article class="price-card price-card-featured">
+      <p class="card-index">INDIVIDUAL</p>
+      <h3>Pro</h3>
+      <p class="price"><strong>€79</strong><span>/ month</span></p>
+      <p>20 analyses each month, advanced models, higher-accuracy algorithms, and physics-guided ranking.</p>
+      <a class="btn btn-primary btn-block" href="{{ site.app_url }}/login" data-cta-src="home_pricing_pro" data-analytics="plan_cta_click" data-plan="pro">Get Pro <span aria-hidden="true">→</span></a>
+      <small>Or €790 billed yearly. Sign in to purchase.</small>
+    </article>
+    <article class="price-card">
+      <p class="card-index">LAB / TEAM</p>
+      <h3>Enterprise</h3>
+      <p class="price"><strong>Custom</strong></p>
+      <p>Shared workspace, custom team size, and a commercial path for procurement requirements.</p>
+      <a class="btn btn-secondary btn-block" href="{{ '/contact/' | relative_url }}" data-cta-src="home_pricing_enterprise">Talk to sales</a>
+      <small>For pharmaceutical R&amp;D, core facilities, and contract labs.</small>
+    </article>
   </div>
 </section>
 
@@ -168,7 +150,7 @@ schema: software
   </div>
 </section>
 
-<section class="section" id="research">
+<section class="section section-alt" id="research">
   <div class="wrap prose">
     <h2>Open research</h2>
     <p>Spectra builds on ROSE, a 1H NMR foundation model we released openly with code, weights and a preprint.{% include fact.html path="product.rose_role_in_product" %}{% if fact_ok %} {{ fact_node.value }}{% endif %}</p>
@@ -185,9 +167,10 @@ schema: software
 <section class="section cta-band" id="start">
   <div class="wrap cta-band-inner">
     <div>
+      <p class="eyebrow">A low-risk first run</p>
       <h2>Start with a compound you already know.</h2>
-      <p class="lede">Upload a spectrum whose structure you're sure of. If Spectra ranks it correctly and shows you why, try your next unknown.</p>
+      <p class="lede">Use one of your three free analyses. If Spectra ranks it correctly and makes the evidence clear, move on to your next unknown.</p>
     </div>
-    <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="home_footer" data-analytics="cta_click">Analyze a spectrum free</a>
+    <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="home_footer" data-analytics="cta_click">Run a free analysis <span aria-hidden="true">→</span></a>
   </div>
 </section>
