@@ -47,3 +47,6 @@ Desktop.ini
 .ruby-gemset
 .byebug_history
 coverage/
+
+# Firebase CLI cache
+.firebase/

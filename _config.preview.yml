@@ -1,0 +1,4 @@
+# Firebase preview channels (one per pull request): keep the production URL so qa.sh's canonical-host check
+# still applies, but keep previews out of search engines.
+noindex: true
+environment: preview

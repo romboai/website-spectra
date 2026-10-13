@@ -1,0 +1,54 @@
+name: Firebase Hosting
+
+# Pull requests deploy to a preview channel and comment its URL; main deploys the live site.
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firebase-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Pull requests from forks get no secrets, so they cannot deploy.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    env:
+      JEKYLL_ENV: production
+      LEAD_FORM_ENDPOINT: ${{ secrets.LEAD_FORM_ENDPOINT }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+      - name: Build
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            bundle exec jekyll build --config _config.yml,_config.preview.yml
+          else
+            bundle exec jekyll build
+          fi
+      - name: Quality checks
+        run: bash scripts/qa.sh
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: coastal-pointer-384111
+          channelId: ${{ github.event_name == 'pull_request' && '' || 'live' }}
+          expires: 7d
