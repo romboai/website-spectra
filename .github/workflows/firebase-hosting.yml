@@ -44,11 +44,20 @@ jobs:
           fi
       - name: Quality checks
         run: bash scripts/qa.sh
-      - name: Deploy to Firebase Hosting
+      # Two steps rather than one with a conditional channelId: in Actions expressions '' is falsy, so
+      # `cond && '' || 'live'` always yields 'live'. Without channelId the action creates a channel per PR.
+      - name: Deploy preview channel
+        if: github.event_name == 'pull_request'
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: coastal-pointer-384111
-          channelId: ${{ github.event_name == 'pull_request' && '' || 'live' }}
           expires: 7d
+      - name: Deploy live site
+        if: github.event_name != 'pull_request'
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: coastal-pointer-384111
+          channelId: live
