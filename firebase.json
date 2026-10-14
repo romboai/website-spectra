@@ -1,0 +1,35 @@
+{
+  "hosting": {
+    "site": "coastal-pointer-384111",
+    "public": "_site",
+    "ignore": ["firebase.json", "**/.*"],
+    "trailingSlash": true,
+    "redirects": [
+      {
+        "regex": "^/(login|projects|billing|project/new)/?$",
+        "destination": "https://app.spectra.rombo.ai/:1",
+        "type": 301
+      },
+      {
+        "regex": "^/(global/.*)$",
+        "destination": "https://app.spectra.rombo.ai/:1",
+        "type": 301
+      },
+      {
+        "regex": "^/(L3dvcmtzcGFjZS.*)$",
+        "destination": "https://app.spectra.rombo.ai/:1",
+        "type": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }]
+      },
+      {
+        "source": "/assets/**",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+      }
+    ]
+  }
+}
