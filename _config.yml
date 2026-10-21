@@ -4,14 +4,14 @@ description: >-
   Spectra is an AI scientific agent for NMR compound identification.
   It ranks candidate structures from 1H and 13C data, validates them
   against predicted shifts, and returns traceable evidence for chemist review.
-url: https://spectrahome.rombo.ai
-marketing_url: https://spectrahome.rombo.ai
-app_url: https://spectra.rombo.ai
+url: https://spectra.rombo.ai
+marketing_url: https://spectra.rombo.ai
+app_url: https://app.spectra.rombo.ai
 baseurl: ""
 lang: en
 timezone: Europe/Rome
 
-product_url: https://spectra.rombo.ai/login
+product_url: https://app.spectra.rombo.ai/login
 lead_form_endpoint: ""
 contact_email: contact@rombo.ai
 fallback_cta_path: mailto:contact@rombo.ai

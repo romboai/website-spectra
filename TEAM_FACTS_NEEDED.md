@@ -44,7 +44,7 @@ Templates omit any fact that is not `verified: true` with a non-empty `value` in
 | `pricing.monthly_annual_switch` | Pricing billing FAQ | Can a customer switch between monthly and annual billing? |
 | `proof.customer_logos` | Homepage proof strip | Logos with written permission. |
 | `proof.case_studies` | `/customers/` | Published case studies. |
-| `LEAD_FORM_ENDPOINT` | Production build, contact form | Cloudflare Worker URL for the lead proxy. Add GitHub secret `LEAD_FORM_ENDPOINT`. Also allow origin `https://spectrahome.rombo.ai` on the Worker. |
+| `LEAD_FORM_ENDPOINT` | Production build, contact form | Cloudflare Worker URL for the lead proxy. Add GitHub secret `LEAD_FORM_ENDPOINT`. Also allow origin `https://spectra.rombo.ai` on the Worker. |
 
 ## Screenshots to supply (`assets/docs/`)
 

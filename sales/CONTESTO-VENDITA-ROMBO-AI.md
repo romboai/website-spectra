@@ -24,9 +24,9 @@ Lingua: italiano con il cliente italiano; inglese con prospect internazionali. N
 | Email | contact@rombo.ai |
 | Telefono | +39 352 064 8081 |
 | Sito corporate | https://rombo.ai |
-| Sito marketing Spectra | https://spectrahome.rombo.ai |
-| Applicazione Spectra | https://spectra.rombo.ai |
-| Login Spectra | https://spectra.rombo.ai/login |
+| Sito marketing Spectra | https://spectra.rombo.ai |
+| Applicazione Spectra | https://app.spectra.rombo.ai |
+| Login Spectra | https://app.spectra.rombo.ai/login |
 | GitHub | https://github.com/romboai |
 | Hugging Face | https://huggingface.co/romboai |
 | Leadership citata sul sito about | Andrea Zanda, Carmine Mattia, Silvia Bongiovanni |
@@ -56,9 +56,9 @@ ROMBO AI vende **due linee**. Confonderle è l’errore commerciale più grave.
 
 ### 2. Spectra by ROMBO AI — identificazione molecolare da NMR (ciclo corto, anche self-service)
 
-- Sito marketing: https://spectrahome.rombo.ai
-- Applicazione: https://spectra.rombo.ai
-- Login: https://spectra.rombo.ai/login (Auth0: email, passkey, Google)
+- Sito marketing: https://spectra.rombo.ai
+- Applicazione: https://app.spectra.rombo.ai
+- Login: https://app.spectra.rombo.ai/login (Auth0: email, passkey, Google)
 - Stato: **public alpha 0.6.0-alpha** (14 settembre 2026)
 - Job: da spettri **1H e 13C** a una **shortlist spiegabile** di strutture candidate, con evidenza per il chimico. Lo stesso progetto può includere HSQC, COSY, HMBC, TOCSY e NOESY come correlazioni di supporto.
 - Non conferma l’identità. Il chimico chiude il caso.
@@ -128,7 +128,7 @@ Valuta EUR. IVA da confermare in checkout/fattura. Non inventare sconti accademi
 
 | Piano | Prezzo | Posti | Per chi | CTA |
 | --- | --- | --- | --- | --- |
-| Free | €0, 3 analisi | 1 | Valutazione sul proprio 1H/13C | Start free: https://spectra.rombo.ai/login |
+| Free | €0, 3 analisi | 1 | Valutazione sul proprio 1H/13C | Start free: https://app.spectra.rombo.ai/login |
 | Pro | €79 / mese oppure €790 / anno | 1 | Chimico che analizza con continuità. 20 analisi al mese, modelli LLM avanzati, algoritmi a maggiore accuratezza, ranking physics-guided | Buy Pro dopo il login |
 | Enterprise | Custom | Custom | Pharma R&D, impurity team, workspace condiviso e requisiti contrattuali o di deployment | Talk to sales |
 
@@ -172,7 +172,7 @@ CTA: https://rombo.ai/contact/ oppure contact@rombo.ai
 
 ### Spectra
 
-- Self-service immediato → https://spectra.rombo.ai/login
+- Self-service immediato → https://app.spectra.rombo.ai/login
 - Enterprise / security review / requisiti di deployment → contact@rombo.ai
 - La pagina Contact del sito marketing è temporaneamente disattivata; usare l'email diretta senza chiedere spettri o dettagli confidenziali nel primo messaggio.
 
@@ -284,11 +284,11 @@ L'applicazione è pubblicamente accessibile e il changelog la indica come `0.6.0
 
 | Bisogno | Link |
 | --- | --- |
-| Provare Spectra | https://spectra.rombo.ai/login |
-| Listino Spectra | https://spectrahome.rombo.ai/pricing/ |
-| Docs | https://spectrahome.rombo.ai/docs/ |
-| Limiti (da mandare prima di un lab regolato) | https://spectrahome.rombo.ai/docs/limitations/ |
-| Esempio pubblico | https://spectrahome.rombo.ai/examples/sample-analysis/ |
+| Provare Spectra | https://app.spectra.rombo.ai/login |
+| Listino Spectra | https://spectra.rombo.ai/pricing/ |
+| Docs | https://spectra.rombo.ai/docs/ |
+| Limiti (da mandare prima di un lab regolato) | https://spectra.rombo.ai/docs/limitations/ |
+| Esempio pubblico | https://spectra.rombo.ai/examples/sample-analysis/ |
 | Fattibilità Platform | https://rombo.ai/contact/ |
 | Platform | https://rombo.ai/product/ |
 | About | https://rombo.ai/about/ |
