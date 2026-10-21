@@ -48,7 +48,7 @@ echo "== Duplicate titles =="
 python3 "${ROOT}/scripts/check_meta.py"
 
 echo "== Canonical host =="
-if ! grep -R "https://spectrahome.rombo.ai" "$SITE" >/dev/null; then
+if ! grep -RF "https://spectra.rombo.ai" "$SITE" >/dev/null; then
   echo "Expected marketing host missing from build." >&2
   exit 1
 fi

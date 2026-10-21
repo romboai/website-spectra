@@ -1,42 +1,44 @@
 # Deployment
 
-## Current hosting reality
+## Hosting
 
-As of 14 September 2026 the public hostname `spectra.rombo.ai` is served by **nginx** running the SpectraPro application (`0.6.0-alpha`). It is **not** this GitHub Pages landing.
+Since 21 October 2026:
 
-This repository deploys a Jekyll site from **`main`**. Do not flip DNS to GitHub Pages until product and marketing agree how `/login` and the application will be hosted.
+| Hostname | Serves | Where |
+|---|---|---|
+| `spectra.rombo.ai` | This site | Firebase Hosting, site `coastal-pointer-384111` |
+| `app.spectra.rombo.ai` | The SpectraPro application | Its own VM (SpectraPro repository, `PRODUCTION.md`) |
+| `spectrahome.rombo.ai` | The same site, until it is retired | GitHub Pages (`CNAME`, `.github/workflows/pages.yml`) |
 
-Recommended split (human decision):
+`firebase.json` redirects old application links on `spectra.rombo.ai` (`/login`, `/projects`, `/billing`,
+`/project/new`, `/global/…` and session links starting with `L3dvcmtzcGFjZS`) to the same path on
+`app.spectra.rombo.ai` with a `301`, keeping the query string. Hosting applies redirects before static files and
+`404.html`.
 
-- Marketing + docs: this Jekyll site on GitHub Pages or another static host
-- Application: keep nginx / app host, expose login at `https://spectra.rombo.ai/login` or move the app to a subdomain and update `product_url`
+## DNS
 
-## GitHub Pages setup
+DNS for `rombo.ai` is Namecheap BasicDNS. In the Host column, enter the name without `.rombo.ai`: Namecheap
+appends it.
 
-1. Keep the repository production branch as **`main`**.
-2. Enable GitHub Pages with **GitHub Actions** as the source (not the default Jekyll builder).
-3. `CNAME` contains `spectrahome.rombo.ai` (temporary marketing hostname; do not put `spectra.rombo.ai` here while the app still owns that DNS).
-4. Production workflow: `.github/workflows/pages.yml`
-5. Pull-request tests: `.github/workflows/test.yml`
+- `spectra`: the `A` record Firebase gives in the console (Hosting → custom domain), no `AAAA` record
+- `spectra` TXT `hosting-site=coastal-pointer-384111`: Firebase's ownership record. Keep it
+- `spectra` TXT `brevo-code:…`: Brevo sender verification, unrelated to hosting. Keep it
+- `app.spectra`: `A` record to the application VM
+- `spectrahome`: CNAME `romboai.github.io`, until `spectrahome` is retired
 
-## DNS and CNAME
-
-- Live Pages hostname: `spectrahome.rombo.ai` → CNAME `romboai.github.io`
-- Product hostname: `spectra.rombo.ai` stays on the app host until the split is approved
-- File: `CNAME` (must match the Pages custom domain, no trailing space)
-- HTTPS is enforced on `spectrahome.rombo.ai`
+Firebase renews the certificate for `spectra.rombo.ai` itself.
 
 ## GitHub Actions
 
-The workflow:
+`.github/workflows/firebase-hosting.yml`:
 
-1. Checks out the repository
-2. Sets up Ruby 3.3
-3. Installs Bundler dependencies
-4. Builds Jekyll with `JEKYLL_ENV=production`
-5. Runs `scripts/qa.sh` (HTMLProofer, secret grep, title/H1/description checks)
-6. Uploads the Pages artifact
-7. Deploys only from `main`
+1. Builds Jekyll with `JEKYLL_ENV=production`. Pull requests add `_config.preview.yml` (`noindex`)
+2. Runs `scripts/qa.sh` (HTMLProofer, secret grep, title/H1/description checks, canonical host)
+3. Deploys a pull request to its own preview channel and comments the URL
+4. Deploys `main` to the live site
+
+`.github/workflows/pages.yml` keeps deploying `main` to GitHub Pages for `spectrahome.rombo.ai`. Remove it and
+`CNAME` when `spectrahome` is retired. Pull-request tests: `.github/workflows/test.yml`.
 
 Optional Pagefind step can be added after `jekyll build` if you want static search. The site is usable without it.
 

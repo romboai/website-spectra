@@ -1,8 +1,8 @@
 # Spectra marketing website
 
-Jekyll site for [Spectra by ROMBO AI](https://spectrahome.rombo.ai), the NMR compound-identification marketing site.
+Jekyll site for [Spectra by ROMBO AI](https://spectra.rombo.ai), the NMR compound-identification marketing site.
 
-This repository is the **marketing, documentation and SEO** site. The Spectra application is a separate SpectraPro deployment at `https://spectra.rombo.ai`. Read `DEPLOYMENT.md` before pointing DNS at GitHub Pages.
+This repository is the **marketing, documentation and SEO** site. The Spectra application is a separate SpectraPro deployment at `https://app.spectra.rombo.ai`. The site is hosted on Firebase; see `DEPLOYMENT.md`.
 
 ## Requirements
 
@@ -55,7 +55,7 @@ Primary and footer links live in `_data/navigation.yml`.
 
 ## Edit product URLs
 
-The only application URL setting is `product_url` in `_config.yml`. Templates must use `site.product_url`.
+The application URL settings are `app_url` and `product_url` (its login page) in `_config.yml`. Templates must use them, never a hard-coded host.
 
 ## Configure analytics
 
