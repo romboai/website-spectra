@@ -1,15 +1,96 @@
 ---
 layout: default
 ---
+{% assign uc = site.data.use_cases | where: "slug", page.slug | first %}
 <article class="wrap page-hero">
   <header class="prose">
     {% include breadcrumbs.html %}
-    <p class="eyebrow">Use case</p>
+    <p class="eyebrow">Use case{% if uc and uc.category %} · {{ uc.category }}{% elsif page.category %} · {{ page.category }}{% endif %}</p>
     <h1>{{ page.h1 | default: page.title }}</h1>
     <p class="page-lede">{{ page.description }}</p>
   </header>
+
+  {% assign sp = page.starting_point | default: uc.starting_point %}
+  {% assign inp = page.typical_input | default: uc.input %}
+  {% assign out = page.spectra_output | default: uc.output %}
+  {% assign call = page.chemist_call | default: uc.decision %}
+  {% if sp or inp or out or call %}
+  <dl class="hero-specs use-case-specs" aria-label="Workflow specifications">
+    <div>
+      <dt>Starting point</dt>
+      <dd>{{ sp }}</dd>
+    </div>
+    <div>
+      <dt>Typical input</dt>
+      <dd>{{ inp }}</dd>
+    </div>
+    <div>
+      <dt>Spectra output</dt>
+      <dd>{{ out }}</dd>
+    </div>
+    <div>
+      <dt>Chemist's call</dt>
+      <dd>{{ call }}</dd>
+    </div>
+  </dl>
+  {% endif %}
+
+  {% assign img_src = page.image | default: uc.image %}
+  {% assign shot_file = page.screenshot | default: uc.screenshot %}
+  {% assign shot_cap = page.screenshot_caption | default: uc.screenshot_caption %}
+  {% if img_src or shot_file %}
+  <div class="use-case-visual-pair">
+    {% if img_src %}
+    <figure class="use-case-figure">
+      <img src="{{ img_src | relative_url }}" alt="{{ page.title }} analytical schematic">
+      <figcaption>WORKFLOW SCHEMATIC — {{ uc.summary | default: page.description }}</figcaption>
+    </figure>
+    {% endif %}
+    {% if shot_file %}
+    {% assign shot_path = "/assets/docs/" | append: shot_file %}
+    <figure class="use-case-figure">
+      <img src="{{ shot_path | relative_url }}" alt="{{ shot_cap | default: page.title }}">
+      {% if shot_cap %}<figcaption>IN SPECTRA — {{ shot_cap }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+  </div>
+  {% endif %}
+
   <div class="prose">
     {{ content }}
   </div>
-  {% include cta.html %}
+
+  {% if page.limitations_summary or page.validation_summary %}
+  <div class="use-case-boundaries" aria-label="Boundaries and validation">
+    {% if page.limitations_summary %}
+    <section class="card">
+      <p class="eyebrow">Scope &amp; limitations</p>
+      <h2>Where this workflow stops</h2>
+      <p>{{ page.limitations_summary }}</p>
+    </section>
+    {% endif %}
+    {% if page.validation_summary %}
+    <section class="card">
+      <p class="eyebrow">Chemist sign-off</p>
+      <h2>Recommended validation</h2>
+      <p>{{ page.validation_summary }}</p>
+    </section>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% include cta.html src="use_case_detail" primary_label="Analyze a spectrum free" secondary_href="/examples/sample-analysis/" secondary_label="Open a worked analysis" %}
+
+  <nav class="use-case-nav" aria-label="Other analytical jobs">
+    <p class="eyebrow">Other analytical jobs</p>
+    <ul class="use-case-pills">
+      {% for item in site.data.use_cases %}
+      {% unless item.path == page.permalink %}
+      <li>
+        <a href="{{ item.path | relative_url }}">{{ item.title }} <span aria-hidden="true">→</span></a>
+      </li>
+      {% endunless %}
+      {% endfor %}
+    </ul>
+  </nav>
 </article>

@@ -71,23 +71,35 @@ schema: software
   <div class="wrap">
     <div class="section-heading">
       <p class="eyebrow">For real NMR workloads</p>
-      <h2>Choose your operating context.</h2>
+      <h2>Choose your operating context — or jump straight to the analytical job.</h2>
+      <p>Whether you run an isolation campaign, sign off client structures, or manage shared magnets, Spectra adapts to the question on your bench.</p>
     </div>
     <div class="grid-3">
       <article class="card">
-        <h3><a href="{{ '/natural-products/' | relative_url }}">Natural products and ingredient labs</a></h3>
-        <p>Dereplicate extracts and fractions before isolation.</p>
+        <p class="card-index">01 / EXTRACTS &amp; FRACTIONS</p>
+        <h3><a href="{{ '/natural-products/' | relative_url }}">Natural products and ingredient labs →</a></h3>
+        <p>Dereplicate extracts and concentrated fractions before committing preparative columns.</p>
       </article>
       <article class="card">
-        <h3><a href="{{ '/analytical-labs/' | relative_url }}">Analytical and contract labs</a></h3>
-        <p>Verify proposed structures and rank impurity hypotheses.</p>
+        <p class="card-index">02 / CRO, CDMO &amp; R&amp;D</p>
+        <h3><a href="{{ '/analytical-labs/' | relative_url }}">Analytical and contract labs →</a></h3>
+        <p>Verify proposed structures and rank impurity hypotheses with a reviewable evidence trail.</p>
       </article>
       <article class="card">
-        <h3><a href="{{ '/core-facilities/' | relative_url }}">NMR core facilities</a></h3>
-        <p>Give every user a consistent, reviewable first pass.</p>
+        <p class="card-index">03 / SHARED MAGNETS</p>
+        <h3><a href="{{ '/core-facilities/' | relative_url }}">NMR core facilities →</a></h3>
+        <p>Give every instrument user a consistent, inspectable first pass before expert consultation.</p>
       </article>
     </div>
-    <p class="mt-6"><a href="{{ '/use-cases/' | relative_url }}">All use cases</a></p>
+    <div class="mt-6">
+      <p class="eyebrow">By analytical job</p>
+      <ul class="use-case-pills">
+        {% for item in site.data.use_cases %}
+        <li><a href="{{ item.path | relative_url }}">{{ item.title }} <span aria-hidden="true">→</span></a></li>
+        {% endfor %}
+      </ul>
+      <p class="section-link"><a href="{{ '/use-cases/' | relative_url }}">Compare all 6 NMR use cases <span aria-hidden="true">→</span></a></p>
+    </div>
   </div>
 </section>
 

@@ -11,6 +11,11 @@ eyebrow: Core facilities
   <a class="btn btn-secondary" href="{{ '/pricing/' | relative_url }}">See pricing</a>
 </p>
 
+<figure class="use-case-figure">
+  <img src="{{ '/assets/docs/upload.png' | relative_url }}" alt="Spectra upload launchpad for dropping NMR files or dataset folders">
+  <figcaption>IN SPECTRA — Users drop a dataset folder (1H, 13C, and optional 2D) to generate a consistent pre-consultation shortlist.</figcaption>
+</figure>
+
 ## Target user
 
 NMR core facilities and shared laboratory services that support chemists who are not full-time spectroscopists.

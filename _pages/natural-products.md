@@ -3,7 +3,7 @@ title: Natural products and ingredient labs
 h1: Stop re-isolating compounds that are already known.
 description: Spectra checks your fractions' 1H and 13C data against large compound libraries, ranks known candidates with per-shift evidence, and flags the signals no known structure explains.
 permalink: /natural-products/
-eyebrow: Natural products
+eyebrow: Operating context · Natural products
 ---
 
 <p class="hero-actions">
@@ -11,46 +11,32 @@ eyebrow: Natural products
   <a class="btn btn-secondary" href="{{ '/examples/sample-analysis/' | relative_url }}" data-analytics="sample_view">See a worked example</a>
 </p>
 
-## Target user
+<figure class="use-case-figure">
+  <img src="{{ '/assets/docs/shortlist.png' | relative_url }}" alt="Spectra candidate shortlist comparing structural isomers">
+  <figcaption>IN SPECTRA — Ranked candidate hypotheses with compatibility scores and shift-level justification.</figcaption>
+</figure>
 
-Natural-product and ingredient chemists working extracts, fractions and isolates from plants, microbes, marine sources or botanical ingredients.
+## Protect isolation capacity from known scaffolds
 
-## Specific problem
+In botanical, microbial, marine, and natural-ingredient laboratories, preparative chromatography and NMR time are the scarce resources. When an active or abundant fraction enters the queue, the team needs to know quickly whether the main spin system belongs to a known library compound or a genuinely new analogue.
 
-The interesting peak in a fraction is often a known scaffold or a close analogue. Isolation campaigns then spend weeks on a compound the 13C already supported.
+Exact-match database searches often fail across different solvents or slightly impure fractions, pushing teams to isolate compounds that turn out to be ubiquitous flavonols, terpenes, coumarins, or fatty-acid remnants.
 
-## Existing workflow
+## How extraction and isolation teams use Spectra
 
-LC-MS first, NMR after isolation. Known flavonols, flavones, terpenes and peptides still consume columns.
+1. **Screen concentrated fractions before final purification** — Export 1H and 13C data from TopSpin, Delta, or Mnova and add the solvent plus any MS molecular formula.
+2. **Review knowns and structural neighbours together** — Spectra ranks candidate structures and displays 13C RMSD and per-shift residuals so chemists can see whether the carbon skeleton matches a known compound or diverges at a specific position.
+3. **Keep a shared record across fractions** — Record which fractions were set aside as dereplicated knowns and which were promoted to preparative isolation because their residual peaks remained unexplained.
 
-## Where time is lost
+## A teaching case: three flavonoids, one formula
 
-Isolating compounds a shift-level residual would have identified as known on day one. Close analogues (same formula, different substitution) are the slow cases.
-
-## How Spectra helps
-
-Upload 1H and 13C from a concentrated fraction. Spectra ranks known library members with per-shift evidence and leaves the unexplained signals visible, so you dereplicate before you isolate.
-
-## Data typically required
-
-Fraction 1H and, when possible, 13C; solvent; an organism or extract code you are allowed to share. A formula from MS is useful when you have it.
-
-## Output
-
-A ranked shortlist, 13C RMSD and per-shift residuals, and the peaks no candidate accounts for.
-
-## Limitations
-
-Glycosylation, tautomerism and overlapping aromatics in crude extracts will defeat a one-compound ranking. Spectra does not replace LC or bioassay.
-
-## Recommended validation
-
-Authentic standards for the top knowns. Isolation for residuals that survive that check.
-
-## A teaching case
-
-The public walkthrough uses three closely related flavonoids (two flavonols and a flavone) that share C15H10O6. The C-3 region is where 13C can separate luteolin from quercetin and kaempferol.
+The public walkthrough (`CASE-2043`) shows how Spectra presents three closely related flavonoids (two flavonols and a flavone) that share `C15H10O6`. The C-3 region is where 13C separates luteolin from quercetin and kaempferol.
 
 {% include sample-candidates.html id="flavonoids" %}
 
-<p class="mt-6"><a href="{{ '/examples/sample-analysis/' | relative_url }}">Read the full sample analysis</a> · <a href="{{ '/use-cases/natural-products/' | relative_url }}">Natural-products use case</a> · <a href="{{ '/use-cases/dereplication/' | relative_url }}">Dereplication</a></p>
+## Where Spectra fits — and where it stops
+
+- **Best fit**: Enriched fractions and isolates where 1H and 13C resonances of the major component can be resolved.
+- **Out of scope**: Crude extracts with heavy aromatic or glycosidic overlap, bioassay replacement, or automated novelty certification. Always verify dereplicated hits against authentic standards when available.
+
+<p class="mt-6"><a href="{{ '/examples/sample-analysis/' | relative_url }}">Read the full sample analysis</a> · <a href="{{ '/use-cases/dereplication/' | relative_url }}">NMR dereplication workflow</a> · <a href="{{ '/use-cases/natural-products/' | relative_url }}">Analogue ranking use case</a></p>

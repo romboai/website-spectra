@@ -1,30 +1,83 @@
 - slug: compound-verification
   title: NMR compound verification
   nav: Verification
+  category: Known hypothesis
   path: /use-cases/compound-verification/
-  summary: Check whether submitted 1H and 13C data support a proposed structure.
+  image: /assets/images/use-cases/compound-verification.svg
+  screenshot: context.png
+  screenshot_caption: "Entering optional context — molecular formula, exact mass, solvent, and expected structure — before running verification."
+  summary: Check whether submitted 1H and 13C data support a proposed structure before treating the assignment as closed.
+  starting_point: Proposed structure + 1H/13C
+  input: 1H, 13C, solvent, field, proposed structure
+  output: Ranked shortlist, 13C RMSD, competing isomers
+  decision: Support assignment, inspect neighbour, or acquire 2D
+
 - slug: dereplication
   title: NMR dereplication
   nav: Dereplication
+  category: Extracts & fractions
   path: /use-cases/dereplication/
-  summary: Separate known library members from residual unknowns in extracts and mixtures.
+  image: /assets/images/use-cases/dereplication.svg
+  screenshot: peaks.png
+  screenshot_caption: "Inspecting the peak-picked 1H spectrum and signal table before unlocking formula-guided dereplication."
+  summary: Separate known library scaffolds from genuinely new analogues before committing columns and instrument time.
+  starting_point: Concentrated fraction or extract
+  input: 1H, 13C (when concentrated), solvent, fraction context
+  output: Known matches, close analogues, unexplained peaks
+  decision: Set aside knowns or prioritize fraction for isolation
+
 - slug: unknown-compound-identification
   title: Unknown compound identification
   nav: Unknowns
+  category: Open-world search
   path: /use-cases/unknown-compound-identification/
-  summary: Produce a defensible shortlist when the identity is not already assumed.
+  image: /assets/images/use-cases/unknown-compound-identification.svg
+  screenshot: results.png
+  screenshot_caption: "Reviewing the ranked candidate shortlist (#1 p-Cymene, #2 m-Cymene, #3 o-Cymene) with explicit compatibility and limitations."
+  summary: Produce a defensible shortlist when no structure is assumed, keeping shift residuals and unexplained signals visible.
+  starting_point: Unassigned 1H and 13C dataset
+  input: 1H, 13C, solvent, field, optional MS formula
+  output: Ranked candidates, per-shift residuals, leftover peaks
+  decision: Test top candidate, run targeted 2D, or flag unknown
+
 - slug: impurity-identification
   title: NMR impurity identification
   nav: Impurities
+  category: Process & analytical
   path: /use-cases/impurity-identification/
-  summary: Rank plausible explanations for unexpected signals beside a known major component.
+  image: /assets/images/use-cases/impurity-identification.svg
+  screenshot: per-shift.png
+  screenshot_caption: "Checking matched versus unmatched shift evidence and alternative isomer hypotheses side by side."
+  summary: Rank plausible explanations for unexpected signals beside a known major component without overclaiming confirmation.
+  starting_point: Extra peaks beside a known API or intermediate
+  input: Mixture or cut 1H/13C, known major structure, process context
+  output: Ranked impurity hypotheses and residual signals
+  decision: Spike authentic standard, isolate cut, or escalate to LC-MS
+
 - slug: natural-products
   title: Natural-products research
   nav: Natural products
+  category: Extracts & fractions
   path: /use-cases/natural-products/
-  summary: Support extract dereplication and analogue ranking before isolation campaigns expand.
+  image: /assets/images/use-cases/natural-products.svg
+  screenshot: shortlist.png
+  screenshot_caption: "Comparing structural isomers side by side in the Spectra identification view before committing to isolation."
+  summary: Rank scaffold analogues and spot diagnostic 13C shifts in enriched fractions before isolation campaigns expand.
+  starting_point: Enriched botanical, microbial, or marine fraction
+  input: Fraction 1H and 13C, solvent, optional molecular formula
+  output: Scaffold shortlist, C-shift discriminators, residual peaks
+  decision: Dereplicate common scaffold or isolate novel analogue
+
 - slug: metabolite-identification
   title: Metabolite identification
   nav: Metabolites
+  category: Biotransformation
   path: /use-cases/metabolite-identification/
-  summary: Rank metabolite hypotheses from NMR with explicit residual uncertainty.
+  image: /assets/images/use-cases/metabolite-identification.svg
+  screenshot: objective.png
+  screenshot_caption: "Loading 1H, 13C, and supporting 2D acquisitions (HSQC, COSY, HMBC, TOCSY, NOESY) with parent-structure context."
+  summary: Rank metabolite and conjugate hypotheses from isolated or enriched NMR datasets with explicit residual uncertainty.
+  starting_point: Isolated or enriched metabolite NMR
+  input: 1H, 13C, solvent (D2O/DMSO-d6), parent structure or formula
+  output: Ranked biotransformation candidates and shift residuals
+  decision: Overlay authentic standard or design confirmatory MS/2D

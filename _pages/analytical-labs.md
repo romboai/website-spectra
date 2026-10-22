@@ -11,6 +11,11 @@ eyebrow: Analytical labs
   <a class="btn btn-secondary" href="{{ site.app_url }}/login" data-cta-src="labs_try" data-analytics="cta_click">Analyze a spectrum free</a>
 </p>
 
+<figure class="use-case-figure">
+  <img src="{{ '/assets/docs/per-shift.png' | relative_url }}" alt="Spectra candidate review with matched and unmatched evidence cards">
+  <figcaption>IN SPECTRA — Matched and unmatched evidence cards let a second chemist audit the reasoning without starting from scratch.</figcaption>
+</figure>
+
 ## Target user
 
 CRO, CDMO and in-house analytical teams who verify proposed structures and chase unexpected signals beside a known major component.

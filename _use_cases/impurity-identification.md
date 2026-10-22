@@ -1,44 +1,33 @@
 ---
 title: NMR impurity identification
 h1: NMR impurity identification
+slug: impurity-identification
 description: Rank plausible NMR explanations for unexpected signals beside a known major component, without treating the impurity as confirmed.
 permalink: /use-cases/impurity-identification/
+starting_point: Extra minor peaks beside an assigned API, intermediate, or product
+typical_input: Mixture or enriched impurity-cut 1H and 13C, solvent, known major structure, process context
+spectra_output: Ranked impurity hypotheses, 13C residuals, and signals still left unexplained
+chemist_call: Spike authentic standard, isolate enriched cut, or escalate to LC-MS
+limitations_summary: Low-level impurities often lack usable 13C signals, and Spectra will not invent a structure from three overlapping proton multiplets. Spectra does not apply ICH identification thresholds or replace a validated regulatory impurity method.
+validation_summary: Confirm plausible candidates with orthogonal LC-MS, an enriched isolation cut, or a spiked authentic standard. Keep the accepted or rejected hypothesis recorded alongside the residual peaks.
 ---
 
-## Target user
+## Who this job is for and why it stalls
 
-Impurity characterization and process-chemistry analytical teams who already know the API or intermediate and need a hypothesis for the extra peaks.
+Process-chemistry and impurity-characterization teams usually know the major component — the API, key intermediate, or formulated active — and need a chemically credible hypothesis for a set of unexpected minor peaks.
 
-## Specific problem
+In practice, teams subtract the parent spectrum by eye, check residual solvent tables, and wait for LC-MS or preparative enrichment. Senior spectroscopists lose first-pass time chasing false leads from grease, rotamers, residual starting materials, or oxidative by-products before narrowing the discussion to the two or three structures worth synthesizing or spiking.
 
-The major component is assigned. A set of small signals is not. The question is not “what is chemistry” in the abstract; it is “which plausible process impurity, degradant or residual solvent is consistent with these peaks?”
+## How the Spectra workflow runs
 
-## Existing workflow
+1. **Provide the enriched cut or mixture dataset** — Upload 1H and (when impurity load or enrichment allows) 13C data, along with solvent and known process context such as reagents, oxidants, or parent structure.
+2. **Rank candidate explanations** — Spectra retrieves candidate structures that could account for the extra spin systems and checks them against available 13C resonances to discard isomers the carbon data contradict.
+3. **Separate parent, candidate, and leftover peaks** — Inspect which signals are explained by the top-ranked impurity hypothesis and which resonances remain unassigned.
+4. **Select the fastest confirmatory test** — Use the shortlist to decide whether to spike a cheap commercial reagent/by-product standard or commission preparative isolation.
 
-Teams subtract the known spectrum, hunt libraries, and commission LC-MS. NMR often waits because impurity 13C is weak or buried.
+## What to look for in the review
 
-## Where time is lost
+- **A candidate explains all extra 1H/13C peaks with low residual**: test immediately by spiking an authentic standard or checking retention time in LC-MS.
+- **Partial match with leftover signals**: indicates either a co-eluting second impurity or a process degradant modified at a position not covered by the retrieved library member.
 
-False leads from grease, residual solvents and rotamers. Senior spectroscopists spend first-pass time that should go to the two or three chemically credible impurities.
-
-## How Spectra assists
-
-Treat the case as impurity identification: keep the major component in context, retrieve candidates that could explain the residual signals, and use 13C residuals to drop analogues the carbons cannot support.
-
-## Data typically required
-
-1H of the mixture or enriched impurity cut, 13C if the impurity load allows, solvent, process context (acid, oxidant, residual starting material). MS or formula, when allowed, narrows the retrieval space.
-
-## Resulting output
-
-A shortlist of impurity hypotheses with evidence and leftovers. Leftovers matter: they may say the impurity is still unknown.
-
-## Limitations
-
-Low-level impurities may have no usable 13C. Spectra will not construct a structure from three overlapping protons. Spectra does not apply ICH identification thresholds or a validated impurity method.
-
-## Recommended validation
-
-Orthogonal LC-MS or isolation of the impurity, plus a spiked standard when a hypothesis is cheap to test.
-
-Related: [limitations](/docs/limitations/), [evidence and confidence](/docs/evidence-and-confidence/).
+Related: [analytical and contract labs](/analytical-labs/), [evidence and confidence](/docs/evidence-and-confidence/), [limitations](/docs/limitations/).

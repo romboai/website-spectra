@@ -1,44 +1,33 @@
 ---
 title: Metabolite identification
 h1: Metabolite identification
-description: Rank metabolite hypotheses from NMR with explicit residual uncertainty for biofluids, incubations and labelled studies.
+slug: metabolite-identification
+description: Rank metabolite and conjugate hypotheses from isolated or enriched NMR datasets with explicit residual uncertainty.
 permalink: /use-cases/metabolite-identification/
+starting_point: Isolated or enriched metabolite NMR from incubations or biofluids
+typical_input: 1H and 13C, solvent (typically D2O or DMSO-d6), plus parent structure or formula
+spectra_output: Ranked metabolite and biotransformation candidates with per-shift residuals
+chemist_call: Overlay authentic standard, confirm regioselectivity by 2D, or keep provisional
+limitations_summary: Spectra does not automate pathway mapping, quantitative metabolomics, or MSI identification levels. Raw biofluids with heavy protein/lipid overlap and 1H-only profiling mixtures are outside scope; the workflow is designed for isolated or enriched material with 13C data.
+validation_summary: Validate top-ranked hypotheses with an authentic standard or reference-spectrum overlay plus orthogonal MS, following the reporting standards required by your study or regulatory team.
 ---
 
-## Target user
+## Who this job is for and why it stalls
 
-Metabolomics and drug-metabolism scientists who use NMR on incubations, urine, plasma extracts or labelled compounds.
+Drug-metabolism (MetID) and metabolomics scientists use NMR when LC-MS alone cannot lock down regioselectivity — such as distinguishing which position on an aromatic ring underwent phase I hydroxylation, or confirming the attachment site of a glucuronide or sulfate conjugate.
 
-## Specific problem
+The bottleneck is that biochemical candidate spaces are full of isobaric lookalikes and endogenous background compounds. Relying on a 1H database match without checking 13C shift residuals across the modified site can burn days chasing an endogenous lookalike or the wrong regioisomer.
 
-The candidate space is biochemical, not just structural: phase I oxidations, conjugates, and endogenous lookalikes. A library hit that ignores metabolism is a wasted week.
+## How the Spectra workflow runs
 
-## Existing workflow
+1. **Upload enriched metabolite 1H and 13C** — Submit the NMR of the isolated or concentrated metabolite in `D2O`, `DMSO-d6`, or `CD3OD`, and include the parent xenobiotic structure or molecular formula when available.
+2. **Rank regioisomers and biotransformation candidates** — Spectra retrieves candidate structures and compares predicted versus observed chemical shifts across both the parent core and the modified positions.
+3. **Evaluate carbon residuals at the site of metabolism** — Use 13C RMSD and atom-level residuals to discard isobaric analogues whose carbon shifts conflict with the observed oxidation, dealkylation, or conjugation site.
+4. **Inspect unexplained signals** — Check unassigned peaks to see whether a conjugate moiety (such as a sugar or amino-acid fragment) or co-isolated matrix component is present.
 
-LC-MS features first, NMR confirmation if enough material exists. Many “identifications” remain level 3 annotations.
+## What to look for in the review
 
-## Where time is lost
+- **Clear 13C separation between competing regioisomers**: helps prioritize which synthetic metabolite standard to order or synthesize first.
+- **Core matches well, but extra aliphatic/anomeric peaks remain unexplained**: points toward a phase II conjugate or co-eluting endogenous component that requires targeted 2D (HSQC/HMBC) confirmation.
 
-Confirming an endogenous lookalike because the 1H matched a database while the 13C or the biological context did not.
-
-## How Spectra assists
-
-Submit the NMR of the isolated or highly enriched metabolite, state the parent drug or the expected biotransformation if you can, and use residuals to drop isobaric analogues. Spectra remains an NMR ranking layer — not a full metabolomics platform.
-
-## Data typically required
-
-1H and 13C of the metabolite or a concentrated extract; solvent (often D2O or DMSO-d6); parent structure or formula when this is a xenobiotic study.
-
-## Resulting output
-
-A shortlist of metabolite structures consistent with the NMR, with leftovers that may be the conjugate you have not yet considered.
-
-## Limitations
-
-Spectra does not automate pathway mapping, quantitative metabolomics, or MSI identification levels. Biofluids are mixtures; protein and lipid overlap are out of scope for a one-compound ranking. NMR metabolomics on complex mixtures is typically 1H-dominated; the best fit today is isolated or enriched material with 13C data.
-
-## Recommended validation
-
-Authentic standard or authentic-spectrum overlay, plus MS. Follow community reporting standards used in your field.
-
-Related: [unknown identification](/use-cases/unknown-compound-identification/), [evidence and confidence](/docs/evidence-and-confidence/).
+Related: [unknown compound identification](/use-cases/unknown-compound-identification/), [evidence and confidence](/docs/evidence-and-confidence/), [limitations](/docs/limitations/).
