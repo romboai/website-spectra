@@ -44,7 +44,11 @@ redirect_from:
         </ul>
         {% endif %}
         <div class="plan-cta-row">
-          {% if plan.cta == "product_url" %}
+          {% if plan.id == "pro" %}
+          {% comment %}The app opens its upgrade dialog for this billing period, after sign-in if needed.{% endcomment %}
+          <a class="btn btn-primary" href="{{ site.app_url }}/billing?upgrade=month" data-cta-src="pricing_pro" data-analytics="plan_cta_click" data-plan="pro">{{ plan.cta_label }}</a>
+          <small>Or <a href="{{ site.app_url }}/billing?upgrade=year" data-cta-src="pricing_pro_yearly" data-analytics="plan_cta_click" data-plan="pro">{{ plan.annual_amount | prepend: "€" }} billed yearly</a></small>
+          {% elsif plan.cta == "product_url" %}
           <a class="btn btn-primary" href="{{ site.app_url }}/login" data-cta-src="pricing_{{ plan.id }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
           {% elsif plan.cta == "contact" %}
           <a class="btn btn-primary" href="mailto:{{ site.contact_email }}" data-cta-src="pricing_{{ plan.id }}" data-analytics="plan_cta_click" data-plan="{{ plan.id }}">{{ plan.cta_label }}</a>
