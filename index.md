@@ -104,8 +104,8 @@ schema: software
       <h3>Pro</h3>
       <p class="price"><strong>€79</strong><span>/ month</span></p>
       <p>20 analyses each month, advanced models, higher-accuracy algorithms, and physics-guided ranking.</p>
-      <a class="btn btn-primary btn-block" href="{{ site.app_url }}/login" data-cta-src="home_pricing_pro" data-analytics="plan_cta_click" data-plan="pro">Get Pro <span aria-hidden="true">→</span></a>
-      <small>Or €790 billed yearly. Sign in to purchase.</small>
+      <a class="btn btn-primary btn-block" href="{{ site.app_url }}/billing?upgrade=month" data-cta-src="home_pricing_pro" data-analytics="plan_cta_click" data-plan="pro">Get Pro <span aria-hidden="true">→</span></a>
+      <small>Or <a href="{{ site.app_url }}/billing?upgrade=year" data-cta-src="home_pricing_pro_yearly" data-analytics="plan_cta_click" data-plan="pro">€790 billed yearly</a>. Sign in to purchase.</small>
     </article>
     <article class="price-card">
       <p class="card-index">LAB / TEAM</p>
