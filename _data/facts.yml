@@ -9,8 +9,8 @@ company:
     value: "Open Campus, SS 195 KM 2,300, 09123 Cagliari, Italy"
     verified: true
   vat_number:
-    value: null
-    verified: false
+    value: "IT03533390922"
+    verified: true
   rea:
     value: null
     verified: false
